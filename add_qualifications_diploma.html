@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Dashboard</title>
+  <title>Qualifications</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -44,7 +44,9 @@
   <header class="main-header">
     <!-- Logo -->
     <a href="https://www.aicte-india.org" class="logo">
-		<img src="assets/img/AICTE_LOGO.png" style="height: 45px;width: 50px;margin-right: 10px"><b>AICTE</b>
+      <a href="https://www.aicte-india.org" class="logo">
+		<img src="/AICTE/assets/img/AICTE_LOGO.png" style="height: 45px;width: 50px;margin-right: 10px"><b>AICTE</b>
+    </a>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -292,72 +294,44 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Dashboard
-      </h1>
-    </section>
-
+   
     <!-- Main content -->
     <section class="content">
-      <!-- Small boxes (Stat box) -->
-      <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-				<p>Anyhting goes here</p>
-            </div>
-            <div class="icon">
-				<!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-				<p>Anything goes here</p>
-            </div>
-            <div class="icon">
-             <!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <p>Anything goes here</p>
-            </div>
-            <div class="icon">
-              <!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-				<p>Anything goes here</p>
-            </div>
-            <div class="icon">
-              <!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-      </div>
-      <!-- /.row -->
-      
+		<div class="card">
+			<div class="card-body">
+				<div class="card">
+					<div class="card-header">
+						<i class="fa fa-reorder" style="margin-right: 5px"></i>Add Qualifications
+					</div>
+					<form action="" method="post">
+						<div class="card-body">
+							<table class="table table-responsive table-bordered">
+								<thead>
+									<tr>
+										<th style="width: 60vw">Qualifications required for Promotion</th>
+										<th>Proof</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+										  <div class="form-check" style="margin-bottom:5px">
+											  <label class="form-check-label">
+													<input type="checkbox" class="form-check-input" name="qualification" value="66" style="margin-right: 10px">Qualifications from the database
+											  </label>
+											</div>
+										</td>
+										<td>
+											<input type="file">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
     </section>
     <!-- /.content -->
   </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Dashboard</title>
+  <title>Time Table</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -301,63 +301,71 @@
 
     <!-- Main content -->
     <section class="content">
-      <!-- Small boxes (Stat box) -->
-      <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-				<p>Anyhting goes here</p>
-            </div>
-            <div class="icon">
-				<!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-				<p>Anything goes here</p>
-            </div>
-            <div class="icon">
-             <!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <p>Anything goes here</p>
-            </div>
-            <div class="icon">
-              <!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-				<p>Anything goes here</p>
-            </div>
-            <div class="icon">
-              <!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-      </div>
-      <!-- /.row -->
-      
+		<div class="card">
+			<div class="card-body">
+				<div class="card">
+					<div class="card-header">
+						<i class="fa fa-reorder" style="margin-right: 5px"></i>Upload Time Table
+					</div>
+					<form id="upload-time-table" method="post" enctype="multipart/form-data">
+						<div class="card-body">
+							<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th style="width: 13vw">Year</th>
+												<th style="width: 13vw">Semester</th>
+												<th style="width: 18vw">Section</th>
+												<th>Proof</th>
+												<th>Settings</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr id="">
+												<td>
+													<select class="form-control" required>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option>
+														<option value="8">8</option>
+													</select>
+												</td>
+												<td>
+													<select class="form-control" required>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+													</select>
+												</td>
+												<td>
+													<input type="text" class="form-control" placeholder="Section" required>
+												</td>
+												<td>
+													<input type="file" style="margin-top: 5px" required>
+												</td>
+												<td>
+													<button type="button" class="btn btn-sm btn-danger" style="border-radius: 50%;"><i class="fa fa-remove"></i></button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+							<div class="row">
+								<div class="col-md-3">
+									<button type="button" class="btn btn-block btn-primary"><i class="fa fa-plus" style="margin-right: 5px"></i> Add More</button>
+								</div>
+								<div class="col-md-3">
+									<button type="button" class="btn btn-block btn-success"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+								</div>
+							</div>
+						  </div>
+					</form>
+				</div>
+			</div>
+		</div>
     </section>
     <!-- /.content -->
   </div>
