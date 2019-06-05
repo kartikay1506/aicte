@@ -57,13 +57,26 @@
 		border: 0.5px solid #000000;
 	}
 	.logo {
-		height: 105px;
-		width: 105px;
+		height: 15vh;
+		width: 15vh;
 		margin-right: 15px;
 	}
 	.txt {
 		font-size: 45px;
 		font-weight: 700;
+	}
+	.login {
+		border-radius: 13px;
+		width: 15vw;
+	}
+	.login-form {
+		width: 40vw;
+		text-align: center;
+		margin-top: 12vh;
+		margin-left: 4vw;
+	}
+	.label-text {
+		font-size: 18px;
 	}
 </style>
 
@@ -72,13 +85,64 @@
 			<div class="row">
 				<div class="col-md-6 left-box">
 					<div class="container box">
-						<div style="padding: 10px 20px">
-							<h1 class="txt"><img class="logo" src="/AICTE/assets/img/AICTE_LOGO.png">AICTE Feedback Portal</h1>
-						</div>
+						<div class="row">
+								<div class="col-md-3"><img class="logo" src="/AICTE/assets/img/AICTE_LOGO.png"></div>
+								<div class="col-md-9"><h1 class="txt">AICTE Feedback Portal</h1></div>
+							</div>
 					</div>
 				</div>
 				<div class="col-md-6 right-box">
-					<img src="/AICTE/assets/img/AICTE_LOGO.png">
+					<div class="card login-form">
+						<div class="card-header" style="text-align: center;font-size: 25px">
+							LOGIN
+						</div>
+						<form id="login" method="post">
+							<div class="card-body">
+								<div class="form-group">
+									<label class="label-text" for="university_code">
+										University/Institute Code
+									</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="fa fa-institution"></i>
+										</span> 
+										<input id="email" type="text" class="form-control input-lg" name="university_code" placeholder="University/Institute Code" required>  
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="label-text" for="username">
+										Username
+									</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="fa fa-user"></i>
+										</span> 
+										<input id="username" type="text" class="form-control input-lg" name="username" placeholder="Username" required>  
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="label-text" for="password">
+										Password
+									</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="fa fa-lock"></i>
+										</span> 											<input id="password" type="password" class="form-control input-lg" name="password" placeholder="Password" required>  
+									</div>
+								</div>
+
+								<button class="btn login btn-danger" type="submit" style="margin-bottom: 30px;margin-top: 10px">
+									Login
+								</button>
+							</div>
+						</form>
+						<div class="card-footer">
+							<p style="font-size: 15px;margin-top: 3px">By clicking login, you agree to our
+								<a href="#" style="color:#FF4040;text-decoration: underline">Terms & Conditions
+								</a>
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
