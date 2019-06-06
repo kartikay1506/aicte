@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>University</title>
+  <title>Departmental Activities</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -44,7 +44,7 @@
   <header class="main-header">
     <!-- Logo -->
     <a href="https://www.aicte-india.org" class="logo">
-		<img src="assets/img/AICTE_LOGO.png" style="height: 45px;width: 50px;margin-right: 10px"><b>AICTE</b>
+		<img src="/assets/img/AICTE_LOGO.png" style="height: 45px;width: 50px;margin-right: 10px"><b>AICTE</b>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -95,7 +95,7 @@
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
+    <section class="sidebar">
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
@@ -379,104 +379,80 @@
   <div class="content-wrapper">
     <!-- Main content -->
     <section class="content">
-		<div class="card" style="width: 50vw">
+		<div class="card">
 			<div class="card-body">
 				<div class="card">
 					<div class="card-header">
-						<i class="fa fa-reorder" style="margin-right: 5px"></i>Edit University Details
+						<i class="fa fa-reorder" style="margin-right: 5px"></i>Add Departmental Activities
 					</div>
-					<div class="card-body">
-						<div class="card">
-							<div class="card-body">
-								<div style="margin-left: 15px">
-									<form id="university-form" method="post">
-										<div class="row" style="margin-bottom: 20px">
-											<div class="col">
-												<img class="img-circle" src="assets/img/avatar.png" height="110px" width="110px" style="margin-right: 10px">
-												<button class="btn btn-primary" type="button" style="margin-top: 60px">+ Upload</button>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-7">
-												<div class="form-group">
-													<label>
-														University Name
-													</label>
-													<input type="text" class="form-control" placeholder="University Name" value="">
-												</div>
-											</div>
-											<div class="col-md-5">
-												<div class="form-group">
-													<label>
-														University Code
-													</label>
-													<input type="text" class="form-control" placeholder="University Code" value="" disabled>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-4">
-												<div class="form-group">
-													<label>
-														State
-													</label>
-													<input type="text" class="form-control" placeholder="State" value="">
-												</div>
-											</div>
-											<div class="col-md-4">
-												<div class="form-group">
-													<label>
-														District
-													</label>
-													<input type="text" class="form-control" placeholder="District" value="">
-												</div>
-											</div>
-											<div class="col-md-4">
-												<div class="form-group">
-													<label>
-														Postal Code
-													</label>
-													<input type="text" class="form-control" placeholder="Postal Code" value="">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-12">
-												<div class="form-group">
-													<label>
-														University Address
-													</label>
-													<input type="text" class="form-control" placeholder="University Address" value="">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-4">
-												<div class="form-group">
-													<label>
-														Contact Number
-													</label>
-													<input type="text" class="form-control" placeholder="Contact Number" value="">
-												</div>
-											</div>
-											<div class="col-md-8">
-												<div class="form-group">
-													<label>
-														Email
-													</label>
-													<input type="text" class="form-control" placeholder="Email" value="">
-												</div>
-											</div>
-										</div>
-									</form>
+					<form id="add-activities" method="post" enctype="multipart/form-data">
+						<div class="card-body">
+							<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th style="width: 10vw">Year</th>
+												<th style="width: 8vw">Semester</th>
+												<th style="width: 20vw">Activity</th>
+												<th style="width: 8vw">Credit Points</th>
+												<th>Proof</th>
+												<th>Settings</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr id="">
+												<td>
+													<input type="text" class="form-control" placeholder="Year" required>
+												</td>
+												<td>
+													<select class="form-control" required>
+														<option selected disabled></option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option>
+														<option value="8">8</option>
+													</select>
+												</td>
+												<td>
+													<select class="form-control" required>
+														<option selected disabled></option>
+														<option value="lab-incharge">Lab Incharge</option>
+														<option value="consultancy">Consultancy</option>
+														<option value="timetable-incharge">Time Table Incharge</option>
+														<option value="NBA-work">NBA Work</option>
+													</select>
+												</td>
+												<td>
+													<!--Make Disabled for faculty but enabled for hod -->
+													<select class="form-control">
+														<option selected disabled></option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+													</select>
+												</td>
+												<td>
+													<input type="file" style="margin-top: 5px" required>
+												</td>
+												<td>
+													<button type="button" class="btn btn-sm btn-danger" style="border-radius: 50%;"><i class="fa fa-remove"></i></button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+							<div class="row">
+								<div class="col-md-3">
+									<button type="button" class="btn btn-block btn-primary"><i class="fa fa-plus" style="margin-right: 5px"></i> Add More</button>
+								</div>
+								<div class="col-md-3">
+									<button type="submit" class="btn btn-block btn-success"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
 								</div>
 							</div>
-							<div class="card-footer">
-								<button class="btn btn-sm btn-primary" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Update Details</button>
-								<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
-							</div>
-						</div>
-					</div>
+						  </div>
+					</form>
 				</div>
 			</div>
 		</div>
