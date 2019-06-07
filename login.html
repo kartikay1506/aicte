@@ -44,26 +44,28 @@
 <style>
 	.left-box {
 		height: 100vh;
-		border: 0.5px solid #000000;
 		float: left;
 	}	
 	.right-box {
 		height: 100vh;
-		border: 0.5px solid #000000;
 		float: right;
+		background-color: #f2f2f2;
 	}	
-	.box {
-		margin-top: 12vh;
-		border: 0.5px solid #000000;
+	.field {
+		margin-top: 8vh;
+		width: 42vw;
 	}
 	.logo {
-		height: 15vh;
-		width: 15vh;
-		margin-right: 15px;
+		height: 18vh;
+		width: 20vh;
+		margin-right: 10px;
+		margin-top: 10px;
+		margin-left: 15px;
 	}
 	.txt {
 		font-size: 45px;
 		font-weight: 700;
+		margin-left: 25px;
 	}
 	.login {
 		border-radius: 13px;
@@ -72,11 +74,41 @@
 	.login-form {
 		width: 40vw;
 		text-align: center;
-		margin-top: 12vh;
+		margin-top: 8vh;
 		margin-left: 4vw;
 	}
 	.label-text {
 		font-size: 18px;
+	}
+	
+	.para {
+		color: #666666;
+		letter-spacing: 1px;
+		line-height: 1.8em;
+		font-size: 16px;
+		font-weight: 400;
+		margin-left: 25px;
+		margin-top: 20px;
+	}
+	.name {
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+	.post {
+		font-size: 1.1em;
+		font-weight: bolder;
+		color: #848383;
+	}
+	.person {
+		height: 140px;
+		width: 150px;
+	}
+	.footer p {
+		color: #666;
+		text-align: center;
+		letter-spacing: 1px;
+		font-size: 15px;
+		margin-top: 2em;
 	}
 </style>
 
@@ -84,11 +116,39 @@
 	<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-6 left-box">
-					<div class="container box">
+					<div class="container field">
 						<div class="row">
 								<div class="col-md-3"><img class="logo" src="/AICTE/assets/img/AICTE_LOGO.png"></div>
 								<div class="col-md-9"><h1 class="txt">AICTE Feedback Portal</h1></div>
+						</div>
+						<div class="row">
+							<p class="para">“Criticism, like rain, should be gentle enough to nourish a man’s growth without destroying his roots.”</p>
+						</div>
+					</div>
+					<div class="container" style="width: 42vw">
+						<div class="row">
+							<div class="col-md-4">
+								<img class="person" src="/AICTE/assets/img/img-1.jpg">
+								<div style="padding: 5px 0px 0px 0px">
+									<div class="name">Prof. Anil D. Sahasrabudhe</div>
+									<div class="post">Chairman</div>
+								</div>
 							</div>
+							<div class="col-md-4">
+								<img class="person" src="/AICTE/assets/img/img-2.jpg">
+								<div style="padding: 5px 0px 0px 0px">
+									<div class="name">Dr. M.P. Poonia</div>
+									<div class="post">Vice Chairman</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<img class="person" src="/AICTE/assets/img/img-3.jpg">
+								<div style="padding: 5px 0px 0px 0px">
+									<div class="name">Prof. Alok Prakash Mittal</div>
+									<div class="post">Member Secretary</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-6 right-box">
@@ -143,9 +203,11 @@
 							</p>
 						</div>
 					</div>
+					<div class="footer">
+						<p>&copy; 2019 AICTE. All Rights Reserved.</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	
+	</div>
 </body>
 </html>
