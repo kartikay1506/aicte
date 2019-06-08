@@ -157,4 +157,71 @@ if (isset($_POST['addFaculty-btn'])) {
     mysqli_query($conn, $sql);
     header("Location: ../../index.html?facultyAdded=success");
 }
+
+// Login Page
+if (isset($_POST['login-btn'])) {
+    // Session Started
+    session_start();
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $universityCode = mysqli_real_escape_string($conn, $_POST['university_code']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+
+    $sql = "SELECT * FROM user_login WHERE username = '$username' AND password = '$password';";
+    $result = mysqli_query($conn, $sql);
+    $resultChk = mysqli_num_rows($result);
+    if ($resultChk < 1) {
+        echo ' <h2>No User Found!</h2> ';
+    } else {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $_SESSION['usertype'] = $row['login_type'];
+            $_SESSION['username'] = $row['username'];
+        }
+        header("Location: ../../index.html?userlogin=".$_SESSION['username']);
+        exit();
+    }
+}
+
+// Faculty List
+if (isset($_POST['viewfacultyList'])) {
+    $sql = "SELECT * FROM faculty_technical;";
+    $result = mysqli_query($conn, $sql);
+    $resultChk = mysqli_num_rows($result);
+    if ($resultChk < 1) {
+        echo '
+            <h2> No List Found! </h2>
+        ';  
+    } else {
+        echo '
+        <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+        <thead>
+            <tr role="row">
+                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 166.433px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Name
+                </th>
+                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 202.45px;" aria-label="Position: activate to sort column ascending">Position
+                </th>
+                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 177.767px;" aria-label="Years of Service: activate to sort column ascending">Years of Service
+                </th>
+                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 99.8667px;" aria-label="Department: activate to sort column ascending">Department
+                <!-- </th> -->
+                <!-- <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 142.15px;" aria-label="Feedback Score: activate to sort column ascending">Feedback Score -->
+                <!-- </th> -->
+            </tr>
+        </thead>
+        <tbody>
+        ';
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo '
+            <tr role="row" class="odd">
+            <td class="sorting_1">'.$row['name'].'</td>
+            <td>'.$row['level'].'</td>
+            <td>'.$row['date_of_joining'].'</td>
+            <td>'.$row['department'].'</td>
+            </tr>
+            ';
+        }
+        echo '
+        </tbody>
+        </table>';
+    }
+}
 ?>
