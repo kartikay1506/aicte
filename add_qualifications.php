@@ -299,45 +299,12 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-   
-    <!-- Main content -->
-    <section class="content">
-		<div class="card">
-			<div class="card-body">
-				<div class="card">
-					<div class="card-header">
-						<i class="fa fa-reorder" style="margin-right: 5px"></i>Add Qualifications
-					</div>
-					<form action="" method="post">
-						<div class="card-body">
-							<table class="table table-responsive table-bordered">
-								<thead>
-									<tr>
-										<th style="width: 60vw">Qualifications required for Promotion</th>
-										<th>Proof</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-										  <div class="form-check" style="margin-bottom:5px">
-											  <label class="form-check-label">
-													<input type="checkbox" class="form-check-input" name="qualification" value="66" style="margin-right: 10px">Qualifications from the database
-											  </label>
-											</div>
-										</td>
-										<td>
-											<input type="file">
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-    </section>
+   <form action="./src/php/main.php" method="post">
+	<!-- Main content -->
+	<div id="root"></div>
+	<button type="submit" class="btn btn-block ml-2 mr-2 mb-4 btn-success">Submit</button>
+	</form>
+    
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
@@ -397,5 +364,6 @@
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<script src="./src/js/main.js"></script>
 </body>
 </html>

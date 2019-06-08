@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>HOD</title>
+  <title>Activities</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -37,17 +37,19 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 </head>
+	
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
     <a href="https://www.aicte-india.org" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>AICTE</b></span>
+      <a href="https://www.aicte-india.org" class="logo">
+		<img src="assets/img/AICTE_LOGO.png" style="height: 45px;width: 50px;margin-right: 10px"><b>AICTE</b>
+    </a>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -167,7 +169,7 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
+			<a href="/AICTE/pages/Technical/add_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
 			</a>  
 		</li>
@@ -192,6 +194,11 @@
 		<li>
 			<a href="add_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="upload_time_table.html">
+				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
 			</a>  
 		</li>
 		<!-- Faculty END-->
@@ -295,105 +302,111 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="card" style="width: 50vw">
-	  	<div class="card-body">
-			<div class="card">
-				<div class="card-header">
-					<i class="fa fa-reorder" style="margin-right: 5px"></i>Edit Details
-				</div>
-				<div class="card-body">
-					<div class="card">
+  	<!-- Main Content -->
+      <section class="content">
+	  	<div class="card">
+			<div class="card-body">
+				<div class="card">
+					<div class="card-header">
+						<i class="fa fa-reorder" style="margin-right: 5px"></i>Add Activities
+					</div>
+					<form id="add-activities" method="post" name="add_name" id="add_name" enctype="multipart/form-data">
 						<div class="card-body">
-					<div style="margin-left: 15px">
-						<form action="./src/php/main.php" id="hod-form" method="post">
-							<div class="form-group row">
-								<div class="col-md-5">
-									<label style="font-size: 1.20em;margin-top: 5px">University Code</label>
-									<input type="text" class="form-control" name="university_code" placeholder="" disabled>
+							<table id="dynamic_field" class="table table-bordered">
+										<thead>
+											<tr>
+												<th style="width: 18vw">Activity Name</th>
+												<th style="width: 8vw">Semester</th>
+												<th style="width: 10vw">Year</th>
+												<th style="width: 13.5vw">Type</th>
+												<th>Proof</th>
+												<th>Settings</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<input type="text" name="activity[]" id="activity" class="form-control" placeholder="Enter Activity" required>
+												</td>
+												<td>
+													<select name="semester[]" id="semester" class="form-control">
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option>
+														<option value="8">8</option>
+													</select>
+												</td>
+												<td>
+													<input name="date[]" id="date" type="date" class="form-control">
+												</td>
+												<td>
+													<select name="type[]" id="type" class="form-control">
+														<option value="Departmental Activity">Departmental Activity</option>
+														<option value="Institutional Activity">Institutional Activity</option>
+														<option value="Social Activity">Social Activity</option> 	
+													</select>
+												</td>
+												<td>
+													<input name="file[]" id="file" type="file" style="margin-top: 5px" required>
+												</td>
+												<td>
+													<button type="button" class="btn btn-sm btn-danger" style="border-radius: 50%;"><i class="fa fa-remove"></i></button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+							<div class="row">
+								<div class="col-md-3">
+									<button type="button" name="add" id="add" class="btn btn-block btn-primary"><i class="fa fa-plus" style="margin-right: 5px"></i> Add More</button>
 								</div>
-								<div class="col-md-6">
-									<label style="font-size: 1.20em;margin-top: 5px">Department</label>
-									<input type="text" class="form-control" name="department" placeholder="" disabled>
+								<div class="col-md-3">
+									<!-- <button type="submit" name="submit-btn" id="submit-btn" class="btn btn-block btn-success"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button> -->
 								</div>
 							</div>
+						  </div>
+						<button type="button" name="submit-btn" id="submit-btn">Submit</button>
+					</form>
+					<script>
+						$(document).ready(() => {
+							var i = 1;
+							$("#add").click(() => {
+								i++;
+								// $("#dynamic_field").append('<tr id="row'+i+'"><td><input type="text" name="name[]" class="form-control" id="name"></td><td><button class="btn btn_remove btn-danger" type="button" name="remove" id="'+i+'">Remove</button></td></tr>')
+								$("#dynamic_field").append('<tr id="row'+i+'"><td><input type="text" name="activity[]" id="activity" class="form-control" placeholder="Enter Activity" required></td><td><select name="semester[]" id="semester" class="form-control"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></td><td><input name="date[]" id="date" type="date" class="form-control"></td><td><select name="type[]" id="type" class="form-control"><option value="Departmental Activity">Departmental Activity</option><option value="Institutional Activity">Institutional Activity</option><option value="Social Activity">Social Activity</option></select></td><td><input name="file[]" id="file" type="file" style="margin-top: 5px" required></td><td><button class="btn btn_remove btn-danger" type="button" name="remove" id="'+i+'">Remove</button></td></tr>')
+							})
 							
-							
-						<div class="form-group row">
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Id</label>
-								<input type="text" class="form-control" name="facultyID" placeholder="Enter Faculty Id">
-							</div>
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Level</label>
-								<select class="form-control" name="facultyLevel" id="">
-									<option selected disabled value="Select Faculty Level">Select Faculty Level</option>
-									<option value="10">Assistant Professor - 10</option>
-									<option value="13A1">Associate Professor - 13A1</option>
-									<option value="14">Professor - 14</option>
-									<option value="14">Principal/Director - 14</option>
-								</select>
-							</div>
-						</div>
-							
-						<div class="form-group row">
-							<div class="col-md-7">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Name</label>
-								<input type="text" name="facultyName" class="form-control" placeholder="Enter Name">
-							</div>
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Contact </label>
-								<input type="text" name="facultyContact" class="form-control" placeholder="Contact No.">
-							</div>
-						</div>
-						
-						<div class="form-group row">
-							<div class="col-md-7">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Email</label>
-								<input type="text" name="facultyEmail" class="form-control" placeholder="Enter Faculty Email">
-							</div>
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Date Of Joining</label>
-								<input type="text" name="facultyDateOfJoining" class="form-control" placeholder="dd/mm/yyyy">
-							</div>
-						</div>
-							
-					
-					</div>
-						</div>
-					</div>
+							$(document).on('click', '.btn_remove', function(){
+								var button_id = $(this).attr("id"); 
+								$('#row'+button_id+'').remove();
+							});
 
-				</div>
-				<div class="card-footer">
-					<button class="btn btn-sm btn-primary" name="addFaculty-btn" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
-					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
-				</div>
-			</div>  
-			</form>
-			
-			<div class="card">
-				<div class="card-header">
-					<i class="fa fa-file-excel-o" style="margin-right: 5px"></i>Upload an Excel File
-				</div>
-				<div class="card-body">
-					<div class="card">
-						<div class="card-body">
-							<input type="file">
-						</div>
-					</div>
-				</div>
-				<div class="card-footer">
-					<button class="btn btn-sm btn-primary" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
-					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
-					<button class="btn btn-sm btn-success"><i class="fa fa-download" style="margin-right: 5px"></i>Template</button>
+							$(document).on('click', '.btn_remove', function(){
+								var button_id = $(this).attr("id"); 
+								$('#row'+button_id+'').remove();
+							});
+							
+							$('#submit-btn').click(function(){		
+								$.ajax({
+									url:"./php/add_activities_data.php",
+									method:"POST",
+									data:$('#add_name').serialize(),
+									success:function(data)
+									{
+										alert(data);
+										$('#add_name')[0].reset();
+									}
+								});
+							});
+						})
+					</script>
 				</div>
 			</div>
-			
 		</div>
-	  </div>
-    </section>
+	  </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>HOD</title>
+  <title>University</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -89,6 +89,7 @@
           </li>
           <!-- Control Sidebar Toggle Button -->
           <li>
+
             <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
           </li>
         </ul>
@@ -98,7 +99,7 @@
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
+        <section class="sidebar">
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
@@ -167,9 +168,29 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
 		</li>
 		<li>
 			<a href="upload_time_table.html">
@@ -190,8 +211,33 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
+		</li>
+		<li>
+			<a href="upload_time_table.html">
+				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
 			</a>  
 		</li>
 		<!-- Faculty END-->
@@ -253,9 +299,29 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
 		</li>
 		<li>
 			<a href="upload_time_table.html">
@@ -276,9 +342,29 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
 		</li>
 		<li>
 			<a href="upload_time_table.html">
@@ -308,70 +394,69 @@
 					<div class="card">
 						<div class="card-body">
 					<div style="margin-left: 15px">
-						<form action="./src/php/main.php" id="hod-form" method="post">
+						<form id="hod-form" action="./src/php/main.php" method="post">
 							<div class="form-group row">
 								<div class="col-md-5">
 									<label style="font-size: 1.20em;margin-top: 5px">University Code</label>
-									<input type="text" class="form-control" name="university_code" placeholder="" disabled>
+									<input type="text" name="hodCode" class="form-control" placeholder="" disabled>
 								</div>
 								<div class="col-md-6">
 									<label style="font-size: 1.20em;margin-top: 5px">Department</label>
-									<input type="text" class="form-control" name="department" placeholder="" disabled>
+									<input type="text" name="hodDepartment" class="form-control" placeholder="" disabled>
 								</div>
 							</div>
 							
 							
 						<div class="form-group row">
 							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Id</label>
-								<input type="text" class="form-control" name="facultyID" placeholder="Enter Faculty Id">
+								<label style="font-size: 1.20em;margin-top: 5px">HOD Id</label>
+								<input type="text" name="hodId" class="form-control" placeholder="Enter HOD Id">
 							</div>
 							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Level</label>
-								<select class="form-control" name="facultyLevel" id="">
-									<option selected disabled value="Select Faculty Level">Select Faculty Level</option>
-									<option value="10">Assistant Professor - 10</option>
-									<option value="13A1">Associate Professor - 13A1</option>
-									<option value="14">Professor - 14</option>
-									<option value="14">Principal/Director - 14</option>
+								<label style="font-size: 1.20em;margin-top: 5px">Level</label>
+								<select name="hodLevel" class="form-control" id="">
+									<option selected disabled value="Select Level">Select Level</option>
+									<option value="9A">Lecturer - 9A</option>
+									<option value="10">Lecturer - 10</option>
+									<option value="11">Lecturer - 11</option>
+									<option value="13A1">Lecturer - 13A1</option>
 								</select>
 							</div>
 						</div>
 							
 						<div class="form-group row">
 							<div class="col-md-7">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Name</label>
-								<input type="text" name="facultyName" class="form-control" placeholder="Enter Name">
+								<label style="font-size: 1.20em;margin-top: 5px">HOD Name</label>
+								<input type="text" name="hodName" class="form-control" placeholder="Enter Name">
 							</div>
 							<div class="col-md-5">
 								<label style="font-size: 1.20em;margin-top: 5px">Contact </label>
-								<input type="text" name="facultyContact" class="form-control" placeholder="Contact No.">
+								<input type="text" name="hodContact" class="form-control" placeholder="Contact No.">
 							</div>
 						</div>
 						
 						<div class="form-group row">
 							<div class="col-md-7">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Email</label>
-								<input type="text" name="facultyEmail" class="form-control" placeholder="Enter Faculty Email">
+								<label style="font-size: 1.20em;margin-top: 5px">HOD Email</label>
+								<input type="text" name="hodEmail" class="form-control" placeholder="Enter HOD Email">
 							</div>
 							<div class="col-md-5">
 								<label style="font-size: 1.20em;margin-top: 5px">Date Of Joining</label>
-								<input type="text" name="facultyDateOfJoining" class="form-control" placeholder="dd/mm/yyyy">
+								<input type="text" name="hodDateOfJoining" class="form-control" placeholder="dd/mm/yyyy">
 							</div>
 						</div>
 							
-					
 					</div>
 						</div>
 					</div>
 
 				</div>
 				<div class="card-footer">
-					<button class="btn btn-sm btn-primary" name="addFaculty-btn" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+					<button class="btn btn-sm btn-primary" name="addHodDiploma-btn" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
 					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
 				</div>
+				</form>
 			</div>  
-			</form>
 			
 			<div class="card">
 				<div class="card-header">

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>HOD</title>
+  <title>University</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -44,10 +44,7 @@
   <header class="main-header">
     <!-- Logo -->
     <a href="https://www.aicte-india.org" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>AICTE</b></span>
+		<img src="assets/img/AICTE_LOGO.png" style="height: 45px;width: 50px;margin-right: 10px"><b>AICTE</b>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -98,7 +95,7 @@
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
+        <section class="sidebar">
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
@@ -167,9 +164,29 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
 		</li>
 		<li>
 			<a href="upload_time_table.html">
@@ -190,8 +207,33 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
+		</li>
+		<li>
+			<a href="upload_time_table.html">
+				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
 			</a>  
 		</li>
 		<!-- Faculty END-->
@@ -253,9 +295,29 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
 		</li>
 		<li>
 			<a href="upload_time_table.html">
@@ -276,9 +338,29 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
 		</li>
 		<li>
 			<a href="upload_time_table.html">
@@ -295,104 +377,121 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-
     <!-- Main content -->
     <section class="content">
-      <div class="card" style="width: 50vw">
-	  	<div class="card-body">
-			<div class="card">
-				<div class="card-header">
-					<i class="fa fa-reorder" style="margin-right: 5px"></i>Edit Details
-				</div>
-				<div class="card-body">
-					<div class="card">
-						<div class="card-body">
-					<div style="margin-left: 15px">
-						<form action="./src/php/main.php" id="hod-form" method="post">
-							<div class="form-group row">
-								<div class="col-md-5">
-									<label style="font-size: 1.20em;margin-top: 5px">University Code</label>
-									<input type="text" class="form-control" name="university_code" placeholder="" disabled>
+		<div class="card" style="width: 50vw">
+			<div class="card-body">
+				<div class="card">
+					<div class="card-header">
+						<i class="fa fa-reorder" style="margin-right: 5px"></i>Edit University Details
+					</div>
+					<div class="card-body">
+						<div class="card">
+							<div class="card-body">
+								<div style="margin-left: 15px">
+									<form id="university-form" action="./src/php/main.php" enctype="multipart/form-data" method="POST">
+										<div class="row" style="margin-bottom: 20px">
+											<div class="col">
+												<img class="img-circle" src="assets/img/avatar.png" height="110px" width="110px" style="margin-right: 10px">
+												<input type="file" name="file" />
+												<!-- <button class="btn btn-primary" type="button" style="margin-top: 60px">+ Upload</button> -->
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-7">
+												<div class="form-group">
+													<label>
+														University Name
+													</label>
+													<input type="text" name="univName" class="form-control" placeholder="University Name" value="">
+												</div>
+											</div>
+											<div class="col-md-5">
+												<div class="form-group">
+													<label>
+														University Code
+													</label>
+													<input type="text" name="univCode" class="form-control" placeholder="University Code" value="" disabled>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>
+														State
+													</label>
+													<input type="text" name="univState" class="form-control" placeholder="State" value="">
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>
+														District
+													</label>
+													<input type="text" name="univDistrict" class="form-control" placeholder="District" value="">
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>
+														Postal Code
+													</label>
+													<input type="text" name="univPostalCode" class="form-control" placeholder="Postal Code" value="">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group">
+													<label>
+														University Address
+													</label>
+													<input type="text" name="univAddress" class="form-control" placeholder="University Address" value="">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>
+														Contact Number
+													</label>
+													<input type="text" name="univContact" class="form-control" placeholder="Contact Number" value="">
+												</div>
+											</div>
+											<div class="col-md-8">
+												<div class="form-group">
+													<label>
+														Email
+													</label>
+													<input type="email" name="univEmail" class="form-control" placeholder="Email" value="">
+												</div>
+											</div>
+											<div class="col-md-8">
+												<div class="form-group">
+													<label>
+														Type
+													</label>
+													<select class="form-group" name="univType">
+														<option value="Techical">Techical</option>
+														<option value="Diploma">Diploma</option>
+													</select>
+												</div>
+											</div>
+										</div>
 								</div>
-								<div class="col-md-6">
-									<label style="font-size: 1.20em;margin-top: 5px">Department</label>
-									<input type="text" class="form-control" name="department" placeholder="" disabled>
-								</div>
 							</div>
-							
-							
-						<div class="form-group row">
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Id</label>
-								<input type="text" class="form-control" name="facultyID" placeholder="Enter Faculty Id">
+							<div class="card-footer">
+								<button class="btn btn-sm btn-primary" name="addUnivDetails-btn" type="submit" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Update Details</button>
+								<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
 							</div>
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Level</label>
-								<select class="form-control" name="facultyLevel" id="">
-									<option selected disabled value="Select Faculty Level">Select Faculty Level</option>
-									<option value="10">Assistant Professor - 10</option>
-									<option value="13A1">Associate Professor - 13A1</option>
-									<option value="14">Professor - 14</option>
-									<option value="14">Principal/Director - 14</option>
-								</select>
-							</div>
-						</div>
-							
-						<div class="form-group row">
-							<div class="col-md-7">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Name</label>
-								<input type="text" name="facultyName" class="form-control" placeholder="Enter Name">
-							</div>
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Contact </label>
-								<input type="text" name="facultyContact" class="form-control" placeholder="Contact No.">
-							</div>
-						</div>
-						
-						<div class="form-group row">
-							<div class="col-md-7">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Email</label>
-								<input type="text" name="facultyEmail" class="form-control" placeholder="Enter Faculty Email">
-							</div>
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Date Of Joining</label>
-								<input type="text" name="facultyDateOfJoining" class="form-control" placeholder="dd/mm/yyyy">
-							</div>
-						</div>
-							
-					
-					</div>
+							</form>
 						</div>
 					</div>
-
-				</div>
-				<div class="card-footer">
-					<button class="btn btn-sm btn-primary" name="addFaculty-btn" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
-					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
-				</div>
-			</div>  
-			</form>
-			
-			<div class="card">
-				<div class="card-header">
-					<i class="fa fa-file-excel-o" style="margin-right: 5px"></i>Upload an Excel File
-				</div>
-				<div class="card-body">
-					<div class="card">
-						<div class="card-body">
-							<input type="file">
-						</div>
-					</div>
-				</div>
-				<div class="card-footer">
-					<button class="btn btn-sm btn-primary" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
-					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
-					<button class="btn btn-sm btn-success"><i class="fa fa-download" style="margin-right: 5px"></i>Template</button>
 				</div>
 			</div>
-			
 		</div>
-	  </div>
     </section>
     <!-- /.content -->
   </div>

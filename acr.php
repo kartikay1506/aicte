@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>HOD</title>
+  <title>ACR</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -37,6 +37,9 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -44,10 +47,7 @@
   <header class="main-header">
     <!-- Logo -->
     <a href="https://www.aicte-india.org" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>AICTE</b></span>
+		<img src="/assets/img/AICTE_LOGO.png" style="height: 45px;width: 50px;margin-right: 10px"><b>AICTE</b>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -167,9 +167,29 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
 		</li>
 		<li>
 			<a href="upload_time_table.html">
@@ -190,8 +210,33 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
+		</li>
+		<li>
+			<a href="upload_time_table.html">
+				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
 			</a>  
 		</li>
 		<!-- Faculty END-->
@@ -253,9 +298,29 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
 		</li>
 		<li>
 			<a href="upload_time_table.html">
@@ -276,9 +341,29 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
 		</li>
 		<li>
 			<a href="upload_time_table.html">
@@ -295,104 +380,139 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-
     <!-- Main content -->
     <section class="content">
-      <div class="card" style="width: 50vw">
-	  	<div class="card-body">
-			<div class="card">
-				<div class="card-header">
-					<i class="fa fa-reorder" style="margin-right: 5px"></i>Edit Details
-				</div>
-				<div class="card-body">
-					<div class="card">
-						<div class="card-body">
-					<div style="margin-left: 15px">
-						<form action="./src/php/main.php" id="hod-form" method="post">
-							<div class="form-group row">
-								<div class="col-md-5">
-									<label style="font-size: 1.20em;margin-top: 5px">University Code</label>
-									<input type="text" class="form-control" name="university_code" placeholder="" disabled>
-								</div>
-								<div class="col-md-6">
-									<label style="font-size: 1.20em;margin-top: 5px">Department</label>
-									<input type="text" class="form-control" name="department" placeholder="" disabled>
-								</div>
-							</div>
-							
-							
-						<div class="form-group row">
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Id</label>
-								<input type="text" class="form-control" name="facultyID" placeholder="Enter Faculty Id">
-							</div>
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Level</label>
-								<select class="form-control" name="facultyLevel" id="">
-									<option selected disabled value="Select Faculty Level">Select Faculty Level</option>
-									<option value="10">Assistant Professor - 10</option>
-									<option value="13A1">Associate Professor - 13A1</option>
-									<option value="14">Professor - 14</option>
-									<option value="14">Principal/Director - 14</option>
-								</select>
-							</div>
-						</div>
-							
-						<div class="form-group row">
-							<div class="col-md-7">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Name</label>
-								<input type="text" name="facultyName" class="form-control" placeholder="Enter Name">
-							</div>
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Contact </label>
-								<input type="text" name="facultyContact" class="form-control" placeholder="Contact No.">
-							</div>
-						</div>
-						
-						<div class="form-group row">
-							<div class="col-md-7">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Email</label>
-								<input type="text" name="facultyEmail" class="form-control" placeholder="Enter Faculty Email">
-							</div>
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Date Of Joining</label>
-								<input type="text" name="facultyDateOfJoining" class="form-control" placeholder="dd/mm/yyyy">
-							</div>
-						</div>
-							
-					
+		<div class="card">
+			<div class="card-body">
+				<div class="card">
+					<div class="card-header">
+						<i class="fa fa-reorder" style="margin-right: 5px"></i>ACR
 					</div>
-						</div>
-					</div>
+					<form action="./src/php/main.php" enctype="multipart/form-data" name="add_name" id="add_name">
+						<table class="table table-bordered" id="dynamic_field">
+							<tr>
+								<td>
+									<input type="text" name="year[]" class="form-control" id="year">
+								</td>
+								<td>
+									<select name="activity[]" id="activity">
+										<option value="activity1">Activity 1</option>
+										<option value="activity2">Activity 2</option>
+									</select>
+								</td>
+								<td>
+									<select name="credit[]" id="credit">
+										<option value="credit1">Credit 1</option>
+										<option value="credit2">Credit 2</option>
+									</select>
+								</td>
+								<td>
+									<button type="button" name="add" id="add">Add More</button>
+								</td>
+							</tr>
+						</table>
+						<button type="button" name="submit-btn" id="submit-btn">Submit</button>
+					</form>
+					<script>
+						$(document).ready(() => {
+							var i = 1;
+							$("#add").click(() => {
+								i++;
+								// $("#dynamic_field").append('<tr id="row'+i+'"><td><input type="text" name="name[]" class="form-control" id="name"></td><td><button class="btn btn_remove btn-danger" type="button" name="remove" id="'+i+'">Remove</button></td></tr>')
+								$("#dynamic_field").append('<tr id="row'+i+'"><td><input type="text" name="year[]" class="form-control" id="year"></td><td><select name="activity[]" id="activity"><option value="activity1">Activity 1</option><option value="activity2">Activity 2</option></select></td><td><select name="credit[]" id="credit"><option value="credit1">Credit 1</option><option value="credit2">Credit 2</option></select></td><td><button class="btn btn_remove btn-danger" type="button" name="remove" id="'+i+'">X</button></td></tr>')
+							})
+							
+							$(document).on('click', '.btn_remove', function(){
+								var button_id = $(this).attr("id"); 
+								$('#row'+button_id+'').remove();
+							});
 
-				</div>
-				<div class="card-footer">
-					<button class="btn btn-sm btn-primary" name="addFaculty-btn" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
-					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
-				</div>
-			</div>  
-			</form>
-			
-			<div class="card">
-				<div class="card-header">
-					<i class="fa fa-file-excel-o" style="margin-right: 5px"></i>Upload an Excel File
-				</div>
-				<div class="card-body">
-					<div class="card">
+							$(document).on('click', '.btn_remove', function(){
+								var button_id = $(this).attr("id"); 
+								$('#row'+button_id+'').remove();
+							});
+							
+							$('#submit-btn').click(function(){		
+								$.ajax({
+									url:"./php/acr_data_add.php",
+									method:"POST",
+									data:$('#add_name').serialize(),
+									success:function(data)
+									{
+										alert(data);
+										$('#add_name')[0].reset();
+									}
+								});
+							});
+						})
+					</script>
+
+
+
+					<form id="add-activities" method="post" enctype="multipart/form-data">
 						<div class="card-body">
-							<input type="file">
-						</div>
-					</div>
-				</div>
-				<div class="card-footer">
-					<button class="btn btn-sm btn-primary" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
-					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
-					<button class="btn btn-sm btn-success"><i class="fa fa-download" style="margin-right: 5px"></i>Template</button>
+							<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th style="width: 10vw">Year</th>
+												<th style="width: 20vw">Activity</th>
+												<th style="width: 8vw">Credit Points</th>
+												<th>Proof</th>
+												<th>Settings</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr id="">
+												<td>
+													<input type="text" class="form-control" placeholder="Year" required>
+												</td>
+												<td>
+													<select class="form-control" required>
+														<option selected disabled></option>
+														<option value=""></option>
+														<option value=""></option>
+														<option value=""></option>
+														<option value=""></option>
+													</select>
+												</td>
+												<td>
+													<!--Make Disabled for faculty but enabled for hod -->
+													<select class="form-control">
+														<option selected disabled></option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option>
+														<option value="8">8</option>
+														<option value="9">9</option>
+														<option value="10">10</option>
+													</select>
+												</td>
+												<td>
+													<input type="file" style="margin-top: 5px" required>
+												</td>
+												<td>
+													<button type="button" class="btn btn-sm btn-danger" style="border-radius: 50%;"><i class="fa fa-remove"></i></button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+							<div class="row">
+								<div class="col-md-3">
+									<button type="button" class="btn btn-block btn-primary"><i class="fa fa-plus" style="margin-right: 5px"></i> Add More</button>
+								</div>
+								<div class="col-md-3">
+									<button type="submit" class="btn btn-block btn-success"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+								</div>
+							</div>
+						  </div>
+					</form>
 				</div>
 			</div>
-			
 		</div>
-	  </div>
     </section>
     <!-- /.content -->
   </div>
