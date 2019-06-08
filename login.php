@@ -1,211 +1,213 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html>
 <head>
-    <title>AICTE Feedback System Login Page</title>
-    <!-- Meta-Tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <meta name="keywords">
-    <script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
+<meta charset="utf-8">
+<title>AICTE Feedback</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="bower_components/morris.js/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-    <!-- //Meta-Tags -->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
-    <!-- css files -->
-    <link href="/rating-system/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/rating-system/assets/css/style-login.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- //css files -->
-
-    <!-- google fonts -->
-    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link rel="stylesheet" href="/rating-system/assets/css/loading.css">
-    <link rel="stylesheet" href="/rating-system/assets/css/loading-btn.css">
-    <!-- //google fonts -->
-    <style>
-        #logo {
-			width: 140px;
-			height: 105px;
-			margin-top: 42px;
-		}
-		.txt {
-    padding: 10px 20px;
-}.person {
-    padding: 8px;
-}
-
-.details {
-    padding: 5px 0 0 0;
-}
-
-.name {
-    font-size: 0.97em;
-    font-weight: bold;
-}
-
-.post {
-    font-weight: bolder;
-    color: #848383;
-}
-	</style>
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <!-- Connection -->
-    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
-
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/css/mdb.min.css" rel="stylesheet">
-
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
+<style>
+	.left-box {
+		height: 100vh;
+		float: left;
+	}	
+	.right-box {
+		height: 100vh;
+		float: right;
+		background-color: #f2f2f2;
+	}	
+	.field {
+		margin-top: 8vh;
+		width: 42vw;
+	}
+	.logo {
+		height: 18vh;
+		width: 20vh;
+		margin-right: 10px;
+		margin-top: 10px;
+		margin-left: 15px;
+	}
+	.txt {
+		font-size: 45px;
+		font-weight: 700;
+		margin-left: 25px;
+	}
+	.login {
+		border-radius: 13px;
+		width: 15vw;
+	}
+	.login-form {
+		width: 40vw;
+		text-align: center;
+		margin-top: 8vh;
+		margin-left: 4vw;
+	}
+	.label-text {
+		font-size: 18px;
+	}
+	
+	.para {
+		color: #666666;
+		letter-spacing: 1px;
+		line-height: 1.8em;
+		font-size: 16px;
+		font-weight: 400;
+		margin-left: 25px;
+		margin-top: 20px;
+	}
+	.name {
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+	.post {
+		font-size: 1.1em;
+		font-weight: bolder;
+		color: #848383;
+	}
+	.person {
+		height: 140px;
+		width: 150px;
+	}
+	.footer p {
+		color: #666;
+		text-align: center;
+		letter-spacing: 1px;
+		font-size: 15px;
+		margin-top: 2em;
+	}
+</style>
+
 <body>
-
-    <div class="signupform">
-        <div class="container">
-            <!-- main content -->
-            <div class="agile_info">
-                <div class="w3l_form">
-                    <div class="left_grid_info">
-                    	<div class="d-flex">
-                    		<div class="logo">
-                    			<img id="logo" src="/rating-system/assets/img/AICTE_LOGO.png" alt="" />
-                    		</div>
-							<div class="txt">
-								 <h1>AICTE FeedBack Portal</h1>
-							</div>
-                    	</div>
-
-                        <p>“Criticism, like rain, should be gentle enough to nourish a man’s growth without destroying his roots.”</p>
-                        <div class="d-flex">
-                        	<div class="person">
-                        		<div class="top-img">
-                        			<img src="/rating-system/assets/img/img-1.jpg" alt="">
-                        		</div>
-                        		<div class="details">
-                        			<div class="name">Prof. Anil D. Sahasrabudhe</div>
-                        			<div class="post">Chairman</div>
-                       		 	</div>
-                        	</div>
-                        	<div class="person">
-                        		<div class="top-img">
-                        			<img src="/rating-system/assets/img/img-2.JPG" alt="">
-                        		</div>
-                        		<div class="details">
-                        			<div class="name">Dr. M.P. Poonia</div>
-                        			<div class="post">Vice Chairman</div>
-                       		 	</div>
-                        	</div>
-                        	<div class="person">
-                        		<div class="top-img">
-                        			<img src="/rating-system/assets/img/img-3.jpg" alt="">
-                        		</div>
-                        		<div class="details">
-                        			<div class="name">Prof. Alok Prakash Mittal</div>
-                        			<div class="post">Member Secretary</div>
-                       		 	</div>
-                        	</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w3_info">
-                    <h2>Login to your Account</h2>
-                    <p>Enter your details to login.</p>
-                    <p style="color: red" id="msg"></p>
-                    <form action="#" method="post" id="login-form">
-						<label>Login Type</label>
-						<div class="input-group">
-							<span class="fa fa-envelope" aria-hidden="true"></span>
-							 <input type="text" id="login_type" name="login_type" placeholder="Enter Your Institute/University Code" required="">
+	<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 left-box">
+					<div class="container field">
+						<div class="row">
+								<div class="col-md-3"><img class="logo" src="/AICTE/assets/img/AICTE_LOGO.png"></div>
+								<div class="col-md-9"><h1 class="txt">AICTE Feedback Portal</h1></div>
 						</div>
-                        <label>Institute/University Code</label>
-                        <div class="input-group">
-                            <span class="fa fa-envelope" aria-hidden="true"></span>
-                            <input type="text" id="code" name="code" placeholder="Enter Your Institute/University Code" required="">
-                        </div>
-                        <label>Username</label>
-                        <div class="input-group">
-                            <span class="fa fa-envelope" aria-hidden="true"></span>
-                            <input type="text" name="username" placeholder="Enter Your Email" required="">
-                        </div>
-                        <label>Password</label>
-                        <div class="input-group">
-                            <span class="fa fa-lock" aria-hidden="true"></span>
-                            <input type="Password" name="password" id="password-Field" placeholder="Enter Password" required="">
-                        </div>
+						<div class="row">
+							<p class="para">“Criticism, like rain, should be gentle enough to nourish a man’s growth without destroying his roots.”</p>
+						</div>
+					</div>
+					<div class="container" style="width: 42vw">
+						<div class="row">
+							<div class="col-md-4">
+								<img class="person" src="/AICTE/assets/img/img-1.jpg">
+								<div style="padding: 5px 0px 0px 0px">
+									<div class="name">Prof. Anil D. Sahasrabudhe</div>
+									<div class="post">Chairman</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<img class="person" src="/AICTE/assets/img/img-2.jpg">
+								<div style="padding: 5px 0px 0px 0px">
+									<div class="name">Dr. M.P. Poonia</div>
+									<div class="post">Vice Chairman</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<img class="person" src="/AICTE/assets/img/img-3.jpg">
+								<div style="padding: 5px 0px 0px 0px">
+									<div class="name">Prof. Alok Prakash Mittal</div>
+									<div class="post">Member Secretary</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 right-box">
+					<div class="card login-form">
+						<div class="card-header" style="text-align: center;font-size: 25px">
+							LOGIN
+						</div>
+						<form id="login" action="./src/php/main.php" method="post">
+							<div class="card-body">
+								<div class="form-group">
+									<label class="label-text" for="university_code">
+										University/Institute Code
+									</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="fa fa-institution"></i>
+										</span> 
+										<input id="email" type="text" class="form-control input-lg" name="university_code" placeholder="University/Institute Code" required>  
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="label-text" for="username">
+										Username
+									</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="fa fa-user"></i>
+										</span> 
+										<input id="username" type="text" class="form-control input-lg" name="username" placeholder="Username" required>  
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="label-text" for="password">
+										Password
+									</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="fa fa-lock"></i>
+										</span><input id="password" type="password" class="form-control input-lg" name="password" placeholder="Password" required>  
+									</div>
+								</div>
 
-                        <button class="btn btn-danger btn-block ld-over-inverse" id="login-btn" type="submit">
-
-                        Login
-                    <div class="ld ld-ring ld-spin" style="font-size: 1.5em" ></div>
-
-                    </button><br>
-                </form>
-                    <p class="account">By clicking login, you agree to our <a href="#">Terms & Conditions!</a></p>
-                    
-                </div>
-            </div>
-            <!-- //main content -->
-        </div>
-
-        <!-- footer -->
-        <div class="footer">
-            <p>&copy; 2019 AICTE. All Rights Reserved | Design by <a href="#" target="blank">Graphic Era University</a></p>
-        </div>
-        <!-- footer -->
-    </div>
-
-<script>
-    $("#login-form").submit(function(e) {
-        e.preventDefault();
-        var form = $(this);
-        $.ajax({
-            method: "POST",
-            url: "login-user",
-            data: form.serialize(),
-            beforeSend: function() {
-                $("#login-btn").addClass('running');
-            },
-            success: function(data){
-                alert(data);
-                if (data != 0) {
-                    window.location.href = 'user/dashboard';
-                }
-                else {
-                    $("#msg").html("Invalid Credentials, please try again.")
-                }
-                $("#login-btn").removeClass('running');
-            },
-            error: function() { 
-                alert("Error posting feed.");
-                $("#login-btn").removeClass('running'); 
-            } 
-        });
-    });
-</script>    
- 
+								<button class="btn login btn-danger" name="login-btn" type="submit" style="margin-bottom: 30px;margin-top: 10px">
+									Login
+								</button>
+							</div>
+						</form>
+						<div class="card-footer">
+							<p style="font-size: 15px;margin-top: 3px">By clicking login, you agree to our
+								<a href="#" style="color:#FF4040;text-decoration: underline">Terms & Conditions
+								</a>
+							</p>
+						</div>
+					</div>
+					<div class="footer">
+						<p>&copy; 2019 AICTE. All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+	</div>
 </body>
-
 </html>

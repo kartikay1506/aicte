@@ -37,7 +37,8 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -96,7 +97,7 @@
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
+        <section class="sidebar">
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
@@ -165,9 +166,29 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
 		</li>
 		<li>
 			<a href="upload_time_table.html">
@@ -188,9 +209,29 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
 		</li>
 		<li>
 			<a href="upload_time_table.html">
@@ -256,9 +297,29 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
 		</li>
 		<li>
 			<a href="upload_time_table.html">
@@ -279,9 +340,29 @@
 			</a>  
 		</li>
 		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
+          <a href="teaching_process.html">
+            <i class="fa fa-home"></i><span>Teaching Process</span>
+		  </a>
+		</li>
+		<li>
+			<a href="departmental_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
+		</li>
+		<li>
+			<a href="institutional_activities.html">
+				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
+			</a>  
+		</li>
+		<li>
+			<a href="acr.html">
+				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
+			</a>  
+		</li>
+		<li>
+          <a href="society_contribution.html">
+            <i class="fa fa-home"></i><span>Contribution To Society</span>
+		  </a>
 		</li>
 		<li>
 			<a href="upload_time_table.html">
@@ -298,13 +379,6 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Dashboard
-      </h1>
-    </section>
-
     <!-- Main content -->
     <section class="content">
 		<div class="card">
@@ -335,9 +409,12 @@
 						  </div>
 						  <div class="row">
 							  <div class="col-sm-12">
-								  <div id="tableFormFaculty">
-										
-									</div>
+										  <div id="tableRoot"></div>
+										  <script>
+											  $("#tableRoot").load("./src/php/main.php", {
+													viewfacultyList: true
+												})
+										  </script>
 							  </div>
 						  </div>
 						  <div class="row">
@@ -441,12 +518,5 @@
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-
-<script>
-	 $("#tableFormFaculty").load("./src/php/main.php", {
-		seeFaculty: true
-	 })
-</script>
-
 </body>
 </html>
