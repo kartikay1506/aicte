@@ -38,25 +38,11 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-	
-<style>
-	.upload-btn {
-		position: relative;
-  		overflow: hidden;
-  		display: inline-block;
-	}
-	.upload-btn input[type=file] {
-		font-size: 100px;
-		position: absolute;
-		left: 0;
-		top: 0;
-		opacity: 0;
-	}
-</style>
-	
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-
+<?php
+	include './src/php/auth.php';
+?>
   <header class="main-header">
     <!-- Logo -->
     <a href="https://www.aicte-india.org" class="logo">
@@ -70,18 +56,18 @@
         <ul class="nav navbar-nav">
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
-            <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Username</span>
+              <span class="hidden-xs">Alexander Pierce</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
-               <p>
-                  Username
-                  <small>Details</small>
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -118,7 +104,8 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Username</p>
+          <p>Alexander Pierce</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -132,79 +119,79 @@
 		  
 		<!--University Head-->
 		<li>
-			<a href="add_university_details.php">
+			<a href="add_university_details.html">
 				<i class="fa fa-pencil"></i><span>Edit University Details</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_institutes.php">
+			<a href="add_institutes.html">
 				<i class="fa fa-institution"></i><span>Add Institutes</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_department.php">
+			<a href="add_department.html">
 				<i class="fa fa-newspaper-o"></i><span>Add Department</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_hod.php">
+			<a href="add_hod.html">
 				<i class="fa fa-user-plus"></i><span>Create HOD Account</span>
 			</a>  
 		</li>
 		<li>
-			<a href="faculty_list.php">
+			<a href="faculty_list.html">
 				<i class="fa fa-list"></i><span>Faculty List</span>
 			</a>  
 		</li>
 		  
 		<!--HOD-->
 		<li>
-			<a href="hod_details.php">
+			<a href="hod_details.html">
 				<i class="fa fa-pencil"></i><span>Edit Details</span>
 			</a>  
 		</li> 
 		<li>
-			<a href="add_qualifications.php">
+			<a href="add_qualifications.html">
 				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_faculty.php">
+			<a href="add_faculty.html">
 				<i class="fa fa-user-plus"></i><span>Add Faculty</span>
 			</a>  
 		</li>
 		<li>
-			<a href="faculty_list.php">
+			<a href="faculty_list.html">
 				<i class="fa fa-list"></i><span>Faculty List</span>
 			</a>  
 		</li>
 		<li>
-          <a href="teaching_process.php">
+          <a href="teaching_process.html">
             <i class="fa fa-home"></i><span>Teaching Process</span>
 		  </a>
 		</li>
 		<li>
-			<a href="departmental_activities.php">
+			<a href="departmental_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="institutional_activities.php">
+			<a href="institutional_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="acr.php">
+			<a href="acr.html">
 				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
 			</a>  
 		</li>
 		<li>
-          <a href="society_contribution.php">
+          <a href="society_contribution.html">
             <i class="fa fa-home"></i><span>Contribution To Society</span>
 		  </a>
 		</li>
 		<li>
-			<a href="upload_time_table.php">
+			<a href="upload_time_table.html">
 				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
 			</a>  
 		</li>
@@ -212,42 +199,42 @@
 		  
 		<!--Faculty-->
 		<li>
-			<a href="faculty_details.php">
+			<a href="faculty_details.html">
 				<i class="fa fa-pencil"></i><span>Edit Details</span>
 			</a>  
 		</li> 
 		<li>
-			<a href="add_qualifications.php">
+			<a href="add_qualifications.html">
 				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
 			</a>  
 		</li>
 		<li>
-          <a href="teaching_process.php">
+          <a href="teaching_process.html">
             <i class="fa fa-home"></i><span>Teaching Process</span>
 		  </a>
 		</li>
 		<li>
-			<a href="departmental_activities.php">
+			<a href="departmental_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="institutional_activities.php">
+			<a href="institutional_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="acr.php">
+			<a href="acr.html">
 				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
 			</a>  
 		</li>
 		<li>
-          <a href="society_contribution.php">
+          <a href="society_contribution.html">
             <i class="fa fa-home"></i><span>Contribution To Society</span>
 		  </a>
 		</li>
 		<li>
-			<a href="upload_time_table.php">
+			<a href="upload_time_table.html">
 				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
 			</a>  
 		</li>
@@ -263,79 +250,79 @@
 		  
 		<!--University Head-->
 		<li>
-			<a href="add_university_details.php">
+			<a href="add_university_details.html">
 				<i class="fa fa-pencil"></i><span>Edit University Details</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_institutes.php">
+			<a href="add_institutes.html">
 				<i class="fa fa-institution"></i><span>Add Institutes</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_department.php">
+			<a href="add_department.html">
 				<i class="fa fa-newspaper-o"></i><span>Add Department</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_hod_diploma.php">
+			<a href="add_hod_diploma.html">
 				<i class="fa fa-user-plus"></i><span>Create HOD Account</span>
 			</a>  
 		</li>
 		<li>
-			<a href="faculty_list.php">
+			<a href="faculty_list.html">
 				<i class="fa fa-list"></i><span>Faculty List</span>
 			</a>  
 		</li>
 		  
 		<!--HOD-->
 		<li>
-			<a href="hod_details_diploma.php">
+			<a href="hod_details_diploma.html">
 				<i class="fa fa-pencil"></i><span>Edit Details</span>
 			</a>  
 		</li> 
 		<li>
-			<a href="add_qualifications_diploma.php">
+			<a href="add_qualifications_diploma.html">
 				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_faculty_diploma.php">
+			<a href="add_faculty_diploma.html">
 				<i class="fa fa-user-plus"></i><span>Add Faculty</span>
 			</a>  
 		</li>
 		<li>
-			<a href="faculty_list.php">
+			<a href="faculty_list.html">
 				<i class="fa fa-list"></i><span>Faculty List</span>
 			</a>  
 		</li>
 		<li>
-          <a href="teaching_process.php">
+          <a href="teaching_process.html">
             <i class="fa fa-home"></i><span>Teaching Process</span>
 		  </a>
 		</li>
 		<li>
-			<a href="departmental_activities.php">
+			<a href="departmental_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="institutional_activities.php">
+			<a href="institutional_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="acr.php">
+			<a href="acr.html">
 				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
 			</a>  
 		</li>
 		<li>
-          <a href="society_contribution.php">
+          <a href="society_contribution.html">
             <i class="fa fa-home"></i><span>Contribution To Society</span>
 		  </a>
 		</li>
 		<li>
-			<a href="upload_time_table.php">
+			<a href="upload_time_table.html">
 				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
 			</a>  
 		</li>
@@ -343,42 +330,42 @@
 		  
 		<!--Faculty-->
 		<li>
-			<a href="faculty_details_diploma.php">
+			<a href="faculty_details_diploma.html">
 				<i class="fa fa-pencil"></i><span>Edit Details</span>
 			</a>  
 		</li> 
 		<li>
-			<a href="add_qualifications_diploma.php">
+			<a href="add_qualifications.html">
 				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
 			</a>  
 		</li>
 		<li>
-          <a href="teaching_process.php">
+          <a href="teaching_process.html">
             <i class="fa fa-home"></i><span>Teaching Process</span>
 		  </a>
 		</li>
 		<li>
-			<a href="departmental_activities.php">
+			<a href="departmental_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="institutional_activities.php">
+			<a href="institutional_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="acr.php">
+			<a href="acr.html">
 				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
 			</a>  
 		</li>
 		<li>
-          <a href="society_contribution.php">
+          <a href="society_contribution.html">
             <i class="fa fa-home"></i><span>Contribution To Society</span>
 		  </a>
 		</li>
 		<li>
-			<a href="upload_time_table.php">
+			<a href="upload_time_table.html">
 				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
 			</a>  
 		</li>
@@ -407,11 +394,9 @@
 									<form id="university-form" action="./src/php/main.php" enctype="multipart/form-data" method="POST">
 										<div class="row" style="margin-bottom: 20px">
 											<div class="col">
-												<img class="img-circle" src="assets/img/avatar.png" height="110px" width="110px">
-												<div class="upload-btn">
-													<button class="btn btn-primary" type="button"><i class="fa fa-plus"></i> Upload</button>
-													<input type="file" name="file"/>
-												</div>
+												<img class="img-circle" src="assets/img/avatar.png" height="110px" width="110px" style="margin-right: 10px">
+												<input type="file" name="file" />
+												<!-- <button class="btn btn-primary" type="button" style="margin-top: 60px">+ Upload</button> -->
 											</div>
 										</div>
 										<div class="row">

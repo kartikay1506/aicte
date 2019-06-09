@@ -49,7 +49,7 @@ if (isset($_POST['addUnivDetails-btn'])) {
     ";
     // Query Init
     mysqli_query($conn, $sql);
-    header("Location: ../../index.html?universityaddedd=success");
+    header("Location: ../../index.php?universityaddedd=success");
 }
 
 
@@ -130,7 +130,7 @@ if (isset($_POST['addHodDiploma-btn'])) {
     $sql = "INSERT INTO faculty_technical(university_code, name, contact, qualification, date_of_joining, department
     , level, faculty_id, address, email, profile_pic) VALUES('$UnivCode', '$hodName', '$hodContact', '$hodQualification', '$hodDateOfJoining', '$hodDepartment', '$hodLevel', '$hodId', '$hodAddress', '$hodEmail', '$hodProfile');";
     mysqli_query($conn, $sql);
-    header("Location: ../../index.html?hodDiploma=success");
+    header("Location: ../../index.php?hodDiploma=success");
 
 }
 
@@ -155,7 +155,7 @@ if (isset($_POST['addFaculty-btn'])) {
     $sql = "INSERT INTO faculty_technical(university_code, name, contact, qualification, date_of_joining, department
     , level, faculty_id, address, email, profile_pic) VALUES('$univ_Code', '$facultyName', '$facultyContact', '$facultyQualification', '$facultyDateOfJoining', '$department', '$facultyLevel', '$facultyID', '$facultyAdderss', '$facultyEmail', '$facultyProfile');";
     mysqli_query($conn, $sql);
-    header("Location: ../../index.html?facultyAdded=success");
+    header("Location: ../../index.php?facultyAdded=success");
 }
 
 // Login Page
@@ -176,7 +176,7 @@ if (isset($_POST['login-btn'])) {
             $_SESSION['usertype'] = $row['login_type'];
             $_SESSION['username'] = $row['username'];
         }
-        header("Location: ../../index.html?userlogin=".$_SESSION['username']);
+        header("Location: ../../index.php?userlogin=".$_SESSION['username']);
         exit();
     }
 }
