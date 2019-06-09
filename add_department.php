@@ -37,6 +37,8 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 <?php
 	include './src/php/auth.php';
@@ -388,9 +390,9 @@
 					<div class="card-header">
 						<i class="fa fa-reorder" style="margin-right: 5px"></i>Add Department
 					</div>
-					<form id="add-department" method="post" enctype="multipart/form-data">
+					<form id="add-department" method="post" name="add_name" id="add_name" enctype="multipart/form-data">
 						<div class="card-body">
-							<table class="table table-bordered">
+							<table class="table table-bordered" id="dynamic_field">
 										<thead>
 											<tr>
 												<th style="width: 20vw">Department Name</th>
@@ -401,27 +403,57 @@
 										<tbody>
 											<tr id="">
 												<td>
-													<input type="text" class="form-control" placeholder="Department Name" required>
+													<input type="text" name="departmentName[]" id="departmentName" class="form-control" placeholder="Department Name" required>
 												</td>
 												<td>
-													<input type="text" class="form-control" placeholder="Department Code" required>
+													<input type="text" name="departmentCode[]" id="departmentCode" class="form-control" placeholder="Department Code" required>
 												</td>
 												<td>
-													<button type="button" class="btn btn-sm btn-danger" style="border-radius: 50%;"><i class="fa fa-remove"></i></button>
+													<button type="button" name="add" id="add">Add More</button>
 												</td>
 											</tr>
 										</tbody>
 									</table>
 							<div class="row">
 								<div class="col-md-3">
-									<button type="button" class="btn btn-block btn-primary"><i class="fa fa-plus" style="margin-right: 5px"></i> Add More</button>
-								</div>
-								<div class="col-md-3">
-									<button type="button" class="btn btn-block btn-success"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+									<button type="button" name="submit-btn" id="submit-btn">Submit</button>
 								</div>
 							</div>
 						  </div>
 					</form>
+					<script>
+						$(document).ready(() => {
+							var i = 1;
+							$("#add").click(() => {
+								i++;
+								// $("#dynamic_field").append('<tr id="row'+i+'"><td><input type="text" name="name[]" class="form-control" id="name"></td><td><button class="btn btn_remove btn-danger" type="button" name="remove" id="'+i+'">Remove</button></td></tr>')
+								$("#dynamic_field").append('<tr id="row'+i+'"><th style="width: 20vw">Department Name</th><th style="width: 15vw">Code</th><th style="width: 5vw">Settings</th></tr></thead><tbody><tr id=""><td><input type="text" name="departmentName[]" id="departmentName" class="form-control" placeholder="Department Name" required></td><td><input type="text" name="departmentCode[]" id="departmentCode" class="form-control" placeholder="Department Code" required></td><td><button class="btn btn_remove btn-danger" type="button" name="remove" id="'+i+'">Remove</button></td></tr>')
+							})
+							
+							$(document).on('click', '.btn_remove', function(){
+								var button_id = $(this).attr("id"); 
+								$('#row'+button_id+'').remove();
+							});
+
+							$(document).on('click', '.btn_remove', function(){
+								var button_id = $(this).attr("id"); 
+								$('#row'+button_id+'').remove();
+							});
+							
+							$('#submit-btn').click(function(){		
+								$.ajax({
+									url:"./php/acr_data_add.php",
+									method:"POST",
+									data:$('#add_name').serialize(),
+									success:function(data)
+									{
+										alert(data);
+										$('#add_name')[0].reset();
+									}
+								});
+							});
+						})
+					</script>
 				</div>
 			</div>
 		</div>
