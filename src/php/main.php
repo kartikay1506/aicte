@@ -176,8 +176,14 @@ if (isset($_POST['login-btn'])) {
             $_SESSION['usertype'] = $row['login_type'];
             $_SESSION['username'] = $row['username'];
         }
-        header("Location: ../../index.php?userlogin=".$_SESSION['username']);
-        exit();
+        if ($_SESSION['usertype'] == "student") {
+            header("Location: ../../feedback.php?userlogin=".$_SESSION['username']);
+            exit();
+        } else {
+            header("Location: ../../index.php?userlogin=".$_SESSION['username']);
+            exit();
+        }
+        
     }
 }
 
@@ -223,5 +229,70 @@ if (isset($_POST['viewfacultyList'])) {
         </tbody>
         </table>';
     }
+}
+
+// Student Feedback handler
+if (isset($_POST['studentFeedback_submit-btn'])) {
+    $totalScore2 = 0;
+    $totalComment2 = 0;
+    $points = array();
+    for ($select=1; $select <= 72; $select++) { 
+        $totalScore = $_POST['score_'.$select];
+        $totalScore2 = $totalScore2 + (int)$totalScore;
+        array_push($points, $totalScore);
+    }
+    for ($comment=1; $comment <= 8; $comment++) { 
+        $totalComment = $_POST['comment_'.$comment];
+        $totalComment2 = $totalComment + (int)$totalComment2;
+    }
+    // Activity List
+    $activity_1 = "Has the Teacher covered entire Syllabus as prescribed by University/ College/ Board?";
+    $activity_2 = "Has the Teacher covered relevant topics beyond syllabus ";
+    $activity_3 = "Effectiveness of Teacher in terms of :(a) Technical content/course content (b) Communication skills (c) Use of teaching aids";
+    $activity_4 = "Pace on which contents were covered";
+    $activity_5 = "Motivation and inspiration for students to learn";
+    $activity_6 = "Support for the development of Students’ skill (a) Practical demonstration (b) Hands on training";
+    $activity_7 = "Feedback provided on Students’ progress";
+
+    $activity_Array = array($activity_1, $activity_2, $activity_3, $activity_4, $activity_5, $activity_6, $activity_7);
+    // Session Started
+    session_start();
+    $uid = $_SESSION['username'];
+    $keyword = "Good";
+    $remarks = "Great";
+    $activity = 0;
+    for($i=1; $i <= 72; $i++) {
+        if ( $activity > 7 ) {
+            $activity = 0;
+        }
+        $sql = "INSERT INTO student_feedback(student_id, faculty_id, activity_name, points, keywords, remarks) VALUES('$uid', 'facultyID-Test123', '$activity_Array[$activity]', '$points[$i]', '$keyword', '$remarks');";
+        mysqli_query($conn, $sql);
+        $activity++;
+    }
+    $sql = "SELECT * FROM student_feedback WHERE student_id = '$uid';";
+    $result = mysqli_query($conn, $sql);
+    $resultChk = mysqli_num_rows($result);
+    if ($resultChk < 1) {
+        echo '<h2>No Result Found!</h2>';
+    } else {
+        $score = 0;
+        $scoreCount = 0;
+        $facultyScoreArray = array();
+        while ($row = mysqli_fetch_assoc($result)) {
+            if ($scoreCount > 7) {
+                array_push($facultyScoreArray, $score);
+                $score = 0;
+            }
+            $score = $score + (int)$row['points'];
+            $scoreCount++;
+        }
+        for($i=0;$i<count($facultyScoreArray);$i++) {
+            $sql2 = "INSERT INTO student_feedback_score(student_id, faculty_id, total_points) VALUES('$uid', 'facultyID-Test123', $facultyScoreArray[$i]);";
+            mysqli_query($conn, $sql2);
+        }
+    }
+    header("Location: ../../thankyou.php?task=success");
+    exit();
+
 }
 ?>

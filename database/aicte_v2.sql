@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2019 at 06:26 PM
+-- Generation Time: Jun 09, 2019 at 09:41 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.1.12
 
@@ -168,6 +168,183 @@ INSERT INTO `min_qualifications` (`id`, `qualification_name`, `meta_qualificatio
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `student_feedback`
+--
+
+CREATE TABLE `student_feedback` (
+  `id` int(11) NOT NULL,
+  `student_id` varchar(40) NOT NULL,
+  `faculty_id` varchar(40) NOT NULL,
+  `activity_name` varchar(40) NOT NULL,
+  `points` varchar(40) NOT NULL,
+  `keywords` varchar(40) NOT NULL,
+  `remarks` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student_feedback`
+--
+
+INSERT INTO `student_feedback` (`id`, `student_id`, `faculty_id`, `activity_name`, `points`, `keywords`, `remarks`) VALUES
+(145, 'mike', 'facultyID-Test123', 'Has the Teacher covered entire Syllabus ', '1', 'Good', 'Great'),
+(146, 'mike', 'facultyID-Test123', 'Has the Teacher covered relevant topics ', '1', 'Good', 'Great'),
+(147, 'mike', 'facultyID-Test123', 'Effectiveness of Teacher in terms of :(a', '1', 'Good', 'Great'),
+(148, 'mike', 'facultyID-Test123', 'Pace on which contents were covered', '1', 'Good', 'Great'),
+(149, 'mike', 'facultyID-Test123', 'Motivation and inspiration for students ', '1', 'Good', 'Great'),
+(150, 'mike', 'facultyID-Test123', 'Support for the development of Studentsâ', '1', 'Good', 'Great'),
+(151, 'mike', 'facultyID-Test123', 'Feedback provided on Studentsâ€™ progres', '1', 'Good', 'Great'),
+(152, 'mike', 'facultyID-Test123', '', '1', 'Good', 'Great'),
+(153, 'mike', 'facultyID-Test123', 'Has the Teacher covered entire Syllabus ', '1', 'Good', 'Great'),
+(154, 'mike', 'facultyID-Test123', 'Has the Teacher covered relevant topics ', '1', 'Good', 'Great'),
+(155, 'mike', 'facultyID-Test123', 'Effectiveness of Teacher in terms of :(a', '1', 'Good', 'Great'),
+(156, 'mike', 'facultyID-Test123', 'Pace on which contents were covered', '1', 'Good', 'Great'),
+(157, 'mike', 'facultyID-Test123', 'Motivation and inspiration for students ', '1', 'Good', 'Great'),
+(158, 'mike', 'facultyID-Test123', 'Support for the development of Studentsâ', '1', 'Good', 'Great'),
+(159, 'mike', 'facultyID-Test123', 'Feedback provided on Studentsâ€™ progres', '1', 'Good', 'Great'),
+(160, 'mike', 'facultyID-Test123', '', '1', 'Good', 'Great'),
+(161, 'mike', 'facultyID-Test123', 'Has the Teacher covered entire Syllabus ', '1', 'Good', 'Great'),
+(162, 'mike', 'facultyID-Test123', 'Has the Teacher covered relevant topics ', '1', 'Good', 'Great'),
+(163, 'mike', 'facultyID-Test123', 'Effectiveness of Teacher in terms of :(a', '1', 'Good', 'Great'),
+(164, 'mike', 'facultyID-Test123', 'Pace on which contents were covered', '1', 'Good', 'Great'),
+(165, 'mike', 'facultyID-Test123', 'Motivation and inspiration for students ', '1', 'Good', 'Great'),
+(166, 'mike', 'facultyID-Test123', 'Support for the development of Studentsâ', '1', 'Good', 'Great'),
+(167, 'mike', 'facultyID-Test123', 'Feedback provided on Studentsâ€™ progres', '1', 'Good', 'Great'),
+(168, 'mike', 'facultyID-Test123', '', '1', 'Good', 'Great'),
+(169, 'mike', 'facultyID-Test123', 'Has the Teacher covered entire Syllabus ', '1', 'Good', 'Great'),
+(170, 'mike', 'facultyID-Test123', 'Has the Teacher covered relevant topics ', '1', 'Good', 'Great'),
+(171, 'mike', 'facultyID-Test123', 'Effectiveness of Teacher in terms of :(a', '1', 'Good', 'Great'),
+(172, 'mike', 'facultyID-Test123', 'Pace on which contents were covered', '1', 'Good', 'Great'),
+(173, 'mike', 'facultyID-Test123', 'Motivation and inspiration for students ', '1', 'Good', 'Great'),
+(174, 'mike', 'facultyID-Test123', 'Support for the development of Studentsâ', '1', 'Good', 'Great'),
+(175, 'mike', 'facultyID-Test123', 'Feedback provided on Studentsâ€™ progres', '1', 'Good', 'Great'),
+(176, 'mike', 'facultyID-Test123', '', '1', 'Good', 'Great'),
+(177, 'mike', 'facultyID-Test123', 'Has the Teacher covered entire Syllabus ', '1', 'Good', 'Great'),
+(178, 'mike', 'facultyID-Test123', 'Has the Teacher covered relevant topics ', '1', 'Good', 'Great'),
+(179, 'mike', 'facultyID-Test123', 'Effectiveness of Teacher in terms of :(a', '1', 'Good', 'Great'),
+(180, 'mike', 'facultyID-Test123', 'Pace on which contents were covered', '1', 'Good', 'Great'),
+(181, 'mike', 'facultyID-Test123', 'Motivation and inspiration for students ', '1', 'Good', 'Great'),
+(182, 'mike', 'facultyID-Test123', 'Support for the development of Studentsâ', '1', 'Good', 'Great'),
+(183, 'mike', 'facultyID-Test123', 'Feedback provided on Studentsâ€™ progres', '1', 'Good', 'Great'),
+(184, 'mike', 'facultyID-Test123', '', '1', 'Good', 'Great'),
+(185, 'mike', 'facultyID-Test123', 'Has the Teacher covered entire Syllabus ', '1', 'Good', 'Great'),
+(186, 'mike', 'facultyID-Test123', 'Has the Teacher covered relevant topics ', '1', 'Good', 'Great'),
+(187, 'mike', 'facultyID-Test123', 'Effectiveness of Teacher in terms of :(a', '1', 'Good', 'Great'),
+(188, 'mike', 'facultyID-Test123', 'Pace on which contents were covered', '1', 'Good', 'Great'),
+(189, 'mike', 'facultyID-Test123', 'Motivation and inspiration for students ', '1', 'Good', 'Great'),
+(190, 'mike', 'facultyID-Test123', 'Support for the development of Studentsâ', '1', 'Good', 'Great'),
+(191, 'mike', 'facultyID-Test123', 'Feedback provided on Studentsâ€™ progres', '1', 'Good', 'Great'),
+(192, 'mike', 'facultyID-Test123', '', '1', 'Good', 'Great'),
+(193, 'mike', 'facultyID-Test123', 'Has the Teacher covered entire Syllabus ', '1', 'Good', 'Great'),
+(194, 'mike', 'facultyID-Test123', 'Has the Teacher covered relevant topics ', '1', 'Good', 'Great'),
+(195, 'mike', 'facultyID-Test123', 'Effectiveness of Teacher in terms of :(a', '1', 'Good', 'Great'),
+(196, 'mike', 'facultyID-Test123', 'Pace on which contents were covered', '1', 'Good', 'Great'),
+(197, 'mike', 'facultyID-Test123', 'Motivation and inspiration for students ', '1', 'Good', 'Great'),
+(198, 'mike', 'facultyID-Test123', 'Support for the development of Studentsâ', '1', 'Good', 'Great'),
+(199, 'mike', 'facultyID-Test123', 'Feedback provided on Studentsâ€™ progres', '1', 'Good', 'Great'),
+(200, 'mike', 'facultyID-Test123', '', '1', 'Good', 'Great'),
+(201, 'mike', 'facultyID-Test123', 'Has the Teacher covered entire Syllabus ', '1', 'Good', 'Great'),
+(202, 'mike', 'facultyID-Test123', 'Has the Teacher covered relevant topics ', '1', 'Good', 'Great'),
+(203, 'mike', 'facultyID-Test123', 'Effectiveness of Teacher in terms of :(a', '1', 'Good', 'Great'),
+(204, 'mike', 'facultyID-Test123', 'Pace on which contents were covered', '1', 'Good', 'Great'),
+(205, 'mike', 'facultyID-Test123', 'Motivation and inspiration for students ', '1', 'Good', 'Great'),
+(206, 'mike', 'facultyID-Test123', 'Support for the development of Studentsâ', '1', 'Good', 'Great'),
+(207, 'mike', 'facultyID-Test123', 'Feedback provided on Studentsâ€™ progres', '1', 'Good', 'Great'),
+(208, 'mike', 'facultyID-Test123', '', '1', 'Good', 'Great'),
+(209, 'mike', 'facultyID-Test123', 'Has the Teacher covered entire Syllabus ', '1', 'Good', 'Great'),
+(210, 'mike', 'facultyID-Test123', 'Has the Teacher covered relevant topics ', '1', 'Good', 'Great'),
+(211, 'mike', 'facultyID-Test123', 'Effectiveness of Teacher in terms of :(a', '1', 'Good', 'Great'),
+(212, 'mike', 'facultyID-Test123', 'Pace on which contents were covered', '1', 'Good', 'Great'),
+(213, 'mike', 'facultyID-Test123', 'Motivation and inspiration for students ', '1', 'Good', 'Great'),
+(214, 'mike', 'facultyID-Test123', 'Support for the development of Studentsâ', '1', 'Good', 'Great'),
+(215, 'mike', 'facultyID-Test123', 'Feedback provided on Studentsâ€™ progres', '1', 'Good', 'Great'),
+(216, 'mike', 'facultyID-Test123', '', '', 'Good', 'Great');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student_feedback_score`
+--
+
+CREATE TABLE `student_feedback_score` (
+  `id` int(11) NOT NULL,
+  `student_id` varchar(50) NOT NULL,
+  `faculty_id` varchar(50) NOT NULL,
+  `total_points` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student_feedback_score`
+--
+
+INSERT INTO `student_feedback_score` (`id`, `student_id`, `faculty_id`, `total_points`) VALUES
+(1, 'mike', 'facultyID-Test123', '8'),
+(2, 'mike', 'facultyID-Test123', '1'),
+(3, 'mike', 'facultyID-Test123', '1'),
+(4, 'mike', 'facultyID-Test123', '1'),
+(5, 'mike', 'facultyID-Test123', '1'),
+(6, 'mike', 'facultyID-Test123', '1'),
+(7, 'mike', 'facultyID-Test123', '1'),
+(8, 'mike', 'facultyID-Test123', '1'),
+(9, 'mike', 'facultyID-Test123', '1'),
+(10, 'mike', 'facultyID-Test123', '1'),
+(11, 'mike', 'facultyID-Test123', '1'),
+(12, 'mike', 'facultyID-Test123', '1'),
+(13, 'mike', 'facultyID-Test123', '1'),
+(14, 'mike', 'facultyID-Test123', '1'),
+(15, 'mike', 'facultyID-Test123', '1'),
+(16, 'mike', 'facultyID-Test123', '1'),
+(17, 'mike', 'facultyID-Test123', '1'),
+(18, 'mike', 'facultyID-Test123', '1'),
+(19, 'mike', 'facultyID-Test123', '1'),
+(20, 'mike', 'facultyID-Test123', '1'),
+(21, 'mike', 'facultyID-Test123', '1'),
+(22, 'mike', 'facultyID-Test123', '1'),
+(23, 'mike', 'facultyID-Test123', '1'),
+(24, 'mike', 'facultyID-Test123', '1'),
+(25, 'mike', 'facultyID-Test123', '1'),
+(26, 'mike', 'facultyID-Test123', '1'),
+(27, 'mike', 'facultyID-Test123', '1'),
+(28, 'mike', 'facultyID-Test123', '1'),
+(29, 'mike', 'facultyID-Test123', '1'),
+(30, 'mike', 'facultyID-Test123', '1'),
+(31, 'mike', 'facultyID-Test123', '1'),
+(32, 'mike', 'facultyID-Test123', '1'),
+(33, 'mike', 'facultyID-Test123', '1'),
+(34, 'mike', 'facultyID-Test123', '1'),
+(35, 'mike', 'facultyID-Test123', '1'),
+(36, 'mike', 'facultyID-Test123', '1'),
+(37, 'mike', 'facultyID-Test123', '1'),
+(38, 'mike', 'facultyID-Test123', '1'),
+(39, 'mike', 'facultyID-Test123', '1'),
+(40, 'mike', 'facultyID-Test123', '1'),
+(41, 'mike', 'facultyID-Test123', '1'),
+(42, 'mike', 'facultyID-Test123', '1'),
+(43, 'mike', 'facultyID-Test123', '1'),
+(44, 'mike', 'facultyID-Test123', '1'),
+(45, 'mike', 'facultyID-Test123', '1'),
+(46, 'mike', 'facultyID-Test123', '1'),
+(47, 'mike', 'facultyID-Test123', '1'),
+(48, 'mike', 'facultyID-Test123', '1'),
+(49, 'mike', 'facultyID-Test123', '1'),
+(50, 'mike', 'facultyID-Test123', '1'),
+(51, 'mike', 'facultyID-Test123', '1'),
+(52, 'mike', 'facultyID-Test123', '1'),
+(53, 'mike', 'facultyID-Test123', '1'),
+(54, 'mike', 'facultyID-Test123', '1'),
+(55, 'mike', 'facultyID-Test123', '1'),
+(56, 'mike', 'facultyID-Test123', '1'),
+(57, 'mike', 'facultyID-Test123', '1'),
+(58, 'mike', 'facultyID-Test123', '1'),
+(59, 'mike', 'facultyID-Test123', '1'),
+(60, 'mike', 'facultyID-Test123', '1'),
+(61, 'mike', 'facultyID-Test123', '1'),
+(62, 'mike', 'facultyID-Test123', '1'),
+(63, 'mike', 'facultyID-Test123', '1'),
+(64, 'mike', 'facultyID-Test123', '1');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_name`
 --
 
@@ -320,7 +497,8 @@ CREATE TABLE `user_login` (
 
 INSERT INTO `user_login` (`id`, `login_type`, `username`, `password`) VALUES
 (1, 'technical', 'technical', 'technical'),
-(2, 'diploma', 'diploma', 'diploma');
+(2, 'diploma', 'diploma', 'diploma'),
+(3, 'student', 'mike', 'mike');
 
 --
 -- Indexes for dumped tables
@@ -354,6 +532,18 @@ ALTER TABLE `faculty_technical`
 -- Indexes for table `min_qualifications`
 --
 ALTER TABLE `min_qualifications`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `student_feedback`
+--
+ALTER TABLE `student_feedback`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `student_feedback_score`
+--
+ALTER TABLE `student_feedback_score`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -421,6 +611,18 @@ ALTER TABLE `min_qualifications`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
+-- AUTO_INCREMENT for table `student_feedback`
+--
+ALTER TABLE `student_feedback`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=217;
+
+--
+-- AUTO_INCREMENT for table `student_feedback_score`
+--
+ALTER TABLE `student_feedback_score`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+
+--
 -- AUTO_INCREMENT for table `tbl_name`
 --
 ALTER TABLE `tbl_name`
@@ -442,7 +644,7 @@ ALTER TABLE `university`
 -- AUTO_INCREMENT for table `user_login`
 --
 ALTER TABLE `user_login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

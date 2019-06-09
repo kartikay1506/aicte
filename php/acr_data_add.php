@@ -20,5 +20,5 @@ if($number > 1)
 }
 else
 {
-	echo "Please Enter Name";
+	echo "Done!";
 }

@@ -37,6 +37,9 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<?php
+include './src/php/auth.php';
+?>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -122,6 +125,7 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+	  <form action="./src/php/main.php" method="POST">
     <!-- Main content -->
     <section class="content">
 		 <!-- Content Wrapper. Contains page content -->
@@ -197,7 +201,7 @@
 										<tr>
 						<td>Has the Teacher covered entire Syllabus as prescribed by University/ College/ Board?</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_1" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -209,7 +213,7 @@
 					<tr>
 						<td>Has the Teacher covered relevant topics beyond syllabus </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_2" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -225,7 +229,7 @@
 							(c) Use of teaching aids
 							</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_3" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -237,7 +241,7 @@
 					<tr>
 						<td>Pace on which contents were covered </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_4" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -250,7 +254,7 @@
 					<tr>
 						<td>Motivation and inspiration for students to learn </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_5" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -265,7 +269,8 @@
 							(a) Practical demonstration 
 							(b) Hands on training </td>
 						<td>
-							<select class="form-control" name="" id="">
+							
+							<select class="form-control" name="score_6" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -278,7 +283,7 @@
 					<tr>
 						<td>Clarity of expectations of students </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_7" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -291,7 +296,7 @@
 					<tr>
 						<td>Feedback provided on Students’ progress </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_8" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -304,7 +309,7 @@
 					<tr>
 						<td>Willingness to offer help and advice to students. </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_9" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -325,7 +330,7 @@
 									<div class="form-group">
 										<textarea class="form-control" rows="10" name="comment"></textarea>
 									</div>
-									<select class="form-control" name="" id="">
+									<select class="form-control" name="comment_1" id="">
 											<option value="1">Comment1</option>
 											<option value="2">Comment2</option>
 											<option value="3">Comment3</option>
@@ -353,7 +358,7 @@
 										<tr>
 						<td>Has the Teacher covered entire Syllabus as prescribed by University/ College/ Board?</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_10" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -365,7 +370,7 @@
 					<tr>
 						<td>Has the Teacher covered relevant topics beyond syllabus </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_11" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -381,7 +386,7 @@
 							(c) Use of teaching aids
 							</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_12" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -393,7 +398,7 @@
 					<tr>
 						<td>Pace on which contents were covered </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_13" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -406,7 +411,7 @@
 					<tr>
 						<td>Motivation and inspiration for students to learn </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_14" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -421,7 +426,7 @@
 							(a) Practical demonstration 
 							(b) Hands on training </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_15" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -434,7 +439,7 @@
 					<tr>
 						<td>Clarity of expectations of students </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_16" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -447,7 +452,7 @@
 					<tr>
 						<td>Feedback provided on Students’ progress </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_17" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -460,7 +465,7 @@
 					<tr>
 						<td>Willingness to offer help and advice to students. </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_18" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -481,7 +486,7 @@
 									<div class="form-group">
 										<textarea class="form-control" rows="10" name="comment"></textarea>
 									</div>
-									<select class="form-control" name="" id="">
+									<select class="form-control" name="comment_2" id="">
 											<option value="1">Comment1</option>
 											<option value="2">Comment2</option>
 											<option value="3">Comment3</option>
@@ -511,7 +516,7 @@
 										<tr>
 						<td>Has the Teacher covered entire Syllabus as prescribed by University/ College/ Board?</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_19" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -523,7 +528,7 @@
 					<tr>
 						<td>Has the Teacher covered relevant topics beyond syllabus </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_20" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -539,7 +544,7 @@
 							(c) Use of teaching aids
 							</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_21" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -551,7 +556,7 @@
 					<tr>
 						<td>Pace on which contents were covered </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_22" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -564,7 +569,7 @@
 					<tr>
 						<td>Motivation and inspiration for students to learn </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_23" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -579,7 +584,7 @@
 							(a) Practical demonstration 
 							(b) Hands on training </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_24" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -592,7 +597,7 @@
 					<tr>
 						<td>Clarity of expectations of students </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_25" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -605,7 +610,7 @@
 					<tr>
 						<td>Feedback provided on Students’ progress </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_26" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -618,7 +623,7 @@
 					<tr>
 						<td>Willingness to offer help and advice to students. </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_27" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -639,7 +644,7 @@
 									<div class="form-group">
 										<textarea class="form-control" rows="10" name="comment"></textarea>
 									</div>
-									<select class="form-control" name="" id="">
+									<select class="form-control" name="comment_3" id="">
 											<option value="1">Comment1</option>
 											<option value="2">Comment2</option>
 											<option value="3">Comment3</option>
@@ -669,7 +674,7 @@
 										<tr>
 						<td>Has the Teacher covered entire Syllabus as prescribed by University/ College/ Board?</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_28" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -681,7 +686,7 @@
 					<tr>
 						<td>Has the Teacher covered relevant topics beyond syllabus </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_29" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -697,7 +702,7 @@
 							(c) Use of teaching aids
 							</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_30" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -709,7 +714,7 @@
 					<tr>
 						<td>Pace on which contents were covered </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_31" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -722,7 +727,7 @@
 					<tr>
 						<td>Motivation and inspiration for students to learn </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_32" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -737,7 +742,7 @@
 							(a) Practical demonstration 
 							(b) Hands on training </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_33" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -750,7 +755,7 @@
 					<tr>
 						<td>Clarity of expectations of students </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_34" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -763,7 +768,7 @@
 					<tr>
 						<td>Feedback provided on Students’ progress </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_35" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -776,7 +781,7 @@
 					<tr>
 						<td>Willingness to offer help and advice to students. </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_36" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -797,7 +802,7 @@
 									<div class="form-group">
 										<textarea class="form-control" rows="10" name="comment"></textarea>
 									</div>
-									<select class="form-control" name="" id="">
+									<select class="form-control" name="comment_4" id="">
 											<option value="1">Comment1</option>
 											<option value="2">Comment2</option>
 											<option value="3">Comment3</option>
@@ -825,7 +830,7 @@
 										<tr>
 						<td>Has the Teacher covered entire Syllabus as prescribed by University/ College/ Board?</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_37" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -837,7 +842,7 @@
 					<tr>
 						<td>Has the Teacher covered relevant topics beyond syllabus </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_38" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -853,7 +858,7 @@
 							(c) Use of teaching aids
 							</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_39" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -865,7 +870,7 @@
 					<tr>
 						<td>Pace on which contents were covered </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_40" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -878,7 +883,7 @@
 					<tr>
 						<td>Motivation and inspiration for students to learn </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_41" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -893,7 +898,7 @@
 							(a) Practical demonstration 
 							(b) Hands on training </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_42" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -906,7 +911,7 @@
 					<tr>
 						<td>Clarity of expectations of students </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_43" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -919,7 +924,7 @@
 					<tr>
 						<td>Feedback provided on Students’ progress </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_44" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -932,7 +937,7 @@
 					<tr>
 						<td>Willingness to offer help and advice to students. </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_45" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -953,7 +958,7 @@
 									<div class="form-group">
 										<textarea class="form-control" rows="10" name="comment"></textarea>
 									</div>
-									<select class="form-control" name="" id="">
+									<select class="form-control" name="comment_5" id="">
 											<option value="1">Comment1</option>
 											<option value="2">Comment2</option>
 											<option value="3">Comment3</option>
@@ -981,7 +986,7 @@
 										<tr>
 						<td>Has the Teacher covered entire Syllabus as prescribed by University/ College/ Board?</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_46" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -993,7 +998,7 @@
 					<tr>
 						<td>Has the Teacher covered relevant topics beyond syllabus </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_47" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1009,7 +1014,7 @@
 							(c) Use of teaching aids
 							</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_48" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1021,7 +1026,7 @@
 					<tr>
 						<td>Pace on which contents were covered </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_49" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1034,7 +1039,7 @@
 					<tr>
 						<td>Motivation and inspiration for students to learn </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_50" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1049,7 +1054,7 @@
 							(a) Practical demonstration 
 							(b) Hands on training </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_51" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1062,7 +1067,7 @@
 					<tr>
 						<td>Clarity of expectations of students </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_52" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1075,7 +1080,7 @@
 					<tr>
 						<td>Feedback provided on Students’ progress </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_53" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1088,7 +1093,7 @@
 					<tr>
 						<td>Willingness to offer help and advice to students. </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_54" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1109,7 +1114,7 @@
 									<div class="form-group">
 										<textarea class="form-control" rows="10" name="comment"></textarea>
 									</div>
-									<select class="form-control" name="" id="">
+									<select class="form-control" name="comment_6" id="">
 											<option value="1">Comment1</option>
 											<option value="2">Comment2</option>
 											<option value="3">Comment3</option>
@@ -1137,7 +1142,7 @@
 										<tr>
 						<td>Has the Teacher covered entire Syllabus as prescribed by University/ College/ Board?</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_55" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1149,7 +1154,7 @@
 					<tr>
 						<td>Has the Teacher covered relevant topics beyond syllabus </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_56" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1165,7 +1170,7 @@
 							(c) Use of teaching aids
 							</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_57" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1177,7 +1182,7 @@
 					<tr>
 						<td>Pace on which contents were covered </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_58" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1190,7 +1195,7 @@
 					<tr>
 						<td>Motivation and inspiration for students to learn </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_59" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1205,7 +1210,7 @@
 							(a) Practical demonstration 
 							(b) Hands on training </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_60" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1218,7 +1223,7 @@
 					<tr>
 						<td>Clarity of expectations of students </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_61" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1231,7 +1236,7 @@
 					<tr>
 						<td>Feedback provided on Students’ progress </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_62" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1244,7 +1249,7 @@
 					<tr>
 						<td>Willingness to offer help and advice to students. </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_63" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1265,7 +1270,7 @@
 									<div class="form-group">
 										<textarea class="form-control" rows="10" name="comment"></textarea>
 									</div>
-									<select class="form-control" name="" id="">
+									<select class="form-control" name="comment_7" id="">
 											<option value="1">Comment1</option>
 											<option value="2">Comment2</option>
 											<option value="3">Comment3</option>
@@ -1293,7 +1298,7 @@
 										<tr>
 						<td>Has the Teacher covered entire Syllabus as prescribed by University/ College/ Board?</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_64" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1305,7 +1310,7 @@
 					<tr>
 						<td>Has the Teacher covered relevant topics beyond syllabus </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_65" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1321,7 +1326,7 @@
 							(c) Use of teaching aids
 							</td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_66" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1333,7 +1338,7 @@
 					<tr>
 						<td>Pace on which contents were covered </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_67" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1346,7 +1351,7 @@
 					<tr>
 						<td>Motivation and inspiration for students to learn </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_68" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1361,7 +1366,7 @@
 							(a) Practical demonstration 
 							(b) Hands on training </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_69" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1374,7 +1379,7 @@
 					<tr>
 						<td>Clarity of expectations of students </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_70" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1387,7 +1392,7 @@
 					<tr>
 						<td>Feedback provided on Students’ progress </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_71" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1400,7 +1405,7 @@
 					<tr>
 						<td>Willingness to offer help and advice to students. </td>
 						<td>
-							<select class="form-control" name="" id="">
+							<select class="form-control" name="score_72" id="">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -1421,7 +1426,7 @@
 									<div class="form-group">
 										<textarea class="form-control" rows="10" name="comment"></textarea>
 									</div>
-									<select class="form-control" name="" id="">
+									<select class="form-control" name="comment_8" id="">
 											<option value="1">Comment1</option>
 											<option value="2">Comment2</option>
 											<option value="3">Comment3</option>
@@ -1430,15 +1435,22 @@
 									</select>
 								</div>
 						</div>
+						<button type="submit" name="studentFeedback_submit-btn" style="margin-top: 10px;" class="btn btn-success">Submit</button>
+
 					</div>
+
 				</div>
-</div>
+
+			</div>
+
 			</div>
 		</div>
     </section>
     <!-- /.content -->
-    </section>
-    <!-- /.content -->
+	</section>
+	
+	<!-- /.content -->
+	</form>
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
