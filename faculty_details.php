@@ -46,11 +46,11 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="https://www.aicte-india.org" class="logo">
+    
       <a href="https://www.aicte-india.org" class="logo">
-		<img src="assets/img/AICTE_LOGO.png" style="height: 45px;width: 50px;margin-right: 10px"><b>AICTE</b>
+		<img src="/AICTE/assets/img/AICTE_LOGO.png" style="height: 45px;width: 50px;margin-right: 10px"><b>AICTE</b>
     </a>
-    </a>
+ 
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
@@ -59,9 +59,9 @@
         <ul class="nav navbar-nav">
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">Username</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -69,8 +69,8 @@
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  Username
+                  <small>Details</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -107,196 +107,10 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <p>Username</p>
         </div>
       </div>
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-		<!--Technical Sidebar-->
-        <li class="active">
-          <a href="index.html">
-            <i class="fa fa-home"></i> <span>Home</span>
-		  </a>
-		</li>
-		  
-		<!--University Head-->
-		<li>
-			<a href="add_university_details.html">
-				<i class="fa fa-pencil"></i><span>Edit University Details</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_institutes.html">
-				<i class="fa fa-institution"></i><span>Add Institutes</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_department.html">
-				<i class="fa fa-newspaper-o"></i><span>Add Department</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_hod.html">
-				<i class="fa fa-user-plus"></i><span>Create HOD Account</span>
-			</a>  
-		</li>
-		<li>
-			<a href="faculty_list.html">
-				<i class="fa fa-list"></i><span>Faculty List</span>
-			</a>  
-		</li>
-		  
-		<!--HOD-->
-		<li>
-			<a href="hod_details.html">
-				<i class="fa fa-pencil"></i><span>Edit Details</span>
-			</a>  
-		</li> 
-		<li>
-			<a href="add_qualifications.html">
-				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_faculty.html">
-				<i class="fa fa-user-plus"></i><span>Add Faculty</span>
-			</a>  
-		</li>
-		<li>
-			<a href="faculty_list.html">
-				<i class="fa fa-list"></i><span>Faculty List</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="upload_time_table.html">
-				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
-			</a>  
-		</li>
-		<!-- HOD END-->
-		  
-		<!--Faculty-->
-		<li>
-			<a href="faculty_details.html">
-				<i class="fa fa-pencil"></i><span>Edit Details</span>
-			</a>  
-		</li> 
-		<li>
-			<a href="add_qualifications.html">
-				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="upload_time_table.html">
-				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
-			</a>  
-		</li>
-		<!-- Faculty END-->
-		<!--Technical END-->
-		  
-		<!--Diploma Sidebar-->
-        <li class="active">
-          <a href="index.html">
-            <i class="fa fa-home"></i> <span>Home</span>
-		  </a>
-		</li>
-		  
-		<!--University Head-->
-		<li>
-			<a href="add_university_details.html">
-				<i class="fa fa-pencil"></i><span>Edit University Details</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_institutes.html">
-				<i class="fa fa-institution"></i><span>Add Institutes</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_department.html">
-				<i class="fa fa-newspaper-o"></i><span>Add Department</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_hod_diploma.html">
-				<i class="fa fa-user-plus"></i><span>Create HOD Account</span>
-			</a>  
-		</li>
-		<li>
-			<a href="faculty_list.html">
-				<i class="fa fa-list"></i><span>Faculty List</span>
-			</a>  
-		</li>
-		  
-		<!--HOD-->
-		<li>
-			<a href="hod_details_diploma.html">
-				<i class="fa fa-pencil"></i><span>Edit Details</span>
-			</a>  
-		</li> 
-		<li>
-			<a href="add_qualifications_diploma.html">
-				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_faculty_diploma.html">
-
-				<i class="fa fa-user-plus"></i><span>Add Faculty</span>
-			</a>  
-		</li>
-		<li>
-			<a href="faculty_list.html">
-				<i class="fa fa-list"></i><span>Faculty List</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="upload_time_table.html">
-				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
-			</a>  
-		</li>
-		<!-- HOD END-->
-		  
-		<!--Faculty-->
-		<li>
-			<a href="faculty_details_diploma.html">
-				<i class="fa fa-pencil"></i><span>Edit Details</span>
-			</a>  
-		</li> 
-		<li>
-			<a href="add_qualifications.html">
-				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Add Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="upload_time_table.html">
-				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
-			</a>  
-		</li>
-		<!-- Faculty END-->
-		<!--Diploma END--> 
-
-      </ul>
+     <?php include 'sidebar.php';?>
     </section>
     <!-- /.sidebar -->
   </aside>

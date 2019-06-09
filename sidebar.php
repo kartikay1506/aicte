@@ -41,7 +41,7 @@
 			</a>  
 		</li> 
 		<li>
-			<a href="add_qualifications.php">
+			<a href="add_qualifications.php?page=add_qualification">
 				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
 			</a>  
 		</li>

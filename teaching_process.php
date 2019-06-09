@@ -50,7 +50,7 @@
   <header class="main-header">
     <!-- Logo -->
     <a href="https://www.aicte-india.org" class="logo">
-		<img src="/assets/img/AICTE_LOGO.png" style="height: 45px;width: 50px;margin-right: 10px"><b>AICTE</b>
+		<img src="/AICTE/assets/img/AICTE_LOGO.png" style="height: 45px;width: 50px;margin-right: 10px"><b>AICTE</b>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -60,9 +60,9 @@
         <ul class="nav navbar-nav">
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">Username</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -70,8 +70,8 @@
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  Username
+                  <small>Details</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -108,275 +108,10 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <p>Username</p>
         </div>
       </div>
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-		<!--Technical Sidebar-->
-        <li class="active">
-          <a href="index.html">
-            <i class="fa fa-home"></i> <span>Home</span>
-		  </a>
-		</li>
-		  
-		<!--University Head-->
-		<li>
-			<a href="add_university_details.html">
-				<i class="fa fa-pencil"></i><span>Edit University Details</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_institutes.html">
-				<i class="fa fa-institution"></i><span>Add Institutes</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_department.html">
-				<i class="fa fa-newspaper-o"></i><span>Add Department</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_hod.html">
-				<i class="fa fa-user-plus"></i><span>Create HOD Account</span>
-			</a>  
-		</li>
-		<li>
-			<a href="faculty_list.html">
-				<i class="fa fa-list"></i><span>Faculty List</span>
-			</a>  
-		</li>
-		  
-		<!--HOD-->
-		<li>
-			<a href="hod_details.html">
-				<i class="fa fa-pencil"></i><span>Edit Details</span>
-			</a>  
-		</li> 
-		<li>
-			<a href="add_qualifications.html">
-				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_faculty.html">
-				<i class="fa fa-user-plus"></i><span>Add Faculty</span>
-			</a>  
-		</li>
-		<li>
-			<a href="faculty_list.html">
-				<i class="fa fa-list"></i><span>Faculty List</span>
-			</a>  
-		</li>
-		<li>
-          <a href="teaching_process.html">
-            <i class="fa fa-home"></i><span>Teaching Process</span>
-		  </a>
-		</li>
-		<li>
-			<a href="departmental_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="institutional_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="acr.html">
-				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
-			</a>  
-		</li>
-		<li>
-          <a href="society_contribution.html">
-            <i class="fa fa-home"></i><span>Contribution To Society</span>
-		  </a>
-		</li>
-		<li>
-			<a href="upload_time_table.html">
-				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
-			</a>  
-		</li>
-		<!-- HOD END-->
-		  
-		<!--Faculty-->
-		<li>
-			<a href="faculty_details.html">
-				<i class="fa fa-pencil"></i><span>Edit Details</span>
-			</a>  
-		</li> 
-		<li>
-			<a href="add_qualifications.html">
-				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
-			</a>  
-		</li>
-		<li>
-          <a href="teaching_process.html">
-            <i class="fa fa-home"></i><span>Teaching Process</span>
-		  </a>
-		</li>
-		<li>
-			<a href="departmental_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="institutional_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="acr.html">
-				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
-			</a>  
-		</li>
-		<li>
-          <a href="society_contribution.html">
-            <i class="fa fa-home"></i><span>Contribution To Society</span>
-		  </a>
-		</li>
-		<li>
-			<a href="upload_time_table.html">
-				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
-			</a>  
-		</li>
-		<!-- Faculty END-->
-		<!--Technical END-->
-		  
-		<!--Diploma Sidebar-->
-        <li class="active">
-          <a href="index.html">
-            <i class="fa fa-home"></i> <span>Home</span>
-		  </a>
-		</li>
-		  
-		<!--University Head-->
-		<li>
-			<a href="add_university_details.html">
-				<i class="fa fa-pencil"></i><span>Edit University Details</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_institutes.html">
-				<i class="fa fa-institution"></i><span>Add Institutes</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_department.html">
-				<i class="fa fa-newspaper-o"></i><span>Add Department</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_hod_diploma.html">
-				<i class="fa fa-user-plus"></i><span>Create HOD Account</span>
-			</a>  
-		</li>
-		<li>
-			<a href="faculty_list.html">
-				<i class="fa fa-list"></i><span>Faculty List</span>
-			</a>  
-		</li>
-		  
-		<!--HOD-->
-		<li>
-			<a href="hod_details_diploma.html">
-				<i class="fa fa-pencil"></i><span>Edit Details</span>
-			</a>  
-		</li> 
-		<li>
-			<a href="add_qualifications_diploma.html">
-				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_faculty_diploma.html">
-				<i class="fa fa-user-plus"></i><span>Add Faculty</span>
-			</a>  
-		</li>
-		<li>
-			<a href="faculty_list.html">
-				<i class="fa fa-list"></i><span>Faculty List</span>
-			</a>  
-		</li>
-		<li>
-          <a href="teaching_process.html">
-            <i class="fa fa-home"></i><span>Teaching Process</span>
-		  </a>
-		</li>
-		<li>
-			<a href="departmental_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="institutional_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="acr.html">
-				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
-			</a>  
-		</li>
-		<li>
-          <a href="society_contribution.html">
-            <i class="fa fa-home"></i><span>Contribution To Society</span>
-		  </a>
-		</li>
-		<li>
-			<a href="upload_time_table.html">
-				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
-			</a>  
-		</li>
-		<!-- HOD END-->
-		  
-		<!--Faculty-->
-		<li>
-			<a href="faculty_details_diploma.html">
-				<i class="fa fa-pencil"></i><span>Edit Details</span>
-			</a>  
-		</li> 
-		<li>
-			<a href="add_qualifications.html">
-				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
-			</a>  
-		</li>
-		<li>
-          <a href="teaching_process.html">
-            <i class="fa fa-home"></i><span>Teaching Process</span>
-		  </a>
-		</li>
-		<li>
-			<a href="departmental_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="institutional_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="acr.html">
-				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
-			</a>  
-		</li>
-		<li>
-          <a href="society_contribution.html">
-            <i class="fa fa-home"></i><span>Contribution To Society</span>
-		  </a>
-		</li>
-		<li>
-			<a href="upload_time_table.html">
-				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
-			</a>  
-		</li>
-		<!-- Faculty END-->
-		<!--Diploma END--> 
-
-      </ul>
+     <?php include 'sidebar.php';?>
     </section>
     <!-- /.sidebar -->
   </aside>
@@ -435,21 +170,19 @@
 											<input type="file" name="file[]" id="file" style="margin-top: 5px" required>
 										</td>
 										<td>
-											<button type="button" name="add" id="add">Add More</button>
+											<button type="button" class="btn btn_remove btn-sm btn-danger" name="remove" id="" style="border-radius: 50%;"><i class="fa fa-remove"></i></button>
 										</td>
 									</tr>
 								</tbody>
 							</table>
 						<div class="row">
-								<!-- <div class="col-md-3">
-									<button type="button" class="btn btn-block btn-primary"><i class="fa fa-plus" style="margin-right: 5px"></i> Add More</button>
-								</div> -->
-								<!-- <div class="col-md-3">
-									<button type="submit" name="submit-btn" id="submit-btn" class="btn btn-block btn-success"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
-								</div> -->
+								 <div class="col-md-3">
+									<button type="button" name="add" id="add" class="btn btn-block btn-primary"><i class="fa fa-plus" style="margin-right: 5px"></i> Add More</button>
+								</div> 
+								<div class="col-md-3">
+									<button type="button" name="submit-btn" id="submit-btn" class="btn btn-block btn-success"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+								</div>
 							</div>
-						<button type="button" name="submit-btn" id="submit-btn">Submit</button>
-
 					</div>
 					</form>
 					<script>
@@ -458,7 +191,7 @@
 							$("#add").click(() => {
 								i++;
 								// $("#dynamic_field").append('<tr id="row'+i+'"><td><input type="text" name="name[]" class="form-control" id="name"></td><td><button class="btn btn_remove btn-danger" type="button" name="remove" id="'+i+'">Remove</button></td></tr>')
-								$("#dynamic_field").append('<tr id="row'+i+'"><td><input type="text" name="year[]" id="year" class="form-control" placeholder="Year" required></td><td><select name="semester[]" id="semester" class="form-control"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></td><td><input type="text" name="courseCode[]" id="courseCode" class="form-control" placeholder="Course Code" required></td><td><input type="number" name="scheduleClass[]" id="scheduleClass" class="form-control" placeholder="Scheduled Classes" min="0" required></td><td><input type="number" name="heldClass[]" id="heldClass" class="form-control" placeholder="Held Classes" min="0" required></td><td><input type="file" name="file[]" id="file" style="margin-top: 5px" required></td><td><button type="button" class="btn btn_remove btn-danger" name="remove" id="'+i+'">X</button></td></tr>')
+								$("#dynamic_field").append('<tr id="row'+i+'"><td><input type="text" name="year[]" id="year" class="form-control" placeholder="Year" required></td><td><select name="semester[]" id="semester" class="form-control"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></td><td><input type="text" name="courseCode[]" id="courseCode" class="form-control" placeholder="Course Code" required></td><td><input type="number" name="scheduleClass[]" id="scheduleClass" class="form-control" placeholder="Scheduled Classes" min="0" required></td><td><input type="number" name="heldClass[]" id="heldClass" class="form-control" placeholder="Held Classes" min="0" required></td><td><input type="file" name="file[]" id="file" style="margin-top: 5px" required></td><td><button type="button" class="btn btn-sm btn_remove btn-danger" name="remove" id="'+i+'"style="border-radius: 50%;"><i class="fa fa-remove"></i></button></td></tr>')
 							})
 							
 							$(document).on('click', '.btn_remove', function(){

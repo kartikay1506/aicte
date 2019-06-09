@@ -57,9 +57,9 @@
         <ul class="nav navbar-nav">
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">Username</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -67,8 +67,8 @@
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  Username
+                  <small>Details</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -105,275 +105,10 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <p>Username</p>
         </div>
       </div>
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-		<!--Technical Sidebar-->
-        <li class="active">
-          <a href="index.html">
-            <i class="fa fa-home"></i> <span>Home</span>
-		  </a>
-		</li>
-		  
-		<!--University Head-->
-		<li>
-			<a href="add_university_details.html">
-				<i class="fa fa-pencil"></i><span>Edit University Details</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_institutes.html">
-				<i class="fa fa-institution"></i><span>Add Institutes</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_department.html">
-				<i class="fa fa-newspaper-o"></i><span>Add Department</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_hod.html">
-				<i class="fa fa-user-plus"></i><span>Create HOD Account</span>
-			</a>  
-		</li>
-		<li>
-			<a href="faculty_list.html">
-				<i class="fa fa-list"></i><span>Faculty List</span>
-			</a>  
-		</li>
-		  
-		<!--HOD-->
-		<li>
-			<a href="hod_details.html">
-				<i class="fa fa-pencil"></i><span>Edit Details</span>
-			</a>  
-		</li> 
-		<li>
-			<a href="add_qualifications.html">
-				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_faculty.html">
-				<i class="fa fa-user-plus"></i><span>Add Faculty</span>
-			</a>  
-		</li>
-		<li>
-			<a href="faculty_list.html">
-				<i class="fa fa-list"></i><span>Faculty List</span>
-			</a>  
-		</li>
-		<li>
-          <a href="teaching_process.html">
-            <i class="fa fa-home"></i><span>Teaching Process</span>
-		  </a>
-		</li>
-		<li>
-			<a href="departmental_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="institutional_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="acr.html">
-				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
-			</a>  
-		</li>
-		<li>
-          <a href="society_contribution.html">
-            <i class="fa fa-home"></i><span>Contribution To Society</span>
-		  </a>
-		</li>
-		<li>
-			<a href="upload_time_table.html">
-				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
-			</a>  
-		</li>
-		<!-- HOD END-->
-		  
-		<!--Faculty-->
-		<li>
-			<a href="faculty_details.html">
-				<i class="fa fa-pencil"></i><span>Edit Details</span>
-			</a>  
-		</li> 
-		<li>
-			<a href="add_qualifications.html">
-				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
-			</a>  
-		</li>
-		<li>
-          <a href="teaching_process.html">
-            <i class="fa fa-home"></i><span>Teaching Process</span>
-		  </a>
-		</li>
-		<li>
-			<a href="departmental_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="institutional_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="acr.html">
-				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
-			</a>  
-		</li>
-		<li>
-          <a href="society_contribution.html">
-            <i class="fa fa-home"></i><span>Contribution To Society</span>
-		  </a>
-		</li>
-		<li>
-			<a href="upload_time_table.html">
-				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
-			</a>  
-		</li>
-		<!-- Faculty END-->
-		<!--Technical END-->
-		  
-		<!--Diploma Sidebar-->
-        <li class="active">
-          <a href="index.html">
-            <i class="fa fa-home"></i> <span>Home</span>
-		  </a>
-		</li>
-		  
-		<!--University Head-->
-		<li>
-			<a href="add_university_details.html">
-				<i class="fa fa-pencil"></i><span>Edit University Details</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_institutes.html">
-				<i class="fa fa-institution"></i><span>Add Institutes</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_department.html">
-				<i class="fa fa-newspaper-o"></i><span>Add Department</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_hod_diploma.html">
-				<i class="fa fa-user-plus"></i><span>Create HOD Account</span>
-			</a>  
-		</li>
-		<li>
-			<a href="faculty_list.html">
-				<i class="fa fa-list"></i><span>Faculty List</span>
-			</a>  
-		</li>
-		  
-		<!--HOD-->
-		<li>
-			<a href="hod_details_diploma.html">
-				<i class="fa fa-pencil"></i><span>Edit Details</span>
-			</a>  
-		</li> 
-		<li>
-			<a href="add_qualifications_diploma.html">
-				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
-			</a>  
-		</li>
-		<li>
-			<a href="add_faculty_diploma.html">
-				<i class="fa fa-user-plus"></i><span>Add Faculty</span>
-			</a>  
-		</li>
-		<li>
-			<a href="faculty_list.html">
-				<i class="fa fa-list"></i><span>Faculty List</span>
-			</a>  
-		</li>
-		<li>
-          <a href="teaching_process.html">
-            <i class="fa fa-home"></i><span>Teaching Process</span>
-		  </a>
-		</li>
-		<li>
-			<a href="departmental_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="institutional_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="acr.html">
-				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
-			</a>  
-		</li>
-		<li>
-          <a href="society_contribution.html">
-            <i class="fa fa-home"></i><span>Contribution To Society</span>
-		  </a>
-		</li>
-		<li>
-			<a href="upload_time_table.html">
-				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
-			</a>  
-		</li>
-		<!-- HOD END-->
-		  
-		<!--Faculty-->
-		<li>
-			<a href="faculty_details_diploma.html">
-				<i class="fa fa-pencil"></i><span>Edit Details</span>
-			</a>  
-		</li> 
-		<li>
-			<a href="add_qualifications.html">
-				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
-			</a>  
-		</li>
-		<li>
-          <a href="teaching_process.html">
-            <i class="fa fa-home"></i><span>Teaching Process</span>
-		  </a>
-		</li>
-		<li>
-			<a href="departmental_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="institutional_activities.html">
-				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
-			</a>  
-		</li>
-		<li>
-			<a href="acr.html">
-				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
-			</a>  
-		</li>
-		<li>
-          <a href="society_contribution.html">
-            <i class="fa fa-home"></i><span>Contribution To Society</span>
-		  </a>
-		</li>
-		<li>
-			<a href="upload_time_table.html">
-				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
-			</a>  
-		</li>
-		<!-- Faculty END-->
-		<!--Diploma END--> 
-
-      </ul>
+      <?php include 'sidebar.php';?>
     </section>
     <!-- /.sidebar -->
   </aside>
@@ -393,55 +128,45 @@
 					<div class="card">
 						<div class="card-body">
 					<div style="margin-left: 15px">
-						<form id="hod-form" method="post">
+						<form id="institute-form" method="post">
 							<div class="form-group row">
 								<div class="col-md-5">
 									<label style="font-size: 1.20em;margin-top: 5px">University Code</label>
 									<input type="text" class="form-control" placeholder="" disabled>
 								</div>
 								<div class="col-md-6">
-									<label style="font-size: 1.20em;margin-top: 5px">Department</label>
-									<input type="text" class="form-control" placeholder="" disabled>
+									<label style="font-size: 1.20em;margin-top: 5px">Institute Code</label>
+									<input type="text" class="form-control" placeholder="Institute Code">
 								</div>
 							</div>
 							
 							
 						<div class="form-group row">
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Id</label>
-								<input type="text" class="form-control" placeholder="Enter Faculty Id">
-							</div>
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Level</label>
-								<select class="form-control" id="">
-									<option selected disabled value="Select Faculty Level">Select Faculty Level</option>
-									<option value="10">Assistant Professor - 10</option>
-									<option value="13A1">Associate Professor - 13A1</option>
-									<option value="14">Professor - 14</option>
-									<option value="14">Principal/Director - 14</option>
-								</select>
+							<div class="col-md-11">
+								<label style="font-size: 1.20em;margin-top: 5px">Institute Name</label>
+								<input type="text" class="form-control" placeholder="Enter Institute Name">
 							</div>
 						</div>
 							
 						<div class="form-group row">
-							<div class="col-md-7">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Name</label>
-								<input type="text" class="form-control" placeholder="Enter Name">
+							<div class="col-md-4">
+								<label style="font-size: 1.20em;margin-top: 5px">State</label>
+								<input type="text" class="form-control" placeholder="Enter State">
 							</div>
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Contact </label>
-								<input type="tex" class="form-control" placeholder="Contact No.">
+							<div class="col-md-4">
+								<label style="font-size: 1.20em;margin-top: 5px">District </label>
+								<input type="tex" class="form-control" placeholder="District">
+							</div>
+							<div class="col-md-4">
+								<label style="font-size: 1.20em;margin-top: 5px">Postal Code </label>
+								<input type="tex" class="form-control" placeholder="Postal Code">
 							</div>
 						</div>
 						
 						<div class="form-group row">
 							<div class="col-md-7">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Email</label>
-								<input type="text" class="form-control" placeholder="Enter Faculty Email">
-							</div>
-							<div class="col-md-5">
-								<label style="font-size: 1.20em;margin-top: 5px">Date Of Joining</label>
-								<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+								<label style="font-size: 1.20em;margin-top: 5px">Institute Email</label>
+								<input type="text" class="form-control" placeholder="Enter Institute Email">
 							</div>
 						</div>
 							
