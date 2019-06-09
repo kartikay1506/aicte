@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Home</title>
+  <title>Institute</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -44,7 +44,10 @@
   <header class="main-header">
     <!-- Logo -->
     <a href="https://www.aicte-india.org" class="logo">
-		<img src="/AICTE/assets/img/AICTE_LOGO.png" style="height: 45px;width: 50px;margin-right: 10px"><b>AICTE</b>
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>A</b>LT</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>AICTE</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -54,9 +57,9 @@
         <ul class="nav navbar-nav">
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
-            <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Username</span>
+              <span class="hidden-xs">Alexander Pierce</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -64,8 +67,8 @@
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Username
-                  <small>Details</small>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -95,17 +98,18 @@
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
+        <section class="sidebar">
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Username</p>
+          <p>Alexander Pierce</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
-		<!-- sidebar menu: : style can be found in sidebar.less -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
 		<!--Technical Sidebar-->
         <li class="active">
@@ -116,79 +120,79 @@
 		  
 		<!--University Head-->
 		<li>
-			<a href="add_university_details.php">
+			<a href="add_university_details.html">
 				<i class="fa fa-pencil"></i><span>Edit University Details</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_institutes.php">
+			<a href="add_institutes.html">
 				<i class="fa fa-institution"></i><span>Add Institutes</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_department.php">
+			<a href="add_department.html">
 				<i class="fa fa-newspaper-o"></i><span>Add Department</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_hod.php">
+			<a href="add_hod.html">
 				<i class="fa fa-user-plus"></i><span>Create HOD Account</span>
 			</a>  
 		</li>
 		<li>
-			<a href="faculty_list.php">
+			<a href="faculty_list.html">
 				<i class="fa fa-list"></i><span>Faculty List</span>
 			</a>  
 		</li>
 		  
 		<!--HOD-->
 		<li>
-			<a href="hod_details.php">
+			<a href="hod_details.html">
 				<i class="fa fa-pencil"></i><span>Edit Details</span>
 			</a>  
 		</li> 
 		<li>
-			<a href="add_qualifications.php">
+			<a href="add_qualifications.html">
 				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_faculty.php">
+			<a href="add_faculty.html">
 				<i class="fa fa-user-plus"></i><span>Add Faculty</span>
 			</a>  
 		</li>
 		<li>
-			<a href="faculty_list.php">
+			<a href="faculty_list.html">
 				<i class="fa fa-list"></i><span>Faculty List</span>
 			</a>  
 		</li>
 		<li>
-          <a href="teaching_process.php">
+          <a href="teaching_process.html">
             <i class="fa fa-home"></i><span>Teaching Process</span>
 		  </a>
 		</li>
 		<li>
-			<a href="departmental_activities.php">
+			<a href="departmental_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="institutional_activities.php">
+			<a href="institutional_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="acr.php">
+			<a href="acr.html">
 				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
 			</a>  
 		</li>
 		<li>
-          <a href="society_contribution.php">
+          <a href="society_contribution.html">
             <i class="fa fa-home"></i><span>Contribution To Society</span>
 		  </a>
 		</li>
 		<li>
-			<a href="upload_time_table.php">
+			<a href="upload_time_table.html">
 				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
 			</a>  
 		</li>
@@ -196,42 +200,42 @@
 		  
 		<!--Faculty-->
 		<li>
-			<a href="faculty_details.php">
+			<a href="faculty_details.html">
 				<i class="fa fa-pencil"></i><span>Edit Details</span>
 			</a>  
 		</li> 
 		<li>
-			<a href="add_qualifications.php">
+			<a href="add_qualifications.html">
 				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
 			</a>  
 		</li>
 		<li>
-          <a href="teaching_process.php">
+          <a href="teaching_process.html">
             <i class="fa fa-home"></i><span>Teaching Process</span>
 		  </a>
 		</li>
 		<li>
-			<a href="departmental_activities.php">
+			<a href="departmental_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="institutional_activities.php">
+			<a href="institutional_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="acr.php">
+			<a href="acr.html">
 				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
 			</a>  
 		</li>
 		<li>
-          <a href="society_contribution.php">
+          <a href="society_contribution.html">
             <i class="fa fa-home"></i><span>Contribution To Society</span>
 		  </a>
 		</li>
 		<li>
-			<a href="upload_time_table.php">
+			<a href="upload_time_table.html">
 				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
 			</a>  
 		</li>
@@ -247,79 +251,79 @@
 		  
 		<!--University Head-->
 		<li>
-			<a href="add_university_details.php">
+			<a href="add_university_details.html">
 				<i class="fa fa-pencil"></i><span>Edit University Details</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_institutes.php">
+			<a href="add_institutes.html">
 				<i class="fa fa-institution"></i><span>Add Institutes</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_department.php">
+			<a href="add_department.html">
 				<i class="fa fa-newspaper-o"></i><span>Add Department</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_hod_diploma.php">
+			<a href="add_hod_diploma.html">
 				<i class="fa fa-user-plus"></i><span>Create HOD Account</span>
 			</a>  
 		</li>
 		<li>
-			<a href="faculty_list.php">
+			<a href="faculty_list.html">
 				<i class="fa fa-list"></i><span>Faculty List</span>
 			</a>  
 		</li>
 		  
 		<!--HOD-->
 		<li>
-			<a href="hod_details_diploma.php">
+			<a href="hod_details_diploma.html">
 				<i class="fa fa-pencil"></i><span>Edit Details</span>
 			</a>  
 		</li> 
 		<li>
-			<a href="add_qualifications_diploma.php">
+			<a href="add_qualifications_diploma.html">
 				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
 			</a>  
 		</li>
 		<li>
-			<a href="add_faculty_diploma.php">
+			<a href="add_faculty_diploma.html">
 				<i class="fa fa-user-plus"></i><span>Add Faculty</span>
 			</a>  
 		</li>
 		<li>
-			<a href="faculty_list.php">
+			<a href="faculty_list.html">
 				<i class="fa fa-list"></i><span>Faculty List</span>
 			</a>  
 		</li>
 		<li>
-          <a href="teaching_process.php">
+          <a href="teaching_process.html">
             <i class="fa fa-home"></i><span>Teaching Process</span>
 		  </a>
 		</li>
 		<li>
-			<a href="departmental_activities.php">
+			<a href="departmental_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="institutional_activities.php">
+			<a href="institutional_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="acr.php">
+			<a href="acr.html">
 				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
 			</a>  
 		</li>
 		<li>
-          <a href="society_contribution.php">
+          <a href="society_contribution.html">
             <i class="fa fa-home"></i><span>Contribution To Society</span>
 		  </a>
 		</li>
 		<li>
-			<a href="upload_time_table.php">
+			<a href="upload_time_table.html">
 				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
 			</a>  
 		</li>
@@ -327,42 +331,42 @@
 		  
 		<!--Faculty-->
 		<li>
-			<a href="faculty_details_diploma.php">
+			<a href="faculty_details_diploma.html">
 				<i class="fa fa-pencil"></i><span>Edit Details</span>
 			</a>  
 		</li> 
 		<li>
-			<a href="add_qualifications_diploma.php">
+			<a href="add_qualifications.html">
 				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
 			</a>  
 		</li>
 		<li>
-          <a href="teaching_process.php">
+          <a href="teaching_process.html">
             <i class="fa fa-home"></i><span>Teaching Process</span>
 		  </a>
 		</li>
 		<li>
-			<a href="departmental_activities.php">
+			<a href="departmental_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Departmental Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="institutional_activities.php">
+			<a href="institutional_activities.html">
 				<i class="fa fa-puzzle-piece"></i><span>Institutional Activities</span>
 			</a>  
 		</li>
 		<li>
-			<a href="acr.php">
+			<a href="acr.html">
 				<i class="fa fa-puzzle-piece"></i><span>ACR</span>
 			</a>  
 		</li>
 		<li>
-          <a href="society_contribution.php">
+          <a href="society_contribution.html">
             <i class="fa fa-home"></i><span>Contribution To Society</span>
 		  </a>
 		</li>
 		<li>
-			<a href="upload_time_table.php">
+			<a href="upload_time_table.html">
 				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
 			</a>  
 		</li>
@@ -376,72 +380,103 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Dashboard
-      </h1>
-    </section>
 
     <!-- Main content -->
     <section class="content">
-      <!-- Small boxes (Stat box) -->
-      <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-				<p>Anyhting goes here</p>
-            </div>
-            <div class="icon">
-				<!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-				<p>Anything goes here</p>
-            </div>
-            <div class="icon">
-             <!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <p>Anything goes here</p>
-            </div>
-            <div class="icon">
-              <!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-				<p>Anything goes here</p>
-            </div>
-            <div class="icon">
-              <!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-      </div>
-      <!-- /.row -->
-      
+      <div class="card" style="width: 50vw">
+	  	<div class="card-body">
+			<div class="card">
+				<div class="card-header">
+					<i class="fa fa-reorder" style="margin-right: 5px"></i>Edit Details
+				</div>
+				<div class="card-body">
+					<div class="card">
+						<div class="card-body">
+					<div style="margin-left: 15px">
+						<form id="hod-form" method="post">
+							<div class="form-group row">
+								<div class="col-md-5">
+									<label style="font-size: 1.20em;margin-top: 5px">University Code</label>
+									<input type="text" class="form-control" placeholder="" disabled>
+								</div>
+								<div class="col-md-6">
+									<label style="font-size: 1.20em;margin-top: 5px">Department</label>
+									<input type="text" class="form-control" placeholder="" disabled>
+								</div>
+							</div>
+							
+							
+						<div class="form-group row">
+							<div class="col-md-5">
+								<label style="font-size: 1.20em;margin-top: 5px">Faculty Id</label>
+								<input type="text" class="form-control" placeholder="Enter Faculty Id">
+							</div>
+							<div class="col-md-5">
+								<label style="font-size: 1.20em;margin-top: 5px">Faculty Level</label>
+								<select class="form-control" id="">
+									<option selected disabled value="Select Faculty Level">Select Faculty Level</option>
+									<option value="10">Assistant Professor - 10</option>
+									<option value="13A1">Associate Professor - 13A1</option>
+									<option value="14">Professor - 14</option>
+									<option value="14">Principal/Director - 14</option>
+								</select>
+							</div>
+						</div>
+							
+						<div class="form-group row">
+							<div class="col-md-7">
+								<label style="font-size: 1.20em;margin-top: 5px">Faculty Name</label>
+								<input type="text" class="form-control" placeholder="Enter Name">
+							</div>
+							<div class="col-md-5">
+								<label style="font-size: 1.20em;margin-top: 5px">Contact </label>
+								<input type="tex" class="form-control" placeholder="Contact No.">
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<div class="col-md-7">
+								<label style="font-size: 1.20em;margin-top: 5px">Faculty Email</label>
+								<input type="text" class="form-control" placeholder="Enter Faculty Email">
+							</div>
+							<div class="col-md-5">
+								<label style="font-size: 1.20em;margin-top: 5px">Date Of Joining</label>
+								<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+							</div>
+						</div>
+							
+					</form>
+					</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-sm btn-primary" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
+				</div>
+			</div>  
+			
+			<div class="card">
+				<div class="card-header">
+					<i class="fa fa-file-excel-o" style="margin-right: 5px"></i>Upload an Excel File
+				</div>
+				<div class="card-body">
+					<div class="card">
+						<div class="card-body">
+							<input type="file">
+						</div>
+					</div>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-sm btn-primary" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
+					<button class="btn btn-sm btn-success"><i class="fa fa-download" style="margin-right: 5px"></i>Template</button>
+				</div>
+			</div>
+			
+		</div>
+	  </div>
     </section>
     <!-- /.content -->
   </div>
