@@ -160,13 +160,13 @@
 							<div class="card-body">
 								<div class="form-group">
 									<label class="label-text" for="university_code">
-										University/Institute Code
+										Institution Code
 									</label>
 									<div class="input-group">
 										<span class="input-group-addon">
 											<i class="fa fa-institution"></i>
 										</span> 
-										<input id="email" type="text" class="form-control input-lg" name="university_code" placeholder="University/Institute Code" required>  
+										<input id="email" type="text" class="form-control input-lg" name="university_code" placeholder="Institution Code" required>  
 									</div>
 								</div>
 								<div class="form-group">

@@ -186,7 +186,7 @@
 									success:function(data)
 									{
 										alert(data);
-										$('#add_name')[0].reset();
+										//$('#add_name')[0].reset();
 									}
 								});
 							});

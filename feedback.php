@@ -108,9 +108,14 @@ include './src/php/auth.php';
 				<i class="fa fa-user"></i><span>Student Feedback</span>
 			  </a>
 		</li>
+		<li class="active">
+			  <a href="feedback.php">
+				<i class="fa fa-user"></i><span>Student Feedback</span>
+			  </a>
+		</li>
 		<li>
           <a href="university_feedback.php">
-            <i class="fa fa-institution"></i><span>University Feedback</span>
+            <i class="fa fa-institution"></i><span>Institution Feedback</span>
 		  </a>
 		</li>
 		  <li>
