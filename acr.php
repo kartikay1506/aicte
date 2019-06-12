@@ -135,7 +135,7 @@
 										<th style="width: 10vw">Year</th>
 										<th style="width: 20vw">Activity</th>
 										<th style="width: 8vw">Credit Points</th>
-										<th>Proof</th>
+										<th>Performa</th>
 										<th>Settings</th>
 									</tr>
 								</thead>

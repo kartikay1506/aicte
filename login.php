@@ -204,8 +204,8 @@
 						</div>
 					</div>
 					<div class="footer">
-						<p>&copy; 2019 <a href="https://www.aicte-india.org">AICTE</a>. All Rights Reserved.<br>
-							Designed By:<a href="https://www.geu.ac.in">Graphic Era Deemed to be University</a> 
+						<p>&copy; 2019 <a href="https://www.aicte-india.org"  style="color:#FF4040;text-decoration: underline">AICTE</a>. All Rights Reserved.<br>
+							Designed By:<a href="https://www.geu.ac.in" style="color:#FF4040;text-decoration: underline">Graphic Era Deemed to be University</a> 
 						</p>
 					</div>
 				</div>

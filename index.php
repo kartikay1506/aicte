@@ -61,17 +61,17 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Username</span>
+              <img src="assets/img/avatar.png" class="user-image" alt="User Image">
+              <span class="hidden-xs">Rajiv Sharma</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="assets/img/avatar.png" class="img-circle" alt="User Image">
 
                 <p>
-                 Username
-                  <small>Details</small>
+                 Rajiv Sharma
+                  <small>Assistant Professor</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -105,10 +105,10 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="assets/img/avatar.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Username</p>
+          <p>Rajiv Sharma</p>
         </div>
       </div>
       <?php include 'sidebar.php';?>
@@ -118,72 +118,58 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Dashboard
-      </h1>
-    </section>
-
     <!-- Main content -->
     <section class="content">
-      <!-- Small boxes (Stat box) -->
-      <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-				<p>Anyhting goes here</p>
-            </div>
-            <div class="icon">
-				<!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-				<p>Anything goes here</p>
-            </div>
-            <div class="icon">
-             <!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <p>Anything goes here</p>
-            </div>
-            <div class="icon">
-              <!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-				<p>Anything goes here</p>
-            </div>
-            <div class="icon">
-              <!--Any icon-->
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-      </div>
-      <!-- /.row -->
-      
+		<div class="card" style="width: 60vw">
+			<div class="card-body">
+				<div class="card">
+					<div class="card-header">
+						<i class="fa fa-reorder" style="margin-right: 5px"></i>Details
+					</div>
+					<div class="card-body">
+						<div class="row" style="margin-bottom: 20px">
+							<div class="col-md-2">
+								<img class="img-circle" src="assets/img/avatar.png" height="110px" width="110px" style="margin-right: 10px">
+							</div>
+							<div class="col-md-3">
+								<h3 style="margin-top: 50px">Rajiv Sharma</h3>
+								<h4>Graphic Era</h4>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="row" style="margin-bottom: 20px;margin-top: 10px">
+								<div class="col-md-4">
+									<h5 style="display: inline"><b>Institution ID :</b></h5>
+									<p style="display: inline">172749279</p>
+								</div>
+								<div class="col-md-4">
+									<h5 style="display: inline"><b>Faculty ID :</b></h5>
+									<p style="display: inline">1209124</p>
+								</div>
+								<div class="col-md-4">
+									<h5 style="display: inline"><b>Level :</b></h5>
+									<p style="display: inline">Assistant Professor</p>
+								</div>
+							</div>
+							<div class="row" style="margin-bottom: 20px;margin-top: 10px">
+								<div class="col-md-3">
+									<h5 style="display: inline"><b>Contact :</b></h5>
+									<p style="display: inline">+91 9690983354</p>
+								</div>
+								<div class="col-md-5">
+									<h5 style="display: inline"><b>Email :</b></h5>
+									<p style="display: inline">rajivsharma121@gmail.com</p>
+								</div>
+								<div class="col-md-4">
+									<h5 style="display: inline"><b>Date of Joining :</b></h5>
+									<p style="display: inline">10/06/2019</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
     </section>
     <!-- /.content -->
   </div>
