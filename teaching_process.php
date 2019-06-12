@@ -41,6 +41,17 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 </head>
+<style>
+	input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-outer-spin-button { 
+	  -webkit-appearance: none;
+	  margin: 0; 
+	}
+	input[type=number] { 
+	  -moz-appearance: textfield;
+	  margin: 0; 
+	}
+</style>
 <?php
 	include './src/php/auth.php';
 ?>
@@ -131,7 +142,7 @@
 							<table class="table table-bordered" id="dynamic_field">
 								<thead>
 									<tr>
-										<th style="width: 10vw">Year</th>
+										<th style="width: 9vw">Year</th>
 										<th>Semester</th>
 										<th>Course Code/Name</th>
 										<th>Number of Scheduled Classes</th>
@@ -147,6 +158,7 @@
 										</td>
 										<td>
 											<select name="semester[]" id="semester" class="form-control">
+												<option value="" selected disabled></option>
 												<option value="1">1</option>
 												<option value="2">2</option>
 												<option value="3">3</option>

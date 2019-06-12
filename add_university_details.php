@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>University</title>
+  <title>Institution</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -134,7 +134,7 @@
 			<div class="card-body">
 				<div class="card">
 					<div class="card-header">
-						<i class="fa fa-reorder" style="margin-right: 5px"></i>Edit University Details
+						<i class="fa fa-reorder" style="margin-right: 5px"></i>Edit Institution Details
 					</div>
 					<div class="card-body">
 						<div class="card">

@@ -159,6 +159,19 @@
 						<form id="login" action="./src/php/main.php" method="post">
 							<div class="card-body">
 								<div class="form-group">
+									<label class="label-text" for="login_type">
+										Login Type
+									</label>
+									<div class="input-group" style="width: 38vw">
+										<select name="login_type" id="login_type" class="form-control input-lg" required>
+											<option value="institution">Institution</option>
+											<option value="hod">HOD</option>
+											<option value="faculty">Faculty</option>
+											<option value="student">Student</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
 									<label class="label-text" for="university_code">
 										Institution Code
 									</label>

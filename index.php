@@ -62,7 +62,7 @@
           <li class="dropdown user user-menu">
             <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
               <img src="assets/img/avatar.png" class="user-image" alt="User Image">
-              <span class="hidden-xs">Rajiv Sharma</span>
+              <span class="hidden-xs"><?php include'./get_user.php';?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -70,8 +70,8 @@
                 <img src="assets/img/avatar.png" class="img-circle" alt="User Image">
 
                 <p>
-                 Rajiv Sharma
-                  <small>Assistant Professor</small>
+                 <?php include'./get_user.php';?>
+                  <small>Details</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -108,7 +108,7 @@
           <img src="assets/img/avatar.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Rajiv Sharma</p>
+          <p><?php include'./get_user.php';?></p>
         </div>
       </div>
       <?php include 'sidebar.php';?>

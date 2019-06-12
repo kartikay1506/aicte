@@ -162,6 +162,7 @@ if (isset($_POST['addFaculty-btn'])) {
 if (isset($_POST['login-btn'])) {
     // Session Started
     session_start();
+	$loginType = mysqli_real_escape_string($conn, $_POST['login_type']);
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $universityCode = mysqli_real_escape_string($conn, $_POST['university_code']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
