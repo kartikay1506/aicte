@@ -38,16 +38,15 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
 <?php
 	include './src/php/auth.php';
 ?>
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
-
   <header class="main-header">
     <!-- Logo -->
-    <a href="https://www.aicte-india.org" class="logo">
-      <img src="/AICTE/assets/img/AICTE_LOGO.png" style="height: 45px;width: 50px;margin-right: 10px"><b>AICTE</b>
+     <a href="https://www.aicte-india.org" class="logo">
+		<img src="/AICTE/assets/img/AICTE_LOGO.png" style="height: 45px;width: 50px;margin-right: 10px"><b>AICTE</b>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -67,8 +66,8 @@
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Username
-                  <small>Username</small>
+                 Username
+                  <small>Details</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -89,7 +88,6 @@
           </li>
           <!-- Control Sidebar Toggle Button -->
           <li>
-
             <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
           </li>
         </ul>
@@ -109,7 +107,7 @@
           <p>Username</p>
         </div>
       </div>
-      <?php include 'sidebar.php';?>
+     <?php include 'sidebar.php';?>
     </section>
     <!-- /.sidebar -->
   </aside>
@@ -128,16 +126,24 @@
 				<div class="card-body">
 					<div class="card">
 						<div class="card-body">
-					<div style="margin-left: 15px">
+          <div style="margin-left: 15px">
+          <?php
+            include_once './messages.php';
+          ?>
 						<form id="hod-form" action="./src/php/main.php" method="post">
 							<div class="form-group row">
 								<div class="col-md-5">
-									<label style="font-size: 1.20em;margin-top: 5px">University Code</label>
-									<input type="text" name="hodCode" class="form-control" placeholder="" disabled>
+                  <label style="font-size: 1.20em;margin-top: 5px">University Code</label>
+                  <?php
+                    $institution_Code = $_SESSION['institution_code'];
+                    echo '
+  						  			<input name="hod_details_universityCode" value="'.$institution_Code.'" type="text" class="form-control" placeholder="" disabled>
+                    ';
+                  ?>
 								</div>
 								<div class="col-md-6">
 									<label style="font-size: 1.20em;margin-top: 5px">Department</label>
-									<input type="text" name="hodDepartment" class="form-control" placeholder="" disabled>
+									<input name="hod_details_department" type="text" class="form-control" placeholder="Enter Department">
 								</div>
 							</div>
 							
@@ -145,16 +151,16 @@
 						<div class="form-group row">
 							<div class="col-md-5">
 								<label style="font-size: 1.20em;margin-top: 5px">HOD Id</label>
-								<input type="text" name="hodId" class="form-control" placeholder="Enter HOD Id">
+								<input type="text" name="hod_details_hodID" class="form-control" placeholder="Enter HOD Id">
 							</div>
 							<div class="col-md-5">
 								<label style="font-size: 1.20em;margin-top: 5px">Level</label>
-								<select name="hodLevel" class="form-control" id="">
+								<select name="hod_details_hodLevel" class="form-control" id="">
 									<option selected disabled value="Select Level">Select Level</option>
-									<option value="9A">Lecturer - 9A</option>
-									<option value="10">Lecturer - 10</option>
-									<option value="11">Lecturer - 11</option>
-									<option value="13A1">Lecturer - 13A1</option>
+									<option value="10">Assistant Professor - 10</option>
+									<option value="13A1">Associate Professor - 13A1</option>
+									<option value="14">Professor - 14</option>
+									<option value="14">Principal/Director - 14</option>
 								</select>
 							</div>
 						</div>
@@ -162,22 +168,22 @@
 						<div class="form-group row">
 							<div class="col-md-7">
 								<label style="font-size: 1.20em;margin-top: 5px">HOD Name</label>
-								<input type="text" name="hodName" class="form-control" placeholder="Enter Name">
+								<input type="text" name="hod_details_hodName" class="form-control" placeholder="Enter Name">
 							</div>
 							<div class="col-md-5">
 								<label style="font-size: 1.20em;margin-top: 5px">Contact </label>
-								<input type="text" name="hodContact" class="form-control" placeholder="Contact No.">
+								<input type="text" name="hod_details_hodContact" class="form-control" placeholder="Contact No.">
 							</div>
 						</div>
 						
 						<div class="form-group row">
 							<div class="col-md-7">
 								<label style="font-size: 1.20em;margin-top: 5px">HOD Email</label>
-								<input type="text" name="hodEmail" class="form-control" placeholder="Enter HOD Email">
+								<input type="text" name="hod_details_hodEmail" class="form-control" placeholder="Enter HOD Email">
 							</div>
 							<div class="col-md-5">
 								<label style="font-size: 1.20em;margin-top: 5px">Date Of Joining</label>
-								<input type="text" name="hodDateOfJoining" class="form-control" placeholder="dd/mm/yyyy">
+								<input type="date" class="form-control" name="hod_details_hodDateOfJoining" placeholder="dd/mm/yyyy">
 							</div>
 						</div>
 							
@@ -187,12 +193,12 @@
 
 				</div>
 				<div class="card-footer">
-					<button class="btn btn-sm btn-primary" name="addHodDiploma-btn" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+					<button class="btn btn-sm btn-primary" name="add_hod_details-btn" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
 					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
 				</div>
-				</form>
 			</div>  
-			
+      </form>
+      <form enctype="multipart/form-data" action="./src/php/main.php" method="POST">
 			<div class="card">
 				<div class="card-header">
 					<i class="fa fa-file-excel-o" style="margin-right: 5px"></i>Upload an Excel File
@@ -200,17 +206,20 @@
 				<div class="card-body">
 					<div class="card">
 						<div class="card-body">
-							<input type="file">
+							<input name="file" type="file">
 						</div>
 					</div>
 				</div>
 				<div class="card-footer">
-					<button class="btn btn-sm btn-primary" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+					<button type="submit" name="uploadHod-btn" class="btn btn-sm btn-primary" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Upload</button>
 					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
-					<button class="btn btn-sm btn-success"><i class="fa fa-download" style="margin-right: 5px"></i>Template</button>
+          <a href="./assets/files/HOD.xlsx" target="_blank" class="btn btn-sm btn-success"><i class="fa fa-download" style="margin-right: 5px"></i>Template</a>
 				</div>
-			</div>
-			
+      </div>
+    </form>
+    <form action="./src/php/main.php" method="POST">
+			<button type="submit" name="uploadExcelFile-btn" class="btn btn-sm btn-success" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit Data</button>
+    </form>
 		</div>
 	  </div>
     </section>

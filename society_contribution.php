@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Contribution To Society</title>
+  <title>Contribution Society</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -102,7 +102,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Username/p>
+          <p>Username</p>
         </div>
       </div>
      <?php include 'sidebar.php';?>
@@ -118,11 +118,11 @@
 			<div class="card-body">
 				<div class="card">
 					<div class="card-header">
-						<i class="fa fa-reorder" style="margin-right: 5px"></i>Contribution to Society
+						<i class="fa fa-reorder" style="margin-right: 5px"></i>Contribution Society
 					</div>
-					<form id="add-activities" method="post" enctype="multipart/form-data">
+					<form name="add_name" id="add_name">
 						<div class="card-body">
-							<table class="table table-bordered">
+							<table class="table table-bordered" id="dynamic_field">
 										<thead>
 											<tr>
 												<th style="width: 10vw">Year</th>
@@ -134,12 +134,12 @@
 											</tr>
 										</thead>
 										<tbody>
-											<tr id="">
+											<tr>
 												<td>
-													<input type="text" class="form-control" placeholder="Year" required>
+													<input type="text" name="year[]" class="form-control" placeholder="Year" required>
 												</td>
 												<td>
-													<select class="form-control" required>
+													<select name="semester[]" class="form-control" required>
 														<option selected disabled></option>
 														<option value="1">1</option>
 														<option value="2">2</option>
@@ -152,46 +152,60 @@
 													</select>
 												</td>
 												<td>
-													<select class="form-control" required>
+													<select name="activity[]" class="form-control" required>
 														<option selected disabled></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
+														<option value="lab-incharge">Lab Incharge</option>
+														<option value="consultancy">Consultancy</option>
+														<option value="timetable-incharge">Time Table Incharge</option>
+														<option value="NBA-work">NBA Work</option>
 													</select>
 												</td>
 												<td>
 													<!--Make Disabled for faculty but enabled for hod -->
-													<select class="form-control">
+													<select name="credit[]" class="form-control">
 														<option selected disabled></option>
 														<option value="1">1</option>
 														<option value="2">2</option>
 														<option value="3">3</option>
-														<option value="4">4</option>
-														<option value="5">5</option>
-														<option value="6">6</option>
-														<option value="7">7</option>
-														<option value="8">8</option>
-														<option value="9">9</option>
-														<option value="10">10</option>
 													</select>
 												</td>
 												<td>
 													<input type="file" style="margin-top: 5px" required>
-												</td>
-												<td>
-													<button type="button" class="btn btn-sm btn-danger" style="border-radius: 50%;"><i class="fa fa-remove"></i></button>
 												</td>
 											</tr>
 										</tbody>
 									</table>
 							<div class="row">
 								<div class="col-md-3">
-									<button type="button" class="btn btn-block btn-primary"><i class="fa fa-plus" style="margin-right: 5px"></i> Add More</button>
+									<button type="button" class="btn btn-block btn-primary" name="add" id="add"></i> Add More</button>
 								</div>
 								<div class="col-md-3">
-									<button type="submit" class="btn btn-block btn-success"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
-								</div>
+									<button type="button" class="btn btn-block btn-success" name="submit" id="submit"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+                  <script>
+                  $(document).ready(function () {
+                    var i = 1;
+                    $('#add').click(function() {
+                      i++;
+                      $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="year[]" class="form-control" placeholder="Year" required></td><td><select name="semester[]" class="form-control" required><option selected disabled></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></td><td><select name="activity[]" class="form-control" required><option selected disabled></option><option value="lab-incharge">Lab Incharge</option><option value="consultancy">Consultancy</option><option value="timetable-incharge">Time Table Incharge</option><option value="NBA-work">NBA Work</option></select></td><td><!--Make Disabled for faculty but enabled for hod --><select name="credit[]" class="form-control"><option selected disabled></option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></td><td><input type="file" style="margin-top: 5px" required><button name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+                    });
+                    $(document).on('click', '.btn_remove', function() {
+                      var button_id = $(this).attr("id");
+                      $("#row"+button_id+"").remove();
+                    });
+                    $("#submit").click(function() {
+                      $.ajax({
+                        url: "./php/contribution_society.php",
+                        method: "POST",
+                        data: $("#add_name").serialize(),
+                        success: function(data) {
+                          alert("Data Inserted");
+                          $('#add_name')[0].reset();
+                        }
+                      })
+                    })
+                  })
+                </script>
+                </div>
 							</div>
 						  </div>
 					</form>

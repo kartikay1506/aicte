@@ -127,7 +127,7 @@
 					<div class="card-header">
 						<i class="fa fa-reorder" style="margin-right: 5px"></i>ACR
 					</div>
-					<form action="./src/php/main.php" enctype="multipart/form-data" name="add_name" id="add_name">
+					<form name="add_name" id="add_name">
 						<div class="card-body">
 							<table class="table table-bordered" id="dynamic_field">
 								<thead>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Institutional Activities</title>
+  <title>Departmental Activities</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -37,9 +37,6 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -57,7 +54,7 @@
         <ul class="nav navbar-nav">
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
-            <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Username</span>
             </a>
@@ -68,7 +65,7 @@
 
                 <p>
                   Username
-                  <small>Username</small>
+                  <small>Details</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -123,9 +120,9 @@
 					<div class="card-header">
 						<i class="fa fa-reorder" style="margin-right: 5px"></i>Add Institutional Activities
 					</div>
-					<form id="add-activities" name="add_name" id="add_name" method="post" enctype="multipart/form-data">
+					<form name="add_name" id="add_name">
 						<div class="card-body">
-							<table id="dynamic_field" class="table table-bordered">
+							<table class="table table-bordered" id="dynamic_field">
 										<thead>
 											<tr>
 												<th style="width: 10vw">Year</th>
@@ -137,12 +134,12 @@
 											</tr>
 										</thead>
 										<tbody>
-											<tr id="">
+											<tr>
 												<td>
-													<input type="text" name="year[]" id="year" class="form-control" placeholder="Year" required>
+													<input type="text" name="year[]" class="form-control" placeholder="Year" required>
 												</td>
 												<td>
-													<select name="semester[]" id="semester" class="form-control" required>
+													<select name="semester[]" class="form-control" required>
 														<option selected disabled></option>
 														<option value="1">1</option>
 														<option value="2">2</option>
@@ -155,77 +152,63 @@
 													</select>
 												</td>
 												<td>
-													<select name="activity[]" id="activity" class="form-control" required>
+													<select name="activity[]" class="form-control" required>
 														<option selected disabled></option>
-														<option value="hod-dean">HOD / Dean</option>
-														<option value="coordinator">Coordinator appointed by Head Of Institution</option>
-														<option value="conference">Organized Conference</option>
-														<option value="fdp">FDP / Conference</option>
+														<option value="lab-incharge">Lab Incharge</option>
+														<option value="consultancy">Consultancy</option>
+														<option value="timetable-incharge">Time Table Incharge</option>
+														<option value="NBA-work">NBA Work</option>
 													</select>
 												</td>
 												<td>
 													<!--Make Disabled for faculty but enabled for hod -->
-													<select name="credit[]" id="credit" class="form-control">
+													<select name="credit[]" class="form-control">
 														<option selected disabled></option>
 														<option value="1">1</option>
 														<option value="2">2</option>
 														<option value="3">3</option>
-														<option value="4">4</option>
 													</select>
 												</td>
 												<td>
-													<input name="file[]" id="file" type="file" style="margin-top: 5px" required>
-												</td>
-												<td>
-													<button type="button" class="btn btn-sm btn-danger btn_remove" name="remove" id="" style="border-radius: 50%;"><i class="fa fa-remove"></i></button>
+													<input type="file" style="margin-top: 5px" required>
 												</td>
 											</tr>
 										</tbody>
 									</table>
-									
 							<div class="row">
 								<div class="col-md-3">
-									<button type="button" class="btn btn-block btn-primary" name="add" id="add"><i class="fa fa-plus" style="margin-right: 5px"></i>Add More</button>
+									<button type="button" class="btn btn-block btn-primary" name="add" id="add"></i> Add More</button>
 								</div>
 								<div class="col-md-3">
-									<button type="button" class="btn btn-block btn-success" name="submit-btn" id="submit-btn"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
-								</div>
+									<button type="button" class="btn btn-block btn-success" name="submit" id="submit"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+                  <script>
+                  $(document).ready(function () {
+                    var i = 1;
+                    $('#add').click(function() {
+                      i++;
+                      $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="year[]" class="form-control" placeholder="Year" required></td><td><select name="semester[]" class="form-control" required><option selected disabled></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></td><td><select name="activity[]" class="form-control" required><option selected disabled></option><option value="lab-incharge">Lab Incharge</option><option value="consultancy">Consultancy</option><option value="timetable-incharge">Time Table Incharge</option><option value="NBA-work">NBA Work</option></select></td><td><!--Make Disabled for faculty but enabled for hod --><select name="credit[]" class="form-control"><option selected disabled></option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></td><td><input type="file" style="margin-top: 5px" required><button name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+                    });
+                    $(document).on('click', '.btn_remove', function() {
+                      var button_id = $(this).attr("id");
+                      $("#row"+button_id+"").remove();
+                    });
+                    $("#submit").click(function() {
+                      $.ajax({
+                        url: "./php/add_institution_activities_data.php",
+                        method: "POST",
+                        data: $("#add_name").serialize(),
+                        success: function(data) {
+                          alert("Data Inserted");
+                          $('#add_name')[0].reset();
+                        }
+                      })
+                    })
+                  })
+                </script>
+                </div>
 							</div>
 						  </div>
 					</form>
-					<script>
-						$(document).ready(() => {
-							var i = 1;
-							$("#add").click(() => {
-								i++;
-								// $("#dynamic_field").append('<tr id="row'+i+'"><td><input type="text" name="name[]" class="form-control" id="name"></td><td><button class="btn btn_remove btn-danger" type="button" name="remove" id="'+i+'">Remove</button></td></tr>')
-								$("#dynamic_field").append('<tr id="row'+i+'"><td><input type="text" name="year[]" id="year" class="form-control" placeholder="Year" required></td><td><select name="semester[]" id="semester" class="form-control" required><option selected disabled></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></td><td><select name="activity[]" id="activity" class="form-control" required><option selected disabled></option><option value="hod-dean">HOD / Dean</option><option value="coordinator">Coordinator appointed by Head Of Institution</option><option value="conference">Organized Conference</option><option value="fdp">FDP / Conference</option></select></td><td><!--Make Disabled for faculty but enabled for hod --><select name="credit[]" id="credit" class="form-control"><option selected disabled></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td><td><input name="file[]" id="file" type="file" style="margin-top: 5px" required></td><td><button type="button" class="btn btn_remove btn-danger" style="border-radius: 50%;"><i class="fa fa-remove"></i></button></td></tr>')
-							})
-							
-							$(document).on('click', '.btn_remove', function(){
-								var button_id = $(this).attr("id"); 
-								$('#row'+button_id+'').remove();
-							});
-
-							$(document).on('click', '.btn_remove', function(){
-								var button_id = $(this).attr("id"); 
-								$('#row'+button_id+'').remove();
-							});
-							
-							$('#submit-btn').click(function(){		
-								$.ajax({
-									url:"./php/institution_activity_add_data.php",
-									method:"POST",
-									data:$('#add_name').serialize(),
-									success:function(data)
-									{
-										alert(data);
-										$('#add_name')[0].reset();
-									}
-								});
-							});
-						})
-					</script>
 				</div>
 			</div>
 		</div>

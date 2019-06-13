@@ -41,17 +41,6 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 </head>
-<style>
-	input[type=number]::-webkit-inner-spin-button, 
-	input[type=number]::-webkit-outer-spin-button { 
-	  -webkit-appearance: none;
-	  margin: 0; 
-	}
-	input[type=number] { 
-	  -moz-appearance: textfield;
-	  margin: 0; 
-	}
-</style>
 <?php
 	include './src/php/auth.php';
 ?>
@@ -137,12 +126,12 @@
 					<div class="card-header">
 						<i class="fa fa-reorder" style="margin-right: 5px"></i>Teaching Process
 					</div>
-					<form id="teaching_process" action="teaching_process.html" name="add_name" id="add_name" method="post" enctype="multipart/form-data">
+					<form name="add_name" id="add_name" enctype="multipart/form-data">
 						<div class="card-body">
 							<table class="table table-bordered" id="dynamic_field">
 								<thead>
 									<tr>
-										<th style="width: 9vw">Year</th>
+										<th style="width: 10vw">Year</th>
 										<th>Semester</th>
 										<th>Course Code/Name</th>
 										<th>Number of Scheduled Classes</th>
@@ -158,7 +147,6 @@
 										</td>
 										<td>
 											<select name="semester[]" id="semester" class="form-control">
-												<option value="" selected disabled></option>
 												<option value="1">1</option>
 												<option value="2">2</option>
 												<option value="3">3</option>
@@ -181,18 +169,15 @@
 										<td>
 											<input type="file" name="file[]" id="file" style="margin-top: 5px" required>
 										</td>
-										<td>
-											<button type="button" class="btn btn_remove btn-sm btn-danger" name="remove" id="" style="border-radius: 50%;"><i class="fa fa-remove"></i></button>
-										</td>
 									</tr>
 								</tbody>
 							</table>
 						<div class="row">
 								 <div class="col-md-3">
-									<button type="button" name="add" id="add" class="btn btn-block btn-primary"><i class="fa fa-plus" style="margin-right: 5px"></i> Add More</button>
+									<button type="button" class="btn btn-block btn-primary" name="add" id="add"><i class="fa fa-plus" style="margin-right: 5px"></i> Add More</button>
 								</div> 
 								<div class="col-md-3">
-									<button type="button" name="submit-btn" id="submit-btn" class="btn btn-block btn-success"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+									<button type="button" class="btn btn-block btn-success" name="submit" id="submit"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
 								</div>
 							</div>
 					</div>
@@ -216,14 +201,14 @@
 								$('#row'+button_id+'').remove();
 							});
 							
-							$('#submit-btn').click(function(){		
+							$('#submit').click(function(){		
 								$.ajax({
 									url:"./php/teachning_process_data_add.php",
 									method:"POST",
 									data:$('#add_name').serialize(),
 									success:function(data)
 									{
-										alert(data);
+										alert("Data Inserted");
 										$('#add_name')[0].reset();
 									}
 								});

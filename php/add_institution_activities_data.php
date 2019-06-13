@@ -11,12 +11,11 @@ if($number > 0)
 		{
 			$year = mysqli_real_escape_string($conn, $_POST['year'][$i]);
 			$semester = mysqli_real_escape_string($conn, $_POST['semester'][$i]);
-			$courseCode = mysqli_real_escape_string($conn, $_POST['courseCode'][$i]);
-			$scheduleClass = mysqli_real_escape_string($conn, $_POST['scheduleClass'][$i]);
-			$heldClass = mysqli_real_escape_string($conn, $_POST['heldClass'][$i]);
+			$activity = mysqli_real_escape_string($conn, $_POST['activity'][$i]);
+			$credit = mysqli_real_escape_string($conn, $_POST['credit'][$i]);
 			// $file = mysqli_real_escape_string($connect, $_POST['file'][$i]);
 			$proof = "NA";
-			$sql = "INSERT INTO teaching_process(institute_id, year, semester, course_code, schedule_class, held_class) VALUES('$institutionId', '$year', '$semester', '$courseCode', '$scheduleClass', '$heldClass');";
+			$sql = "INSERT INTO institution_activity(institution_code, year, semester, activity, credit) VALUES('$institutionId', '$year', '$semester', '$activity', '$credit');";
 			mysqli_query($conn, $sql);
 		}
 	}

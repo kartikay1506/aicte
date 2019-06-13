@@ -1,5 +1,5 @@
 <?php
-include_once './db.php';
+include './db.php';
 
 // Add University Details
 if (isset($_POST['addUnivDetails-btn'])) {
@@ -162,7 +162,7 @@ if (isset($_POST['addFaculty-btn'])) {
 if (isset($_POST['login-btn'])) {
     // Session Started
     session_start();
-	$loginType = mysqli_real_escape_string($conn, $_POST['login_type']);
+    $_SESSION['institution_code'] = $_POST['university_code'];
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $universityCode = mysqli_real_escape_string($conn, $_POST['university_code']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
@@ -294,6 +294,287 @@ if (isset($_POST['studentFeedback_submit-btn'])) {
     }
     header("Location: ../../thankyou.php?task=success");
     exit();
+}
+
+
+// New Backend Code From Here XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+// Adding HOD Data
+if (isset($_POST['add_hod_details-btn'])) {
+    $hod_details_universityCode = mysqli_real_escape_string($conn, $_POST['hod_details_universityCode']);
+    $hod_details_department = mysqli_real_escape_string($conn, $_POST['hod_details_department']);
+    $hod_details_hodID = mysqli_real_escape_string($conn, $_POST['hod_details_hodID']);
+    $hod_details_hodLevel = mysqli_real_escape_string($conn, $_POST['hod_details_hodLevel']);
+    $hod_details_hodName = mysqli_real_escape_string($conn, $_POST['hod_details_hodName']);
+    $hod_details_hodContact = mysqli_real_escape_string($conn, $_POST['hod_details_hodContact']);
+    $hod_details_hodEmail = mysqli_real_escape_string($conn, $_POST['hod_details_hodEmail']);
+    $hod_details_hodDateOfJoining = mysqli_real_escape_string($conn, $_POST['hod_details_hodDateOfJoining']);
+    /* Checking for the validation
+     Checking For the Empty Fields */
+     
+    //  Fields Not Presend
+    $hodUnivCode = "NA";
+    $hodQualification = "NA";
+    $hodProfilePic = "NA";
+    $hod_detailsAddress = "NA";
+
+    if (empty($hod_details_hodID) || empty($hod_details_hodLevel) || empty($hod_details_hodName) || empty($hod_details_hodContact) || empty($hod_details_hodEmail) || empty($hod_details_hodDateOfJoining)) {
+        header("Location: ../../add_hod_diploma.php?Message=EmptyFieldFound");
+        exit();
+    }
+    // Checking for the Valid Email
+    else if (!filter_var($hod_details_hodEmail, FILTER_VALIDATE_EMAIL)) {
+        header("Location: ../../add_hod_diploma.php?Message=NotaValidEmail");
+        exit();
+    }
+    // Checking for the User Name
+    else if (!preg_match("/^[a-zA-Z ]*$/", $hod_details_hodName)) {
+        header("Location: ../../add_hod_diploma.php?Message=InvalidUserName");
+        exit();
+    }
+    // Final Passing the form
+    else {
+        // SQL Statement
+        $sql = "INSERT INTO faculty(faculty_Univ_Code, faculty_department, faculty_id, faculty_level, faculty_Name, faculty_Contact, faculty_Email, faculty_Date_Of_Joining) VALUES ('$hodUnivCode', '$hod_details_department', '$hod_details_hodID', '$hod_details_hodLevel', '$hod_details_hodName', '$hod_details_hodContact', '$hod_details_hodEmail', '$hod_details_hodDateOfJoining');";
+        mysqli_query($conn, $sql);
+        session_start();
+        $type = "hod";
+        $institution_Code = $_SESSION['institution_code'];
+        $username = $_SESSION['username'];
+        $sql = "INSERT INTO user_login(login_type, institution_id, username, password) VALUE('$type', '$institution_Code', '$hod_details_hodID', '$hod_details_hodID');";
+        mysqli_query($conn, $sql);
+        header("Location: ../../add_hod_diploma.php?Message=HodAddedSuccess");
+        exit();
+    }
+}
+
+// Editing University Details
+if (isset($_POST['updateUnivDetails-btn'])) {
+    $univ_Name = mysqli_real_escape_string($conn, $_POST['univName']);
+    $univ_Code = mysqli_real_escape_string($conn, $_POST['univCode']);
+    $univ_State = mysqli_real_escape_string($conn, $_POST['univState']);
+    $univ_District = mysqli_real_escape_string($conn, $_POST['univDistrict']);
+    $univ_PostalCode = mysqli_real_escape_string($conn, $_POST['univPostalCode']);
+    $univ_Address = mysqli_real_escape_string($conn, $_POST['univAddress']);
+    $univ_Email = mysqli_real_escape_string($conn, $_POST['univEmail']);
+    $univ_Type = mysqli_real_escape_string($conn, $_POST['univType']);
+    $univ_Contact = mysqli_real_escape_string($conn, $_POST['univContact']);
+    // Temp Data
+    $univ_Logo = "NA";
+
+    /* Checking for the validation
+     Checking For the Empty Fields */
+     
+    //  Fields Not Presend
+    if (empty($univ_Name) || empty($univ_Contact) || empty($univ_State) || empty($univ_District) || empty($univ_PostalCode) || empty($univ_Address) || empty($univ_Email) || empty($univ_Type)) {
+        header("Location: ../../add_university_details.php?Message=EmptyFieldFound");
+        exit();
+    }
+    // Checking for the Valid Email
+    else if (!filter_var($univ_Email, FILTER_VALIDATE_EMAIL)) {
+        header("Location: ../../add_university_details.php?Message=NotaValidEmail");
+        exit();
+    }
+    // Checking for the Institution Name
+    else if (!preg_match("/^[a-zA-Z ]*$/", $univ_Name)) {
+        header("Location: ../../add_university_details.php?Message=InvalidUserName");
+        exit();
+    }
+    else {
+        //Photos
+        //Getting File Parameter
+        $fileName = $_FILES['file']['name'];
+        $fileTmpName = $_FILES['file']['tmp_name'];
+        $fileSize = $_FILES['file']['size'];
+        $fileType = $_FILES['file']['type'];
+        $fileError = $_FILES['file']['error'];
+        $fileExt = explode('.', $fileName);
+        $fileActualExt = strtolower(end($fileExt));
+        $allowed = array('png', 'jpeg', 'jpg', 'pdf');
+
+        if(in_array($fileActualExt, $allowed)){
+            if($fileError === 0){
+                if($fileSize < 500000){
+                    $fileNameNew = uniqid('',true).".".$fileActualExt;
+                    $fileDistination = '../../assets/university_logo/'.$fileNameNew;
+                    //Upload the file
+                    move_uploaded_file($fileTmpName, $fileDistination);
+                }
+                else{
+                    echo "Could not Upload File Size Exceed!";
+                }
+            }
+            else{
+                echo "There was an ERROR in the Uploading File!";
+            }
+        }
+        else{
+            echo "You cannot upload the file!";
+        }
+        // SQL Statement
+        $sql = "INSERT INTO institution(institution_name, instituion_code, instituion_state, instituion_district, instituion_postal_code, instituion_address, instituion_contact_no, instituion_email, instituion_type, logo)
+        VALUES ('$univ_Name', '$univ_Code', '$univ_State', '$univ_District', '$univ_PostalCode', '$univ_Address', '$univ_Contact', '$univ_Email', '$univ_Type', '$fileNameNew');";
+        mysqli_query($conn, $sql);
+        header("Location: ../../add_university_details.php?Message=InstitutionUpdatedSuccess");
+        exit();
+    }
 
 }
+
+// New Code For Faculty List
+if (isset($_POST['viewfacultyListNew'])) {
+    $sql = "SELECT * FROM faculty;";
+    $result = mysqli_query($conn, $sql);
+    $resultChk = mysqli_num_rows($result);
+    if ($resultChk < 1) {
+        echo '
+            <h2> No List Found! </h2>
+        ';  
+    } else {
+        echo '
+        <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+        <thead>
+            <tr role="row">
+                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 166.433px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Name
+                </th>
+                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 202.45px;" aria-label="Position: activate to sort column ascending">Position
+                </th>
+                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 177.767px;" aria-label="Years of Service: activate to sort column ascending">Years of Service
+                </th>
+                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 99.8667px;" aria-label="Department: activate to sort column ascending">Department
+                <!-- </th> -->
+                <!-- <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 142.15px;" aria-label="Feedback Score: activate to sort column ascending">Feedback Score -->
+                <!-- </th> -->
+            </tr>
+        </thead>
+        <tbody>
+        ';
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo '
+            <tr role="row" class="odd">
+            <td class="sorting_1">'.$row['faculty_Name'].'</td>
+            <td>'.$row['faculty_level'].'</td>
+            <td>'.$row['faculty_Date_Of_Joining'].'</td>
+            <td>'.$row['faculty_department'].'</td>
+            </tr>
+            ';
+        }
+        echo '
+        </tbody>
+        </table>';
+    }
+}
+
+// Edit HOD Details
+if (isset($_POST['editHodDetails-btn'])) {
+        //Photos
+        //Getting File Parameter
+        $fileName = $_FILES['file']['name'];
+        $fileTmpName = $_FILES['file']['tmp_name'];
+        $fileSize = $_FILES['file']['size'];
+        $fileType = $_FILES['file']['type'];
+        $fileError = $_FILES['file']['error'];
+        $fileExt = explode('.', $fileName);
+        $fileActualExt = strtolower(end($fileExt));
+        $allowed = array('png', 'jpeg', 'jpg', 'pdf');
+
+        if(in_array($fileActualExt, $allowed)){
+            if($fileError === 0){
+                if($fileSize < 500000){
+                    $fileNameNew = uniqid('',true).".".$fileActualExt;
+                    $fileDistination = '../../assets/hod_profile/'.$fileNameNew;
+                    //Upload the file
+                    move_uploaded_file($fileTmpName, $fileDistination);
+                }
+                else{
+                    echo "Could not Upload File Size Exceed!";
+                }
+            }
+            else{
+                echo "There was an ERROR in the Uploading File!";
+            }
+        }
+        else{
+            echo "You cannot upload the file!";
+        }
+        $faculty_name = mysqli_real_escape_string($conn, $_POST['name']);
+        $faculty_contact = mysqli_real_escape_string($conn, $_POST['contact']);
+        $faculty_address = mysqli_real_escape_string($conn, $_POST['address']);
+        $faculty_email = mysqli_real_escape_string($conn, $_POST['email']);
+        $faculty_dateOfJoining = mysqli_real_escape_string($conn, $_POST['dateOfJoining']);
+        $faculty_department = mysqli_real_escape_string($conn, $_POST['department']);
+        $faculty_id = mysqli_real_escape_string($conn, $_POST['facultyid']);
+        // SQL Statement
+        session_start();
+        $userId = $_SESSION['username'];
+        $sql = "UPDATE faculty SET faculty_Name = '$faculty_name', faculty_Contact = '$faculty_contact', faculty_address = '$faculty_address', faculty_Email = '$faculty_email', faculty_profile_pic = '$fileNameNew' WHERE faculty_id = '$userId';";
+        mysqli_query($conn, $sql);
+        header("Location: ../../hod_details.php?Message=UpdatedDetailsSuccess");
+        exit();
+}
+
+// Add Faculty Data
+if (isset($_POST['addFaculty_Data-btn'])) {
+    $univ_Code = mysqli_real_escape_string($conn, $_POST['university_code']);
+    $department = mysqli_real_escape_string($conn, $_POST['department']);
+    $facultyID = mysqli_real_escape_string($conn, $_POST['facultyID']);
+    $facultyLevel = mysqli_real_escape_string($conn, $_POST['facultyLevel']);
+    $facultyName = mysqli_real_escape_string($conn, $_POST['facultyName']);
+    $facultyContact = mysqli_real_escape_string($conn, $_POST['facultyContact']);
+    $facultyEmail = mysqli_real_escape_string($conn, $_POST['facultyEmail']);
+    $facultyDateOfJoining = mysqli_real_escape_string($conn, $_POST['facultyDateOfJoining']);
+    $type = "faculty";
+    session_start();
+    $institution_Code = $_SESSION['institution_code'];
+    $sql = "INSERT INTO faculty(faculty_Univ_Code, faculty_department, faculty_id, faculty_level, faculty_Name, faculty_Contact, faculty_Email, faculty_Date_Of_Joining) VALUES('$univ_Code', '$department', '$facultyID', '$facultyLevel', '$facultyName', '$facultyContact', '$facultyEmail', '$facultyDateOfJoining');";
+    mysqli_query($conn, $sql);
+    $sql = "INSERT INTO user_login(login_type, institution_id, username, password) VALUE('$type', '$institution_Code', '$facultyID', '$facultyID');";
+    mysqli_query($conn, $sql);
+    header("Location: ../../add_faculty_diploma.php?Message=FacultyAddedSuccess");
+}
+
+// Adding Excel File
+if (isset($_POST['uploadHod-btn'])) {
+        session_start();
+        $univId = $_SESSION['institution_code'];
+        //Getting File Parameter
+        $fileName = $_FILES['file']['name'];
+        $fileTmpName = $_FILES['file']['tmp_name'];
+        $fileSize = $_FILES['file']['size'];
+        $fileType = $_FILES['file']['type'];
+        $fileError = $_FILES['file']['error'];
+        $fileExt = explode('.', $fileName);
+        $fileActualExt = strtolower(end($fileExt));
+
+            if($fileError === 0){
+                if($fileSize < 100000000){
+                    $fileNameNew = uniqid('',true).".".$fileActualExt;
+                    $fileDistination = '../../assets/excel_uploads/'.$univId.'_'.$fileNameNew;
+                    $_SESSION['HOD_excel'] = $fileNameNew;
+                    //Upload the file
+                    move_uploaded_file($fileTmpName, $fileDistination);
+                    
+                }
+                else{
+                    echo "Could not Upload File Size Exceed!";
+                }
+            }
+            else{
+                echo "There was an ERROR in the Uploading File!";
+            }
+            $sql = "INSERT INTO file_upload(university_id, type,uploaded_for) VALUES('$univId', 'HOD', '$fileNameNew');";
+            mysqli_query($conn, $sql);
+            header("Location: ../../add_hod_diploma.php?Message=UploadedSuccess");
+            exit();
+}
+
+// Excel HOD File Upload
+if (isset($_POST['uploadExcelFile-btn'])) {
+    require './excel/reader.php';
+    session_start();
+    $filePath = $_SESSION['HOD_excel'];
+    $file = '../../assets/excel_uploads/'+$filePath;
+    
+}
+
 ?>

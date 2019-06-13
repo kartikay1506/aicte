@@ -150,7 +150,7 @@
 										  <div id="tableRoot"></div>
 										  <script>
 											  $("#tableRoot").load("./src/php/main.php", {
-													viewfacultyList: true
+													viewfacultyListNew: true
 												})
 										  </script>
 							  </div>

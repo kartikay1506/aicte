@@ -128,15 +128,23 @@
 					<div class="card">
 						<div class="card-body">
 					<div style="margin-left: 15px">
-						<form action="./src/php/main.php" id="hod-form" method="POST">
+            <form action="./src/php/main.php" id="hod-form" method="POST">
+            <?php
+              include './messages.php';
+            ?>
 							<div class="form-group row">
 								<div class="col-md-5">
-									<label style="font-size: 1.20em;margin-top: 5px">University Code</label>
-									<input type="text" name="university_code" class="form-control" placeholder="" disabled>
+                  <?php
+                    $institution_Code = $_SESSION['institution_code'];
+                    echo '
+									  <label style="font-size: 1.20em;margin-top: 5px">University Code</label>
+  									<input type="text" name="university_code" value="'.$institution_Code.'" class="form-control" placeholder="" disabled>
+                    ';
+                  ?>
 								</div>
 								<div class="col-md-6">
 									<label style="font-size: 1.20em;margin-top: 5px">Department</label>
-									<input type="text" name="department" class="form-control" placeholder="" disabled>
+									<input type="text" name="department" class="form-control" placeholder="Faculty Department">
 								</div>
 							</div>
 							
@@ -186,7 +194,7 @@
 
 				</div>
 				<div class="card-footer">
-					<button type="submit" name="addFaculty" class="btn btn-sm btn-primary" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+					<button type="submit" name="addFaculty_Data-btn" class="btn btn-sm btn-primary" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
 					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
 				</div>
 			</div>  
