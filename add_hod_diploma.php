@@ -42,7 +42,6 @@
 <div class="wrapper">
 <?php
 	include './src/php/auth.php';
-	include './get_user.php';
 ?>
   <header class="main-header">
     <!-- Logo -->
@@ -59,7 +58,7 @@
           <li class="dropdown user user-menu">
             <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?php echo($faculty_name);?></span>
+              <span class="hidden-xs">Username</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -67,7 +66,7 @@
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                 <h4><?php echo($faculty_name);?></h4>
+                 Username
                   <small>Details</small>
                 </p>
               </li>
@@ -78,6 +77,9 @@
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
                 <div class="pull-right">
                   <a href="#" class="btn btn-default btn-flat">Sign out</a>
                 </div>
@@ -102,7 +104,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p><h4><?php echo($faculty_name);?></h4></p>
+          <p>Username</p>
         </div>
       </div>
      <?php include 'sidebar.php';?>
@@ -131,7 +133,7 @@
 						<form id="hod-form" action="./src/php/main.php" method="post">
 							<div class="form-group row">
 								<div class="col-md-5">
-                  <label style="font-size: 1.20em;margin-top: 5px">Institution Code</label>
+                  <label style="font-size: 1.20em;margin-top: 5px">University Code</label>
                   <?php
                     $institution_Code = $_SESSION['institution_code'];
                     echo '
@@ -196,25 +198,7 @@
 				</div>
 			</div>  
       </form>
-      <form enctype="multipart/form-data" action="./src/php/main.php" method="POST">
-			<div class="card">
-				<div class="card-header">
-					<i class="fa fa-file-excel-o" style="margin-right: 5px"></i>Upload an Excel File
-				</div>
-				<div class="card-body">
-					<div class="card">
-						<div class="card-body">
-							<input name="file" type="file">
-						</div>
-					</div>
-				</div>
-				<div class="card-footer">
-					<button type="submit" name="uploadHod-btn" class="btn btn-sm btn-primary" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Upload</button>
-					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
-          <a href="./assets/files/HOD.xlsx" target="_blank" class="btn btn-sm btn-success"><i class="fa fa-download" style="margin-right: 5px"></i>Template</a>
-				</div>
-      </div>
-    </form>
+      
     <form action="./src/php/main.php" method="POST">
 			<button type="submit" name="uploadExcelFile-btn" class="btn btn-sm btn-success" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit Data</button>
     </form>

@@ -412,9 +412,8 @@ if (isset($_POST['updateUnivDetails-btn'])) {
             echo "You cannot upload the file!";
         }
         // SQL Statement
-        $sql = "INSERT INTO institution(institution_name, institution_code, institution_state, institution_district, institution_postal_code, institution_address, institution_contact_no, institution_email, institution_type, logo)
+        $sql = "INSERT INTO institution(institution_name, instituion_code, instituion_state, instituion_district, instituion_postal_code, instituion_address, instituion_contact_no, instituion_email, instituion_type, logo)
         VALUES ('$univ_Name', '$univ_Code', '$univ_State', '$univ_District', '$univ_PostalCode', '$univ_Address', '$univ_Contact', '$univ_Email', '$univ_Type', '$fileNameNew');";
-		//$sql = "UPDATE `institution` SET `institution_name`='$univ_Name',`institution_state`='$univ_State',`institution_district`='$univ_District',`institution_postal_code`='$univ_PostalCode',`institution_address`='$univ_Address',`institution_contact_no`='$univ_Contact',`institution_email`='$univ_Email',`institution_type`='$univ_Type',`logo`='$fileNameNew' WHERE institution_code = '$univ_Code';";
         mysqli_query($conn, $sql);
         header("Location: ../../add_university_details.php?Message=InstitutionUpdatedSuccess");
         exit();

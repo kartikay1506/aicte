@@ -43,7 +43,6 @@
 </head>
 <?php
 	include './src/php/auth.php';
-	include './get_user.php';
 ?>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -63,18 +62,38 @@
           <li class="dropdown user user-menu">
             <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
               <img src="assets/img/avatar.png" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?php echo($username);?></span>
-			  <i class="fa fa-chevron-down"></i>
+              <span class="hidden-xs">Rajiv Sharma</span>
             </a>
             <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="assets/img/avatar.png" class="img-circle" alt="User Image">
+
+                <p>
+                 Rajiv Sharma
+                  <small>Assistant Professor</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+               
+                <!-- Some Interesting Things Can be Added-->
+              </li>
               <!-- Menu Footer-->
               <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
                 <div class="pull-right">
-                  <a href="./login.php" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
-		  </li>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -89,7 +108,7 @@
           <img src="assets/img/avatar.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <h4><?php echo($username);?></h4>
+          <p>Rajiv Sharma</p>
         </div>
       </div>
       <?php include 'sidebar.php';?>
@@ -112,12 +131,41 @@
 							<div class="col-md-2">
 								<img class="img-circle" src="assets/img/avatar.png" height="110px" width="110px" style="margin-right: 10px">
 							</div>
-							<div class="col-md-10">
-								<h3 style="margin-top: 50px"><?php echo($username);?></h3>
-								<h4><?php echo($institute_name);?></h4>
+							<div class="col-md-3">
+								<h3 style="margin-top: 50px">Rajiv Sharma</h3>
+								<h4>Graphic Era</h4>
 							</div>
 						</div>
-						<?php include './card.php';?>
+						<div class="card-body">
+							<div class="row" style="margin-bottom: 20px;margin-top: 10px">
+								<div class="col-md-4">
+									<h5 style="display: inline"><b>Institution ID :</b></h5>
+									<p style="display: inline">172749279</p>
+								</div>
+								<div class="col-md-4">
+									<h5 style="display: inline"><b>Faculty ID :</b></h5>
+									<p style="display: inline">1209124</p>
+								</div>
+								<div class="col-md-4">
+									<h5 style="display: inline"><b>Level :</b></h5>
+									<p style="display: inline">Assistant Professor</p>
+								</div>
+							</div>
+							<div class="row" style="margin-bottom: 20px;margin-top: 10px">
+								<div class="col-md-3">
+									<h5 style="display: inline"><b>Contact :</b></h5>
+									<p style="display: inline">+91 9690983354</p>
+								</div>
+								<div class="col-md-5">
+									<h5 style="display: inline"><b>Email :</b></h5>
+									<p style="display: inline">rajivsharma121@gmail.com</p>
+								</div>
+								<div class="col-md-4">
+									<h5 style="display: inline"><b>Date of Joining :</b></h5>
+									<p style="display: inline">10/06/2019</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -128,92 +128,130 @@
 					<div class="card">
 						<div class="card-body">
 					<div style="margin-left: 15px">
-						<form id="hod-form" action="./src/php/main.php" method="POST">
-						<div class="row" style="margin-bottom: 20px">
+						<form enctype="multipart/form-data" id="hod-form" action="./src/php/main.php" method="POST">
+              <?php
+                include_once './messages.php';
+              ?>
+            <div class="row" style="margin-bottom: 20px">
 							<div class="col">
 								<img class="img-circle" src="assets/img/avatar.png" height="110px" width="110px" style="margin-right: 10px">
-								<button class="btn btn-primary" type="button" style="margin-top: 60px">+ Upload</button>
+								<div class="upload-btn">
+                  <label for="file">Profile Picture</label>
+									<input type="file" name="file" />
+								</div>
 							</div>
 						</div>
-						<div class="form-group row">
-							<div class="col-md-3">
-								<label style="font-size: 1.20em;margin-top: 5px">Name</label>
-							</div>
-							<div class="col-md-8">
-								<input type="text" name="name" class="form-control">
-							</div>
-						</div>
-							
-						<div class="form-group row">
-							<div class="col-md-3">
-								<label style="font-size: 1.20em;margin-top: 5px">Contact</label>
-							</div>
-							<div class="col-md-5">
-								<input type="text" name="contact" class="form-control" placeholder="Contact">
-							</div>
-						</div>
-						
-						<div class="form-group row">
-							<div class="col-md-3">
-								<label style="font-size: 1.20em;margin-top: 5px">Address</label>
-							</div>
-							<div class="col-md-8">
-								<input type="text" name="address" class="form-control" placeholder="Enter Address">
-							</div>
-						</div>
-							
-						<div class="form-group row">
-							<div class="col-md-3">
-								<label style="font-size: 1.20em;margin-top: 5px">Email</label>
-							</div>
-							<div class="col-md-8">
-								<input type="email" name="email" class="form-control" placeholder="Enter email">
-							</div>
-						</div>
-							
-						<div class="form-group row">
-							<div class="col-md-3">
-								<label style="font-size: 1.20em">Date Of Joining</label>
-							</div>
-							<div class="col-md-8">
-								<input type="date" name="dateOfJoining" class="form-control" placeholder="dd/mm/yyyy" disabled>
-							</div>
-						</div>
-							
-						<div class="form-group row">
-							<div class="col-md-3">
-								<label style="font-size: 1.20em;margin-top: 5px">Department</label>
-							</div>
-							<div class="col-md-8">
-								<input type="text" name="department" class="form-control" placeholder="" disabled>
-							</div>
-						</div>
-							
-						<div class="form-group row">
-							<div class="col-md-3">
-								<label style="font-size: 1.20em;margin-top: 5px">Level</label>
-							</div>
-							<div class="col-md-8">
-								<input type="text" name="level" class="form-control" placeholder="" disabled>
-							</div>
-						</div>
-							
-						<div class="form-group row">
-							<div class="col-md-3">
-								<label style="font-size: 1.20em;margin-top: 5px">Faculty Id</label>
-							</div>
-							<div class="col-md-8">
-								<input type="text" name="facultyID" class="form-control" placeholder="" disabled>
-							</div>
-						</div>
-							
-					</div>
-						</div>
-					</div>
+              <?php
+                include_once './src/php/db.php';
+                $userId = $_SESSION['username'];
+                $sql = "SELECT * FROM faculty WHERE faculty_id = '$userId';";
+                $result = mysqli_query($conn, $sql);
+                $resultChk = mysqli_num_rows($result);
+                if ($resultChk > 0) {
+                  while($row = mysqli_fetch_assoc($result)) {
+                      echo '
+                      <div class="form-group row">
+                        <div class="col-md-3">
+                          <label style="font-size: 1.20em;margin-top: 5px">Name</label>
+                        </div>
+                        <div class="col-md-8">
+                          <input type="text" name="name" value="'.$row['faculty_Name'].'" class="form-control">
+                        </div>
+                      </div>
 
+                      <div class="form-group row">
+                        <div class="col-md-3">
+                          <label style="font-size: 1.20em;margin-top: 5px">Contact</label>
+                        </div>
+                        <div class="col-md-5">
+                          <input type="text" value="'.$row['faculty_Contact'].'" name="contact" class="form-control" placeholder="Contact">
+                        </div>
+                      </div>';
+                      if (!empty($row['faculty_address'])) {
+                        echo '
+                        <div class="form-group row">
+                          <div class="col-md-3">
+                            <label style="font-size: 1.20em;margin-top: 5px">Address</label>
+                          </div>
+                          <div class="col-md-8">
+                            <input type="text" value="'.$row['faculty_address'].'" name="address" class="form-control" placeholder="Enter Address">
+                          </div>
+                        </div>
+                        ';
+                      } else {
+                        echo '
+                        <div class="form-group row">
+                          <div class="col-md-3">
+                            <label style="font-size: 1.20em;margin-top: 5px">Address</label>
+                          </div>
+                          <div class="col-md-8">
+                            <input type="text" name="address" class="form-control" placeholder="Enter Address">
+                          </div>
+                        </div>
+                        ';
+                      }
+
+                      
+                      echo '
+                      <div class="form-group row">
+                        <div class="col-md-3">
+                          <label style="font-size: 1.20em;margin-top: 5px">Email</label>
+                        </div>
+                        <div class="col-md-8">
+                          <input type="email" value="'.$row['faculty_Email'].'" name="email" class="form-control" placeholder="Enter email">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <div class="col-md-3">
+                          <label style="font-size: 1.20em">Date Of Joining</label>
+                        </div>
+                        <div class="col-md-8">
+                          <input type="date" value="'.$row['faculty_Date_Of_Joining'].'" name="dateOfJoining" class="form-control" placeholder="dd/mm/yyyy" disabled>
+                        </div>
+                      </div>
+
+
+                      <div class="form-group row">
+                      <div class="col-md-3">
+                        <label style="font-size: 1.20em;margin-top: 5px">Department</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" value="'.$row['faculty_department'].'" name="department" class="form-control" placeholder="" disabled>
+                      </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <div class="col-md-3">
+                          <label style="font-size: 1.20em;margin-top: 5px">Level</label>
+                        </div>
+                        <div class="col-md-8">
+                          <input type="text" value="'.$row['faculty_level'].'" name="level" class="form-control" placeholder="" disabled>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                      <div class="col-md-3">
+                        <label style="font-size: 1.20em;margin-top: 5px">Faculty Id</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" value="'.$row['faculty_id'].'" name="facultyid" class="form-control" placeholder="" disabled>
+                      </div>
+                    </div>
+                      ';
+                  }
+                } else {
+                  echo '
+                    <h2>No User Found By Id
+                  '.$userId.'</h2>';
+                }
+              ?>
+					</div>
+						</div>
+					</div>
 				</div>
 				<div class="card-footer">
-					<button type="submit" name="addEditHod-btn" class="btn btn-sm btn-primary" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+					<button type="submit" name="editHodDetails-btn" class="btn btn-sm btn-primary" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
 					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
 				</div>
 				</form>

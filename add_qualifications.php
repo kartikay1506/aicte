@@ -42,7 +42,6 @@
 <div class="wrapper">
 <?php
 	include './src/php/auth.php';
-	include './get_user.php';
 ?>
   <header class="main-header">
     <!-- Logo -->
@@ -60,11 +59,18 @@
           <li class="dropdown user user-menu">
             <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?php echo($username);?></span>
-			  <i class="fa fa-chevron-down"></i>
+              <span class="hidden-xs">Username</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
+              <li class="user-header">
+                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  Username
+                  <small>Details</small>
+                </p>
+              </li>
               <!-- Menu Body -->
               <li class="user-body">
                
