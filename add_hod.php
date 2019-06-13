@@ -126,16 +126,19 @@
 				<div class="card-body">
 					<div class="card">
 						<div class="card-body">
-					<div style="margin-left: 15px">
-						<form id="hod-form" method="post">
+          <div style="margin-left: 15px">
+          <?php
+            include_once './messages.php';
+          ?>
+						<form id="hod-form" action="./src/php/main.php" method="post">
 							<div class="form-group row">
 								<div class="col-md-5">
 									<label style="font-size: 1.20em;margin-top: 5px">University Code</label>
-									<input type="text" class="form-control" placeholder="" disabled>
+									<input name="hod_details_universityCode" type="text" class="form-control" placeholder="" disabled>
 								</div>
 								<div class="col-md-6">
 									<label style="font-size: 1.20em;margin-top: 5px">Department</label>
-									<input type="text" class="form-control" placeholder="" disabled>
+									<input name="hod_details_department" type="text" class="form-control" placeholder="" disabled>
 								</div>
 							</div>
 							
@@ -143,11 +146,11 @@
 						<div class="form-group row">
 							<div class="col-md-5">
 								<label style="font-size: 1.20em;margin-top: 5px">HOD Id</label>
-								<input type="text" class="form-control" placeholder="Enter HOD Id">
+								<input type="text" name="hod_details_hodID" class="form-control" placeholder="Enter HOD Id">
 							</div>
 							<div class="col-md-5">
 								<label style="font-size: 1.20em;margin-top: 5px">Level</label>
-								<select class="form-control" id="">
+								<select name="hod_details_hodLevel" class="form-control" id="">
 									<option selected disabled value="Select Level">Select Level</option>
 									<option value="10">Assistant Professor - 10</option>
 									<option value="13A1">Associate Professor - 13A1</option>
@@ -160,37 +163,36 @@
 						<div class="form-group row">
 							<div class="col-md-7">
 								<label style="font-size: 1.20em;margin-top: 5px">HOD Name</label>
-								<input type="text" class="form-control" placeholder="Enter Name">
+								<input type="text" name="hod_details_hodName" class="form-control" placeholder="Enter Name">
 							</div>
 							<div class="col-md-5">
 								<label style="font-size: 1.20em;margin-top: 5px">Contact </label>
-								<input type="tex" class="form-control" placeholder="Contact No.">
+								<input type="text" name="hod_details_hodContact" class="form-control" placeholder="Contact No.">
 							</div>
 						</div>
 						
 						<div class="form-group row">
 							<div class="col-md-7">
 								<label style="font-size: 1.20em;margin-top: 5px">HOD Email</label>
-								<input type="text" class="form-control" placeholder="Enter HOD Email">
+								<input type="text" name="hod_details_hodEmail" class="form-control" placeholder="Enter HOD Email">
 							</div>
 							<div class="col-md-5">
 								<label style="font-size: 1.20em;margin-top: 5px">Date Of Joining</label>
-								<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+								<input type="date" class="form-control" name="hod_details_hodDateOfJoining" placeholder="dd/mm/yyyy">
 							</div>
 						</div>
 							
-					</form>
 					</div>
 						</div>
 					</div>
 
 				</div>
 				<div class="card-footer">
-					<button class="btn btn-sm btn-primary" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
+					<button class="btn btn-sm btn-primary" name="add_hod_details-btn" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Submit</button>
 					<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
 				</div>
 			</div>  
-			
+      </form>
 			<div class="card">
 				<div class="card-header">
 					<i class="fa fa-file-excel-o" style="margin-right: 5px"></i>Upload an Excel File

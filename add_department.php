@@ -124,8 +124,11 @@
 				<div class="card">
 					<div class="card-header">
 						<i class="fa fa-reorder" style="margin-right: 5px"></i>Add Department
-					</div>
-					<form id="add-department" method="post" name="add_name" id="add_name" enctype="multipart/form-data">
+          </div>
+          <?php
+            include_once './messages.php';
+          ?>
+					<form name="add_name" id="add_name">
 						<div class="card-body">
 							<table class="table table-bordered" id="dynamic_field">
 										<thead>
@@ -136,15 +139,13 @@
 											</tr>
 										</thead>
 										<tbody>
-											<tr id="">
+											<tr>
 												<td>
-													<input type="text" name="departmentName[]" id="departmentName" class="form-control" placeholder="Department Name" required>
+													<input type="text" name="name[]" class="form-control name_list" placeholder="Department Name" required>
 												</td>
 												<td>
-													<input type="text" name="departmentCode[]" id="departmentCode" class="form-control" placeholder="Department Code" required>
-												</td>
-												<td>
-													<button type="button" class="btn btn_remove btn-sm btn-danger" name="remove" id="" style="border-radius: 50%;"><i class="fa fa-remove"></i></button>
+													<input type="text" name="code[]" id="code" class="form-control" placeholder="Department Code" required>
+													<input type="hidden" name="UnivId" id="UnivId" class="form-control" value="12345678" required>
 												</td>
 											</tr>
 										</tbody>
@@ -154,43 +155,38 @@
 									<button type="button" class="btn btn-block btn-primary" name="add" id="add"><i class="fa fa-plus" style="margin-right: 5px"></i>Add More</button>
 								</div>
 								<div class="col-md-3">
-									<button type="button" class="btn btn-block btn-success" name="submit-btn" id="submit-btn"><i class="fa fa-plus" style="margin-right: 5px"></i>Submit</button>
-								</div>
+									<button type="button" class="btn btn-block btn-success" name="submit" id="submit"><i class="fa fa-plus" style="margin-right: 5px"></i>Submit</button>
+                </div>
+                <!-- For Dynamically Adding Script -->
+                <script>
+                  $(document).ready(function () {
+                    var i = 1;
+                    $('#add').click(function() {
+                      i++;
+                      $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="name[]" id="name" class="form-control name_list" placeholder="Department Name" required></td><td><input type="text" name="code[]" id="code" class="form-control" placeholder="Department Code" required></td><td><button name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr> ');
+                    });
+                    $(document).on('click', '.btn_remove', function() {
+                      var button_id = $(this).attr("id");
+                      $("#row"+button_id+"").remove();
+                    });
+                    $("#submit").click(function() {
+                      $.ajax({
+                        url: "./php/add_department_data.php",
+                        method: "POST",
+                        data: $("#add_name").serialize(),
+                        success: function(data) {
+                          alert("Data Inserted");
+                          $('#add_name')[0].reset();
+                        }
+                      })
+                    })
+                  })
+                </script>
 							</div>
 						  </div>
 					</form>
 					<script>
-						$(document).ready(() => {
-							var i = 1;
-							$("#add").click(() => {
-								i++;
-								// $("#dynamic_field").append('<tr id="row'+i+'"><td><input type="text" name="name[]" class="form-control" id="name"></td><td><button class="btn btn_remove btn-danger" type="button" name="remove" id="'+i+'">Remove</button></td></tr>')
-								$("#dynamic_field").append('<tr id="row'+i+'"><th style="width: 20vw">Department Name</th><th style="width: 15vw">Code</th><th style="width: 5vw">Settings</th></tr></thead><tbody><tr id=""><td><input type="text" name="departmentName[]" id="departmentName" class="form-control" placeholder="Department Name" required></td><td><input type="text" name="departmentCode[]" id="departmentCode" class="form-control" placeholder="Department Code" required></td><td><button class="btn btn_remove btn-sm btn-danger" type="button" name="remove" id="'+i+'" style="border-radius: 50%;"><i class="fa fa-remove"></i></button></td></tr>')
-							})
-							
-							$(document).on('click', '.btn_remove', function(){
-								var button_id = $(this).attr("id"); 
-								$('#row'+button_id+'').remove();
-							});
-
-							$(document).on('click', '.btn_remove', function(){
-								var button_id = $(this).attr("id"); 
-								$('#row'+button_id+'').remove();
-							});
-							
-							$('#submit-btn').click(function(){		
-								$.ajax({
-									url:"./php/acr_data_add.php",
-									method:"POST",
-									data:$('#add_name').serialize(),
-									success:function(data)
-									{
-										alert(data);
-										//$('#add_name')[0].reset();
-									}
-								});
-							});
-						})
+						
 					</script>
 				</div>
 			</div>

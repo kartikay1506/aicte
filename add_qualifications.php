@@ -118,8 +118,65 @@
    <form action="./src/php/main.php" method="post">
 	<!-- Main content -->
 	<div id="root"></div>
-	<button type="submit" class="btn btn-block ml-2 mr-2 mb-4 btn-success">Submit</button>
-	</form>
+  </form>
+  <?php
+    include './src/php/db.php';
+    $sql = "SELECT * FROM min_qualifications;";
+    $result = mysqli_query($conn, $sql);
+    $resultChk = mysqli_num_rows($result);
+
+    if ($resultChk < 1) {
+        echo '<h2> Nothing Found </h2>';
+    } else {
+        echo '
+        <section class="content">
+        <div class="card">
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa fa-reorder" style="margin-right: 5px"></i>Add Qualifications
+                    </div>
+                    <form action="./src/php/main.php" method="post">
+                        <div class="card-body">
+                            <table class="table table-responsive table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 60vw">Qualifications required for Promotion</th>
+                                        <th>Proof</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+        ';
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo '
+                    <tr>
+                        <td>
+                            <div class="form-check" style="margin-bottom:5px">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="qualification" value="'.$row['id'].'" style="margin-right: 10px">'.$row['qualification_name'].'
+                                </label>
+                            </div>
+                        </td>
+                        <td>
+                            <input name="file'.$row['id'].'" type="file">
+                                </td>
+                        </tr>
+            ';
+        }
+      }
+        echo '
+        </tbody>
+        </table>
+        </div>
+	      <button type="submit" class="btn btn-block ml-2 mr-2 mb-4 btn-success">Submit</button>
+        </form>
+        </div>
+        </div>
+        </div>
+        </section>
+        ';
+  ?>
+
     
     <!-- /.content -->
   </div>

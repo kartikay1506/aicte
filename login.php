@@ -179,7 +179,7 @@
 										<span class="input-group-addon">
 											<i class="fa fa-institution"></i>
 										</span> 
-										<input id="email" type="text" class="form-control input-lg" name="university_code" placeholder="Institution Code" required>  
+										<input id="text" type="text" class="form-control input-lg" name="university_code" placeholder="Institution Code" required>  
 									</div>
 								</div>
 								<div class="form-group">

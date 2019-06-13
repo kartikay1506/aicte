@@ -1,9 +1,8 @@
 <script href="./src/js/main.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
 <?php
 	$login = $_SESSION['usertype'];
 ?>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
 		  
@@ -13,7 +12,7 @@
 
 		?>
         <li class="active">
-          <a href="index.php">
+          <a href="index_institution.php">
             <i class="fa fa-home"></i> <span>Home</span>
 		  </a>
 		</li>
@@ -39,20 +38,10 @@
 				<i class="fa fa-list"></i><span>Faculty List</span>
 			</a>  
 		</li>
-		<li>
-			<a href="generate_report.php">
-				<i class="fa fa-book"></i><span>Reports</span>
-			</a>  
-		</li>
 		<?php }
 			else if($login == 'hod') {  
 		?> 
 		<!--HOD-->
-		 <li class="active">
-          <a href="index.php">
-            <i class="fa fa-home"></i> <span>Home</span>
-		  </a>
-		</li>
 		<li>
 			<a href="hod_details.php">
 				<i class="fa fa-pencil"></i><span>Edit Details</span>
@@ -103,22 +92,12 @@
 				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
 			</a>  
 		</li>
-		<li>
-			<a href="generate_report.php">
-				<i class="fa fa-book"></i><span>Reports</span>
-			</a>  
-		</li>
 		<?php }
 			else if($login == 'faculty') {  
 		?>
 		<!-- HOD END-->
 		  
 		<!--Faculty-->
-		 <li class="active">
-          <a href="index.php">
-            <i class="fa fa-home"></i> <span>Home</span>
-		  </a>
-		</li>
 		<li>
 			<a href="faculty_details_diploma.php">
 				<i class="fa fa-pencil"></i><span>Edit Details</span>
@@ -157,11 +136,6 @@
 		<li>
 			<a href="upload_time_table.php">
 				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
-			</a>  
-		</li>
-		<li>
-			<a href="generate_report.php">
-				<i class="fa fa-book"></i><span>Reports</span>
 			</a>  
 		</li>
 		<?php } ?>

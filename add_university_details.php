@@ -140,6 +140,9 @@
 						<div class="card">
 							<div class="card-body">
 								<div style="margin-left: 15px">
+									<?php
+										include_once './messages.php';
+									?>
 									<form id="university-form" action="./src/php/main.php" enctype="multipart/form-data" method="POST">
 										<div class="row" style="margin-bottom: 20px">
 											<div class="col">
@@ -165,7 +168,12 @@
 													<label>
 														University Code
 													</label>
-													<input type="text" name="univCode" class="form-control" placeholder="University Code" value="" disabled>
+													<?php
+														$institution_Code = $_SESSION['institution_code'];
+														echo '
+															<input type="text" name="univCode" value="'.$institution_Code.'" class="form-control" placeholder="University Code" value="" disabled>
+														';
+													?>
 												</div>
 											</div>
 										</div>
@@ -237,7 +245,7 @@
 								</div>
 							</div>
 							<div class="card-footer">
-								<button class="btn btn-sm btn-primary" name="addUnivDetails-btn" type="submit" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Update Details</button>
+								<button class="btn btn-sm btn-primary" name="updateUnivDetails-btn" type="submit" style="margin-right: 5px"><i class="fa fa-check" style="margin-right: 5px"></i>Update Details</button>
 								<button class="btn btn-sm btn-danger"><i class="fa fa-refresh" style="margin-right: 5px"></i>Reset</button>
 							</div>
 							</form>
