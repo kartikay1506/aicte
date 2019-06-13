@@ -40,6 +40,8 @@
 </head>
 <?php
 	include './src/php/auth.php';
+	include './get_user.php';
+	include './src/php/main.php';
 ?>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -61,38 +63,19 @@
           <li class="dropdown user user-menu">
             <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Username</span>
+              <span class="hidden-xs"><?php echo($username);?></span>
+			  <i class="fa fa-chevron-down"></i>
             </a>
             <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                <p>
-                  Username
-                  <small>Details</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-               
-                <!-- Some Interesting Things Can be Added-->
-              </li>
+              
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="./login.php" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
-          </li>
-          <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li>
+			</li>
         </ul>
       </div>
     </nav>
@@ -107,7 +90,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Username</p>
+          <h4><?php echo($username);?></h4>
         </div>
       </div>
      <?php include 'sidebar.php';?>
@@ -142,7 +125,7 @@
 								<label style="font-size: 1.20em;margin-top: 5px">Name</label>
 							</div>
 							<div class="col-md-8">
-								<input type="text" name="name" class="form-control">
+								<input type="text" name="name" class="form-control" placeholder="Name" value="<?php echo($faculty_name);?>">
 							</div>
 						</div>
 							
@@ -151,7 +134,7 @@
 								<label style="font-size: 1.20em;margin-top: 5px">Contact</label>
 							</div>
 							<div class="col-md-5">
-								<input type="text" name="contact" class="form-control" placeholder="Contact">
+								<input type="text" name="contact" class="form-control" placeholder="Contact" value="<?php echo($contact);?>">
 							</div>
 						</div>
 						
@@ -160,7 +143,7 @@
 								<label style="font-size: 1.20em;margin-top: 5px">Address</label>
 							</div>
 							<div class="col-md-8">
-								<input type="text" name="address" class="form-control" placeholder="Enter Address">
+								<input type="text" name="address" class="form-control" placeholder="Enter Address" value="<?php echo($faculty_address);?>">
 							</div>
 						</div>
 							
@@ -169,7 +152,7 @@
 								<label style="font-size: 1.20em;margin-top: 5px">Email</label>
 							</div>
 							<div class="col-md-8">
-								<input type="email" name="email" class="form-control" placeholder="Enter email">
+								<input type="email" name="email" class="form-control" placeholder="Enter email" value="<?php echo($email);?>">
 							</div>
 						</div>
 							
@@ -178,7 +161,7 @@
 								<label style="font-size: 1.20em">Date Of Joining</label>
 							</div>
 							<div class="col-md-8">
-								<input type="text" name="dateOfJoining" class="form-control" placeholder="dd/mm/yyyy" disabled>
+								<input type="text" name="dateOfJoining" class="form-control" placeholder="yyyy/mm/dd" value="<?php echo($joining);?>" disabled>
 							</div>
 						</div>
 							
@@ -187,7 +170,7 @@
 								<label style="font-size: 1.20em;margin-top: 5px">Department</label>
 							</div>
 							<div class="col-md-8">
-								<input type="text" name="department" class="form-control" placeholder="" disabled>
+								<input type="text" name="department" class="form-control" placeholder="" value="<?php echo($faculty_department);?>" disabled>
 							</div>
 						</div>
 							
@@ -196,7 +179,7 @@
 								<label style="font-size: 1.20em;margin-top: 5px">Level</label>
 							</div>
 							<div class="col-md-8">
-								<input type="text" name="level" class="form-control" placeholder="" disabled>
+								<input type="text" name="level" class="form-control" placeholder="" value="<?php echo('('.$level.') '); echo($level_name);?>" disabled>
 							</div>
 						</div>
 							
@@ -205,7 +188,7 @@
 								<label style="font-size: 1.20em;margin-top: 5px">Faculty Id</label>
 							</div>
 							<div class="col-md-8">
-								<input type="text" name="facultyID" class="form-control" placeholder="" disabled>
+								<input type="text" name="facultyID" class="form-control" placeholder="" value="<?php echo($username);?>" disabled>
 							</div>
 						</div>
 							

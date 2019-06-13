@@ -64,26 +64,13 @@
             <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
               <img src="assets/img/avatar.png" class="user-image" alt="User Image">
               <span class="hidden-xs"><?php echo($username);?></span>
+			  <i class="fa fa-chevron-down"></i>
             </a>
             <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="assets/img/avatar.png" class="img-circle" alt="User Image">
-
-                <p>
-                 <?php echo($username);?>
-                  <small>Details</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-               
-                <!-- Some Interesting Things Can be Added-->
-              </li>
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="./login.php" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -125,27 +112,12 @@
 							<div class="col-md-2">
 								<img class="img-circle" src="assets/img/avatar.png" height="110px" width="110px" style="margin-right: 10px">
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-10">
 								<h3 style="margin-top: 50px"><?php echo($username);?></h3>
-								<h4>Graphic Era</h4>
+								<h4><?php echo($institute_name);?></h4>
 							</div>
 						</div>
-						<div class="card-body">
-							<div class="row" style="margin-bottom: 20px;margin-top: 10px">
-								<div class="col-md-4">
-									<h5 style="display: inline"><b>Institution ID :</b></h5>
-									<p style="display: inline"><?php echo($userid);?></p>
-								</div>
-								<div class="col-md-3">
-									<h5 style="display: inline"><b>Contact :</b></h5>
-									<p style="display: inline"><?php echo($contact);?></p>
-								</div>
-								<div class="col-md-5">
-									<h5 style="display: inline"><b>Email :</b></h5>
-									<p style="display: inline"><?php echo($email);?></p>
-								</div>
-							</div>
-						</div>
+						<?php include './card.php';?>
 					</div>
 				</div>
 			</div>
