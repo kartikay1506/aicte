@@ -56,6 +56,7 @@
 <div class="wrapper">
 <?php
 	include './src/php/auth.php';
+	include './get_user.php';
 ?>
   <header class="main-header">
     <!-- Logo -->
@@ -72,7 +73,7 @@
           <li class="dropdown user user-menu">
             <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Username</span>
+              <span class="hidden-xs"><?php echo($faculty_name);?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -80,7 +81,7 @@
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Username
+                  <?php echo($faculty_name);?>
                   <small>Details</small>
                 </p>
               </li>
@@ -118,7 +119,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Username</p>
+          <h4><?php echo($faculty_name);?></h4>
         </div>
       </div>
       <?php include 'sidebar.php';?>
@@ -158,20 +159,20 @@
 											<div class="col-md-7">
 												<div class="form-group">
 													<label>
-														University Name
+														Institution Name
 													</label>
-													<input type="text" name="univName" class="form-control" placeholder="University Name" value="">
+													<input type="text" name="univName" class="form-control" placeholder="Institution Name" value="">
 												</div>
 											</div>
 											<div class="col-md-5">
 												<div class="form-group">
 													<label>
-														University Code
+														Institution Code
 													</label>
 													<?php
 														$institution_Code = $_SESSION['institution_code'];
 														echo '
-															<input type="text" name="univCode" value="'.$institution_Code.'" class="form-control" placeholder="University Code" value="" disabled>
+															<input type="text" name="univCode" value="'.$institution_Code.'" class="form-control" placeholder="Institution Code" value="" disabled>
 														';
 													?>
 												</div>
@@ -207,9 +208,9 @@
 											<div class="col-md-12">
 												<div class="form-group">
 													<label>
-														University Address
+														Institution Address
 													</label>
-													<input type="text" name="univAddress" class="form-control" placeholder="University Address" value="">
+													<input type="text" name="univAddress" class="form-control" placeholder="Institution Address" value="">
 												</div>
 											</div>
 										</div>
@@ -235,9 +236,9 @@
 													<label>
 														Type
 													</label>
-													<select class="form-control" name="univType">
-														<option value="Techical">Techical</option>
-														<option value="Diploma">Diploma</option>
+													<select class="form-control" name="univType" disabled>
+														<option value="Technical">Technical</option>
+														<option value="Diploma" selected>Diploma</option>
 													</select>
 												</div>
 											</div>

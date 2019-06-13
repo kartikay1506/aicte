@@ -1,7 +1,7 @@
-<script href="./src/js/main.js"></script>
 <?php
 	$login = $_SESSION['usertype'];
 ?>
+<!--><script href="./src/js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
@@ -12,7 +12,7 @@
 
 		?>
         <li class="active">
-          <a href="index_institution.php">
+          <a href="index.php">
             <i class="fa fa-home"></i> <span>Home</span>
 		  </a>
 		</li>
@@ -42,6 +42,11 @@
 			else if($login == 'hod') {  
 		?> 
 		<!--HOD-->
+		 <li class="active">
+          <a href="index.php">
+            <i class="fa fa-home"></i> <span>Home</span>
+		  </a>
+		</li>
 		<li>
 			<a href="hod_details.php">
 				<i class="fa fa-pencil"></i><span>Edit Details</span>
@@ -98,13 +103,18 @@
 		<!-- HOD END-->
 		  
 		<!--Faculty-->
+		 <li class="active">
+          <a href="index.php">
+            <i class="fa fa-home"></i> <span>Home</span>
+		  </a>
+		</li>
 		<li>
 			<a href="faculty_details_diploma.php">
 				<i class="fa fa-pencil"></i><span>Edit Details</span>
 			</a>  
 		</li> 
 		<li>
-			<a href="add_qualifications_diploma.php">
+			<a href="add_qualifications.php?page=add_qualifications">
 				<i class="fa fa-graduation-cap"></i><span>Qualifications</span>
 			</a>  
 		</li>
