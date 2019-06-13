@@ -144,6 +144,11 @@
 		  </a>
 		</li>
 		<li>
+          <a href="add_students.php">
+            <i class="fa fa-users"></i><span>Add Students</span>
+		  </a>
+		</li>
+		<li>
 			<a href="upload_time_table.php">
 				<i class="fa fa-calendar-plus-o"></i><span>Upload Time Table</span>
 			</a>  
