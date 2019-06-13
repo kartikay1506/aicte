@@ -38,7 +38,10 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 <?php
-include './src/php/auth.php';
+	include './src/php/auth.php';
+	include './student_detail.php';
+	include './get_faculty.php';
+	$i = 0;
 ?>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -61,7 +64,7 @@ include './src/php/auth.php';
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Username</span>
+              <span class="hidden-xs"><?php include 'get_user.php';?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -69,7 +72,7 @@ include './src/php/auth.php';
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Username
+                  <?php include 'get_user.php';?>
                   <small>Details</small>
                 </p>
               </li>
@@ -140,32 +143,32 @@ include './src/php/auth.php';
 				<div class="row" style="margin-bottom: 20px;margin-top: 10px">
 					<div class="col-md-3">
 						<h5 style="display: inline">Course :</h5>
-						<p style="display: inline">Course Name</p>
+						<p style="display: inline"><?php echo($course);?></p>
 					</div>
 					<div class="col-md-6">
 						<h5 style="display: inline">Branch :</h5>
-						<p style="display: inline">Branch Name</p>
+						<p style="display: inline"><?php echo($branch);?></p>
 					</div>
 					<div class="col-md-3">
-						<h5 style="display: inline">Batch :</h5>
-						<p style="display: inline">Batch</p>
+						<h5 style="display: inline">Year :</h5>
+						<p style="display: inline"><?php echo($year);?></p>
 					</div>
 				</div>
 				<div class="row" style="margin-bottom: 20px;margin-top: 10px">
 					<div class="col-md-3">
 						<h5 style="display: inline">Semester :</h5>
-						<p style="display: inline">Semester</p>
+						<p style="display: inline"><?php echo($semester);?></p>
 					</div>
 					<div class="col-md-6">
 						<h5 style="display: inline">Section :</h5>
-						<p style="display: inline">Section</p>
+						<p style="display: inline"><?php echo($section);?></p>
 					</div>
 				</div>
 			</div>
 			<div class="card-body">
 				<ul class="nav nav-tabs" role="tablist">
 <li class="nav-item active">
-<a class="nav-link" data-toggle="tab" href="#faculty1" role="tab" aria-controls="faculty1" aria-selected="false">Faculty1</a>
+<a class="nav-link" data-toggle="tab" href="#faculty1" role="tab" aria-controls="faculty1" aria-selected="false"><?php echo($faculties[$i]); $i++;?></a>
 </li>
 <li class="nav-item">
 <a class="nav-link" data-toggle="tab" href="#faculty2" role="tab" aria-controls="faculty2" aria-selected="false">Faculty2</a>
@@ -508,139 +511,135 @@ include './src/php/auth.php';
 			<div class="card-body">
 				<div class="row">
 					<div class="col-sm-8">
-						<div class="card">
-							<div class="card-body">
-								<table class="table table-responsive-sm table-bordered">
-									<thead>
-										<tr>
-											<td style="width: 80%">Qualities</td>
-											<td style="width: 13%">Rating</td>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-						<td>Has the Teacher covered entire Syllabus as prescribed by University/ College/ Board?</td>
-						<td>
-							<select class="form-control" name="score_19" id="">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<td>Has the Teacher covered relevant topics beyond syllabus </td>
-						<td>
-							<select class="form-control" name="score_20" id="">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<td>Effectiveness of Teacher in terms of :
-							(a) Technical content/course content 	
-							(b) Communication skills 	
-							(c) Use of teaching aids
-							</td>
-						<td>
-							<select class="form-control" name="score_21" id="">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<td>Pace on which contents were covered </td>
-						<td>
-							<select class="form-control" name="score_22" id="">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-							</select>
-						</td>
-					</tr>
-					
-					<tr>
-						<td>Motivation and inspiration for students to learn </td>
-						<td>
-							<select class="form-control" name="score_23" id="">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-							</select>
-						</td>
-					</tr>
-					
-					<tr>
-						<td>Support for the development of Students’ skill
-							(a) Practical demonstration 
-							(b) Hands on training </td>
-						<td>
-							<select class="form-control" name="score_24" id="">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-							</select>
-						</td>
-					</tr>
-					
-					<tr>
-						<td>Clarity of expectations of students </td>
-						<td>
-							<select class="form-control" name="score_25" id="">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-							</select>
-						</td>
-					</tr>
-					
-					<tr>
-						<td>Feedback provided on Students’ progress </td>
-						<td>
-							<select class="form-control" name="score_26" id="">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-							</select>
-						</td>
-					</tr>
-					
-					<tr>
-						<td>Willingness to offer help and advice to students. </td>
-						<td>
-							<select class="form-control" name="score_27" id="">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-							</select>
-						</td>
-					</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
+						<table class="table table-responsive-sm table-bordered">
+							<thead>
+								<tr>
+									<td style="width: 80%">Qualities</td>
+									<td style="width: 13%">Rating</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Has the Teacher covered entire Syllabus as prescribed by University/ College/ Board?</td>
+									<td>
+										<select class="form-control" name="score_19" id="">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Has the Teacher covered relevant topics beyond syllabus </td>
+									<td>
+										<select class="form-control" name="score_20" id="">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Effectiveness of Teacher in terms of :
+										(a) Technical content/course content 	
+										(b) Communication skills 	
+										(c) Use of teaching aids
+										</td>
+									<td>
+										<select class="form-control" name="score_21" id="">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Pace on which contents were covered </td>
+									<td>
+										<select class="form-control" name="score_22" id="">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</td>
+								</tr>
+
+								<tr>
+									<td>Motivation and inspiration for students to learn </td>
+									<td>
+										<select class="form-control" name="score_23" id="">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</td>
+								</tr>
+
+								<tr>
+									<td>Support for the development of Students’ skill
+										(a) Practical demonstration 
+										(b) Hands on training </td>
+									<td>
+										<select class="form-control" name="score_24" id="">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</td>
+								</tr>
+
+								<tr>
+									<td>Clarity of expectations of students </td>
+									<td>
+										<select class="form-control" name="score_25" id="">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</td>
+								</tr>
+
+								<tr>
+									<td>Feedback provided on Students’ progress </td>
+									<td>
+										<select class="form-control" name="score_26" id="">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</td>
+								</tr>
+
+								<tr>
+									<td>Willingness to offer help and advice to students. </td>
+									<td>
+										<select class="form-control" name="score_27" id="">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</td>
+								</tr>
+												</tbody>
+											</table>
 					</div>
 					<div class="col-sm-4">
 						<div class="card" style="height: 95%">

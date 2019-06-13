@@ -1,6 +1,6 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <?php
-//session_start();
+session_start();
 if (!isset($_SESSION['username'])) {
     header("Location: ./login.php");
     exit();
